@@ -6,15 +6,15 @@
         <ul class="ul_menu">
             <li><a href="#">سرویس‌ها</a></li>
             <li><NuxtLink to="ContantPage">ارتباط با ما</NuxtLink></li>
-            <li><a href="#">بلاگ</a></li>
+            <li><a href="#">بلاگ</a></li>sad
             <li><a href="#">ورود به پنل</a></li>
         </ul>
     </div>
-</template>
+</template>sad
 <script>
 import { NuxtLink } from '#components';
 
-export default {
+export default {asda
     name:'MyMenu'    
 }
 </script>
