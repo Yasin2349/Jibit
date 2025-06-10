@@ -59,17 +59,18 @@ export default {
     width: 280px;
     border-radius: 15px;
     height: 96%;
-    background-color: #f2f5fb;
+    background-color: white;
     list-style: none;
     margin-right: 8px;margin-left: 8px;
     direction: rtl;
+    box-shadow: 0px 3px 2px rgb(161, 161, 161);
 }
 .logo1{
     width: 55px;
     height: 55px;
     margin-right: 30px;
     margin-top: 30px;
-    background-image: url(../public/logo/usp4.png);
+    background-image: url(https://jibit.ir/wp-content/themes/jibit/images/home2/usp4.svg);
     background-position: center;
     background-size: cover;
 }
@@ -78,7 +79,7 @@ export default {
     height: 55px;
     margin-right: 30px;
     margin-top: 30px;
-    background-image: url(../public/logo/usp3.png);
+    background-image: url(https://jibit.ir/wp-content/themes/jibit/images/home2/usp3.svg);
     background-position: center;
     background-size: cover;
 }
@@ -87,7 +88,7 @@ export default {
     height: 55px;
     margin-right: 30px;
     margin-top: 30px;
-    background-image: url(../public/logo/usp2.png);
+    background-image: url(https://jibit.ir/wp-content/themes/jibit/images/home2/usp2.svg);
     background-position: center;
     background-size: cover;
 }
@@ -96,7 +97,7 @@ export default {
     height: 55px;
     margin-right: 30px;
     margin-top: 30px;
-    background-image: url(../public/logo/usp1.png);
+    background-image: url(https://jibit.ir/wp-content/themes/jibit/images/home2/usp1.svg);
     background-position: center;
     background-size: cover;
 }

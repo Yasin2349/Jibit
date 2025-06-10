@@ -1,5 +1,5 @@
 <template>
-<div class="div1">
+<div class="div1 from-blue-50 to-indigo-100 py-20">
     <div class="div1_box1">
         <img src="https://jibit.ir/wp-content/themes/jibit/images/home2/main-photo.svg" alt="image not found!" class="image_div1">
     </div>
@@ -38,8 +38,10 @@ export default {
 .div1{
     width:100% ;
     height: 700px;
-    /* background-color: rgb(30, 168, 122); */
-    background-image: url(../public/bg_desktop.png);
+    background-image: url(../public/bg_desktop.png) ;
+    /* background: linear-gradient(to bottom right, #eff6ff, #e0e7ff); */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     flex-grow: 1;
     /* filter: hue-rotate(10deg) saturate(120%);
     filter: brightness(1.1) contrast(1); */
