@@ -38,7 +38,7 @@ export default {
 .div1{
     width:100% ;
     height: 700px;
-    background-image: url(../public/bg_desktop.png) ;
+    background-image: url(../public/bg_desktop.png) , linear-gradient(to bottom right, #d8dce2 , #ffffff ,#ffffff , #ffffff);
     /* background: linear-gradient(to bottom right, #eff6ff, #e0e7ff); */
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -52,6 +52,7 @@ export default {
     justify-content: center;
     align-items: center;
     z-index: 1;
+    box-sizing: border-box;
 }
 .div1_box1{
     width:60%;
