@@ -16,11 +16,11 @@
     <div class="div2">
       <transition :name="transitionName" mode="out-in">
         <div class="page" :key="shTab">
-          <div v-if="shTab === 'tab1'" class="page1">page1</div>
-          <div v-else-if="shTab === 'tab2'" class="page2">page2</div>
-          <div v-else-if="shTab === 'tab3'" class="page3">page3</div>
-          <div v-else-if="shTab === 'tab4'" class="page4">page4</div>
-          <div v-else-if="shTab === 'tab5'" class="page5">page5</div>
+          <div v-if="shTab === 'tab1'" class="page1" style="background-color: blue;">page1</div>
+          <div v-else-if="shTab === 'tab2'" class="page1" style="background-color: red;">page2</div>
+          <div v-else-if="shTab === 'tab3'" class="page1" style="background-color: black;">page3</div>
+          <div v-else-if="shTab === 'tab4'" class="page1" style="background-color: aqua;">page4</div>
+          <div v-else-if="shTab === 'tab5'" class="page1" style="background-color: greenyellow;">page5</div>
         </div>
       </transition>
     </div>
@@ -160,6 +160,14 @@ transform: translateX(100%);
 .slide-right-leave-to {
     transform: translateX(-100%);
   opacity: 0;
-  
+}
+.page1{
+    text-align: center;
+    padding-top: 200px;
+    font-family: Vazir3;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(90, 90, 90);
+    height: 100%;
 }
 </style>
