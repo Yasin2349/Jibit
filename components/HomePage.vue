@@ -5,7 +5,8 @@
     <Box-About></Box-About>
     <AboutSer></AboutSer>
     <Services></Services>
-</template>
+    <Footer></Footer>
+</template> 
 
 <script>
 import MyMenu from '/components/MyMenu.vue'
@@ -14,9 +15,10 @@ import BrandLogos from '/components/BrandLogos.vue'
 import BoxAbout from '/components/BoxAbout.vue'
 import AboutSer from '/components/AboutSer.vue'
 import Services from '/components/ServicesSite.vue'
+import Footer from '/components/Footer.vue'
 export default {
     name:'HomePage',
-    components: { BoxAbout,MyMenu , DivImg , BrandLogos , AboutSer, Services},
+    components: { BoxAbout,MyMenu , DivImg , BrandLogos , AboutSer, Services , Footer},
 }
 </script>
 

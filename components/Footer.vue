@@ -16,7 +16,7 @@
                     <div>
                         <li><a href="#">ارتباط با ما</a></li>
                         <li><a href="#">قوانین و مقررات</a></li>
-                        <li><a href="#">بلاگ</a></li>
+                        <li><a href="#">بلاگ</a></li>   
                     </div>
                 </ul>
 
@@ -47,7 +47,7 @@ export default {
 <style scoped>
 @font-face {
     font-family: VazirFD;
-    src: url(/public/VazirFD.ttf);
+    src: url(/public/Vazir.ttf);
 }
 .footer{
     width: 82%;
