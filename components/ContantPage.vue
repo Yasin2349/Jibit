@@ -6,7 +6,6 @@
 </template>
 
 <script setup>
-import MyMenu from '~/components/MyMenu.vue'
 </script>
 
 <style scoped>

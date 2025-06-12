@@ -6,19 +6,15 @@
     <AboutSer></AboutSer>
     <Services></Services>
     <Footer></Footer>
+    <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
 </template> 
 
 <script>
-import MyMenu from '/components/MyMenu.vue'
-import DivImg from '/components/DivImg.vue'
-import BrandLogos from '/components/BrandLogos.vue'
-import BoxAbout from '/components/BoxAbout.vue'
-import AboutSer from '/components/AboutSer.vue'
-import Services from '/components/ServicesSite.vue'
-import Footer from '/components/Footer.vue'
 export default {
     name:'HomePage',
-    components: { BoxAbout,MyMenu , DivImg , BrandLogos , AboutSer, Services , Footer},
+    
 }
 </script>
 
