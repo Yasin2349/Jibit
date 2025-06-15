@@ -54,7 +54,7 @@ export default {
     height: 300px;
     /* background-color: aqua; */
     margin: auto;
-    background-image: url(/public/footer-background.png);
+    background-image: url(https://jibit.ir/wp-content/themes/jibit/images/transferor/footer-background.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -81,6 +81,7 @@ export default {
     width: 30%;
     height: 100%;
     /* background-color: aqua; */
+    
 }
 .row1-col3{
     width: 20%;
@@ -150,7 +151,7 @@ export default {
 .logo2-footer{
     width: 90px;
     height: 100px;
-    background-image: url(/public/logo-footer.png);
+    background-image: url(../public/logo/logo_enamad.png);
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;

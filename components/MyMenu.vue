@@ -68,7 +68,7 @@ onUnmounted(() => {
   color: rgb(88, 88, 88);
   text-decoration: none;
   font-size: 16px;
-  font-family: Vazir;
+  font-family: Vazir3;
 }
 
 .li_logo {

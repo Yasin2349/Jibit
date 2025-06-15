@@ -5,7 +5,7 @@
       <img src="https://jibit.ir/wp-content/themes/jibit/images/home2/main-photo.svg" alt="image not found!" class="w-[660px] h-[600px] mt-10 z-1 object-cover" />
     </div>
     <div class="w-2/5 h-full flex flex-col justify-start text-right">
-      <p class="text-[48px] font-bold text-black mt-[150px] w-[72%] font-vazir">
+      <p class="text-[48px] font-bold text-[#1a2d4b]-500 mt-[150px] w-[72%] font-vazir3">
         راهکار‌های پیشرفته<br> مالی و پرداخت آنلاین
       </p>
       <p class="w-[72%] text-[18px] leading-[29px] text-[#4d5768] mt-4 font-vazir2">
@@ -24,20 +24,23 @@
 <script>
 export default {
   name: 'DivImg'
+
 }
 </script>
 
 <style scoped>
 .w-full{
     background-image: url('../public/bg_desktop.png'), linear-gradient(to bottom right, #d8dce2 , #f9fafd ,#f9fafd , #f9fafd);
+    color: #1a2d4b;
 }
     @font-face {
   font-family: Vazir;
-  src: url(../public/Vazir-Bold.ttf);
+  src: url(../public/Vazir-Bold.woff);
 }
 @font-face {
   font-family: Vazir2;
-  src: url(../public/Vazir-Thin.ttf);
+  src: url(../public/Vazir-Thin.woff);
+  font-weight: bold;
 }
 @font-face {
   font-family: Vazir3;

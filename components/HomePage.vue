@@ -4,17 +4,13 @@
     <BrandLogos></BrandLogos>
     <Box-About></Box-About>
     <AboutSer></AboutSer>
-    <Services></Services>
+    <servicesSite></ServicesSite>
     <Footer></Footer>
-    <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
 </template> 
 
 <script>
 export default {
     name:'HomePage',
-    
 }
 </script>
 

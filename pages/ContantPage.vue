@@ -35,12 +35,12 @@
                         <div class="row2-col1"><p class="p-table" style="font-family: Vazir; color: #a3a9b2;text-align: start;"><b>تلفن :</b></p></div>
                         <div class="row2-col2"><p class="p-table-cover" style="font-family: Vazir; color: #4d5768; text-align: start;"><b class="cover">021-296</b></p></div>
                     </div>
-                    <p class="p-table-labl" style="font-family: Vazir; color: #4d5768; text-align: start;"><b>روزهای شنبه تا چهارشنبه: از ساعت ۸:۰۰ تا ۱۸:۰۰</b></p>
+                    <p class="p-table-labl" style="font-family: Vazir; color: #4d5768; text-align: start;height: 50px;display: flex;align-items: center;margin-right: 20%;"><b>روزهای شنبه تا چهارشنبه: از ساعت ۸:۰۰ تا ۱۸:۰۰</b></p>
                     <div class="tabl2-row3">
                         <div class="row3-col1"><p class="p-table" style="font-family: Vazir; color: #a3a9b2;text-align: start;"><b>تلگرام :</b></p></div>
                         <div class="row3-col2"><p class="p-table-cover" style="font-family: Vazir; color: #4d5768; text-align: start;"><b class="cover">Jibit_Support</b></p></div>
                     </div>
-                    <p class="p-table-labl" style="font-family: Vazir; color: #4d5768; text-align: start; font-size: 15px; font-family: Vazir2;"><b>روزهای شنبه تا چهارشنبه: از ساعت ۸:۰۰ صبح تا ۰۰:۰۰
+                    <p class="p-table-labl" style="font-family: Vazir; color: #4d5768; text-align: start; font-size: 15px; font-family: Vazir;margin-right: 20%;"><b>روزهای شنبه تا چهارشنبه: از ساعت ۸:۰۰ صبح تا ۰۰:۰۰
 روزهای پنج‌شنبه، جمعه و تعطیلات رسمی: از ساعت ۹:۰۰ تا ۲۰:۰۰</b></p>
                 </div>
             </div>
@@ -124,12 +124,14 @@ export default {
     height: 85%;
     margin: auto;
     direction: rtl;
+    margin-top: 30px;
 }
 .tabl1-row1{
     width: 100%;
     height: 50%;
     display: flex;
     justify-content: center;
+    margin-top: 45px;
 }
 .tabl1-row2{
     width: 100%;
@@ -155,13 +157,12 @@ export default {
     text-align: center;
     font-family: Vazir2;
     font-size: 14px;
-    
     line-height: 25px;
     color: #4d5768;
     padding: 2px;
     border-radius: 15px;
     margin-top: 0%;
-    margin-right: 20%;
+    margin-right: 0%;
 }
 .cover{
     padding: 8px;
@@ -177,6 +178,10 @@ export default {
     font-size: 28px;
     font-weight: bolder;
     line-height: 15px;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 .tabl1-row1{
     width: 100%;
@@ -223,16 +228,22 @@ export default {
     width: 100%;
     display: flex;
     text-align: start;
+    display: flex;
+    align-items: center;
 }
 
 .tabl2-row2{
     width: 100%;
     display: flex;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .tabl2-row3{
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 </style>
