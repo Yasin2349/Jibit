@@ -19,7 +19,7 @@
           <div v-if="shTab === 'tab1'" class="page1">
             <div class="img-pag5"></div>
             <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo"><div class="logo1"></div></div></div>
+              <div class="div-logo-page1"><div class="logo"><div class="logo5"></div></div></div>
               <div class="div-title-page1"><H3 class="title">احراز هویت بایومتریک</H3></div>
               <div class="div-text-page1"><p class="text">
                 با سرویس احراز هویت بایومتریک، می‌توان به بررسی ادعای کاربر در خصوص هویت خود با استفاده از داده‌های بصری، تکنیک‌های پردازش تصویر (Image Processing) و یادگیری عمیق (Deep Learning) پرداخت و آن‌ را تایید و یا رد کرد.
@@ -30,7 +30,7 @@
           <div v-else-if="shTab === 'tab2'" class="page1">
             <div class="img-pag4"></div>
             <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo"><div class="logo1"></div></div></div>
+              <div class="div-logo-page1"><div class="logo"><div class="logo4"></div></div></div>
               <div class="div-title-page1"><H3 class="title">تسویه و انتقال وجه</H3></div>
               <div class="div-text-page1"><p class="text">
                 امکان انتقال وجوه در وب‌سرویس جیبیت به شیوه‌های متنوع برای صاحبان کسب و کار فراهم شده است. امکان جابه‌جایی وجوه از مبدا پلتفرم جیبیت به حساب مشتریان، همکاران و شرکای تجاری شما در تمامی بانک‌ها امکان‌پذیر است.
@@ -41,7 +41,7 @@
           <div v-else-if="shTab === 'tab3'" class="page1">
             <div class="img-pag3"></div>
             <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo"><div class="logo1"></div></div></div>
+              <div class="div-logo-page1"><div class="logo"><div class="logo3"></div></div></div>
               <div class="div-title-page1"><H3 class="title">واریز شناسه دار</H3></div>
               <div class="div-text-page1"><p class="text">
                 سرویس واریز شناسه‌دار این امکان را به مشتریان کسب و کار‌ها می‌دهد تا بدون محدودیت در مبلغ تراکنش و با انتخاب روش مناسب از خدمات واریز وجه و پرداخت استفاده کنند.
@@ -52,7 +52,7 @@
           <div v-else-if="shTab === 'tab4'" class="page1">
             <div class="img-pag2"></div>
             <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo"><div class="logo1"></div></div></div>
+              <div class="div-logo-page1"><div class="logo"><div class="logo2"></div></div></div>
               <div class="div-title-page1"><H3 class="title">سرویس های استعلامی</H3></div>
               <div class="div-text-page1"><p class="text">
                 با وب‌سرویس استعلامی جیبیت کسب و کار‌ها می‌توانند با ایجاد خدماتی نوین در سنجش اصالت اطلاعات بانکی و شناسایی هویت اشخاص تجربه‌ای جدید را برای مشتریان خود به وجود آورند.
@@ -123,7 +123,7 @@ export default {
   width: 80%;
   height: 610px;
   margin: auto;
-  margin-bottom: 80px;
+  margin-bottom: 0px;
 }
 .divbtns {
   width: 100%;
@@ -168,7 +168,7 @@ export default {
 
 .slide-left-enter-active,
 .slide-left-leave-active {
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 .slide-left-enter-from {
   transform: translateX(-100%);
@@ -190,7 +190,7 @@ export default {
 
 .slide-right-enter-active,
 .slide-right-leave-active {
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 .slide-right-enter-from {
 transform: translateX(100%);
@@ -370,6 +370,39 @@ transform: translateX(100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
+.logo2{
+  width: 35px;
+  height: 35px;
+  background-image: url(https://jibit.ir/wp-content/themes/jibit/images/identicator/identicator-logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logo3{
+  width: 35px;
+  height: 35px;
+  background-image: url(https://jibit.ir/wp-content/themes/jibit/images/pip/pip-logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logo4{
+  width: 35px;
+  height: 35px;
+  background-image: url(https://jibit.ir/wp-content/themes/jibit/images/transferor/transferor-logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logo5{
+  width: 35px;
+  height: 35px;
+  background-image: url(https://jibit.ir/wp-content/themes/jibit/images/alpha/alpha_logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .title{
   width: 100%;
   height: 100%;

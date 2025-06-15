@@ -12,9 +12,9 @@
         پلتفرم جیبیت امکانی آنلاین است تا نیاز کسب و کار‌ها در استفاده از خدمات انتقال پول، پرداخت و عملیات‌های مالی و بانکی را از پیچیدگی به سادگی به صورت یکپارچه و پایدار ارائه کند.
       </p>
       <div class="w-[72%] flex justify-end items-center mt-20 gap-2">
-        <input type="submit" value="تماس با تیم  فروش"
+        <input dir="rtl" type="submit" value="تماس با تیم  فروش >"
                class="w-[170px] h-[50px] border border-gray-400 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition" />
-        <input type="submit" value="ساخت حساب کاربری >"
+        <input dir="rtl" type="submit" value="ساخت حساب کاربری >"
                class="w-[170px] h-[50px] bg-[#226ce9] text-white text-sm rounded-md border border-[#226ce9] font-vazir3 hover:bg-[#2247e9] transition" />
       </div>
     </div>
