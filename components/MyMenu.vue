@@ -4,7 +4,7 @@
       <NuxtLink to="/"><div class="logo"></div></NuxtLink>
     </li>
     <ul class="ul_menu">
-      <li><button type="submit" @click="menuopen()" @focusout="menuclose()" style="cursor: pointer;font-family: Vazir3;color: rgb(88, 88, 88);">سرویس‌ها </button></li>
+      <li><button type="submit" @click="menuopen()" @focusout="menuclose()" style="cursor: pointer;font-family: Vazir3;color: rgb(88, 88, 88);">سرویس‌ها         <i class="fas fa-chevron-down"></i></button></li>
       <div :class="['services', { open: menuservices }]">
         <ul class="ul_services">
           <li><NuxtLink to="/DargahP/DargahPardakht">درگاه پرداخت <div class="logo1"></div></NuxtLink></li>

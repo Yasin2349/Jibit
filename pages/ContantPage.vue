@@ -12,13 +12,12 @@
                 <div class="div-table1">
                     <div class="tabl1-row1">
                         <div class="tabl1-col1">
-                            <p class="p-table" style="font-family: Vazir; color: #a3a9b2;"><b>آدرس:</b></p>
+                            <p class="p-table" style="font-family: Vazir; color: #a3a9b2;"><b><i class="fas fa-map-marker-alt"></i>  آدرس:</b></p>
                         </div>
-                        <div class="tabl1-col2"><p class="p-table" style="text-align: start;margin-right: 15px;"><b>
-تهران، تیموری، خیابان شهید احمد قاسمی، خیابان آزاده، پلاک۰، برج فناوری طرشت، طبقه ۱۰، واحد ۱۰۰۴</b></p></div>
+                        <div class="tabl1-col2"><p class="p-table" style="text-align: start;margin-right: 15px;"><b>{{ this.data_contant.address }}</b></p></div>
                     </div>
                     <div class="tabl1-row2">
-                        <div class="tabl2-col1"><p class="p-table" style="font-family: Vazir; color: #a3a9b2;"><b>کد پستی :</b></p></div>
+                        <div class="tabl2-col1"><p class="p-table" style="font-family: Vazir; color: #a3a9b2;"><b><i class="fas fa-envelope-open"></i> کد پستی :</b></p></div>
                         <div class="tabl2-col2">
                             <p class="p-table" style="text-align: start;margin-right: 15px;"><b>۱۴۵۹۹۶۵۲۲۳</b></p>
                         </div>
@@ -28,19 +27,19 @@
             <div class="tab2"><p class="title-tab2">امور مشتریان</p>
                 <div class="div-table2">
                     <div class="tabl2-row1">
-                        <div class="row1-col1"><p class="p-table" style="font-family: Vazir; color: #a3a9b2;text-align: start;"><b>ایمیل:</b></p></div>
-                        <div class="row1-col2"><p class="p-table-cover" style="font-family: Vazir; color: #4d5768; text-align: start;"><b class="cover">support@jibit.ir</b></p></div>
+                        <div class="row1-col1"><p class="p-table" style="font-family: Vazir; color: #a3a9b2;text-align: start;"> <i class="fas fa-envelope"></i> <b>ایمیل: </b></p></div>
+                        <div class="row1-col2"><p class="p-table-cover" style="font-family: Vazir; color: #4d5768; text-align: start;"><b class="cover">{{ this.data_contant.email }}</b></p></div>
                     </div>
                     <div class="tabl2-row2">
                         <div class="row2-col1"><p class="p-table" style="font-family: Vazir; color: #a3a9b2;text-align: start;"><b>تلفن :</b></p></div>
-                        <div class="row2-col2"><p class="p-table-cover" style="font-family: Vazir; color: #4d5768; text-align: start;"><b class="cover">021-296</b></p></div>
+                        <div class="row2-col2"><p class="p-table-cover" style="font-family: Vazir; color: #4d5768; text-align: start;"><b class="cover">{{ this.data_contant.phone }}</b></p></div>
                     </div>
-                    <p class="p-table-labl" style="font-family: Vazir; color: #4d5768; text-align: start;height: 50px;display: flex;align-items: center;margin-right: 20%;"><b>روزهای شنبه تا چهارشنبه: از ساعت ۸:۰۰ تا ۱۸:۰۰</b></p>
+                    <p class="p-table-labl" style="font-family: Vazir; color: #4d5768; text-align: start;height: 50px;display: flex;align-items: center;margin-right: 20%;"><b>{{ this.data_contant.phonetime }}</b></p>
                     <div class="tabl2-row3">
                         <div class="row3-col1"><p class="p-table" style="font-family: Vazir; color: #a3a9b2;text-align: start;"><b>تلگرام :</b></p></div>
-                        <div class="row3-col2"><p class="p-table-cover" style="font-family: Vazir; color: #4d5768; text-align: start;"><b class="cover">Jibit_Support</b></p></div>
+                        <div class="row3-col2"><p class="p-table-cover" style="font-family: Vazir; color: #4d5768; text-align: start;"><b class="cover">{{ this.data_contant.idtelegram }}</b></p></div>
                     </div>
-                    <p class="p-table-labl" style="font-family: Vazir; color: #4d5768; text-align: start; font-size: 15px; font-family: Vazir;margin-right: 20%;"><b>روزهای شنبه تا چهارشنبه: از ساعت ۸:۰۰ صبح تا ۰۰:۰۰
+                    <p class="p-table-labl" style="font-family: Vazir; color: #4d5768; text-align: start; font-size: 15px; font-family: Vazir;margin-right: 20%;"><b>{{ this.data_contant.teltime }}
 روزهای پنج‌شنبه، جمعه و تعطیلات رسمی: از ساعت ۹:۰۰ تا ۲۰:۰۰</b></p>
                 </div>
             </div>
@@ -57,9 +56,23 @@
 
 <script>
 export default {
-    name :'ContantPage',
+  name: 'ContantPage',
+  data() {
+    return {
+      data_contant: {}
+    }
+  },
+  mounted() {
+    fetch("./data/contant.json")
+    .then(res => res.json())
+    .then(data => {
+      this.data_contant = data;
+      console.log("Fetched data:", this.data_contant);
+    });
+  }
 }
 </script>
+
 
 <style scoped>
 .div1{
@@ -140,7 +153,7 @@ export default {
 }
 
 .tabl1-col1{
-    width: 20%;
+    width: 24%;
     height: 100%;
 }
 

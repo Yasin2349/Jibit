@@ -6,8 +6,7 @@
                 <p class="text-footer"><b>شرکت ایوان رایان پیام (جیبیت) با توسعه زیرساخت‌های فنی و فراهم آوردن بستری مناسب و قابل اطمینان این امکان را به کسب و کارها می‌دهد تا به سرویس‌های مالی، پرداخت، انتقال وجه و وب‌سرویس‌های احراز هویت مورد نیاز خود دسترسی پیدا کنند.</b></p>
             </div>
             <div class="row1-col2">
-                <p class="text-footer" style="width: 80%;margin: auto;margin-top:45px;"><b>
-تهران، میدان تیموری، تقاطع بلوار صالحی و اکبری، برج فناوری شریف، طبقه ۱۰، واحد ۱۰۰۴</b></p>
+                <p class="text-footer" style="width: 80%;margin: auto;margin-top:45px;"><b>{{ this.data_contant.address }}</b></p>
                 <p class="text-footer" style="width: 80%;margin: auto;line-height: 40px;"><b>021-26106000</b></p>
                 <p class="text-footer" style="width: 80%;margin: auto;"><b>info@jibit.ir</b></p>
             </div>
@@ -39,8 +38,22 @@
 </template>
 
 <script>
+
 export default {
-    name:'footer'    
+  name: 'footer',
+  data() {
+    return {
+      data_contant: {}
+    }
+  },
+  mounted() {
+    fetch("../data/footer.json")
+    .then(res => res.json())
+    .then(data => {
+      this.data_contant = data;
+      console.log("Fetched data:", this.data_contant);
+    });
+  }
 }
 </script>
 

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
     '~/assets/css/main.css',                 // فایل اصلی CSS که Tailwind داخلشه
-    '@fortawesome/fontawesome-free/css/all.css'  // اضافه کردن FontAwesome
+    '@fortawesome/fontawesome-free/css/all.css'
   ],
   vite: {
     plugins: [
