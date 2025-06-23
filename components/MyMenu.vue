@@ -4,10 +4,10 @@
       <NuxtLink to="/"><div class="logo"></div></NuxtLink>
     </li>
     <ul class="ul_menu">
-      <li><button type="submit" @click="menuopen()" style="cursor: pointer;font-family: Vazir3;color: rgb(88, 88, 88);">سرویس‌ها ∨</button></li>
+      <li><button type="submit" @click="menuopen()" @focusout="menuclose()" style="cursor: pointer;font-family: Vazir3;color: rgb(88, 88, 88);">سرویس‌ها </button></li>
       <div :class="['services', { open: menuservices }]">
         <ul class="ul_services">
-          <li><a href="#">درگاه پرداخت <div class="logo1"></div></a></li>
+          <li><NuxtLink to="/DargahP/DargahPardakht">درگاه پرداخت <div class="logo1"></div></NuxtLink></li>
           <li><a href="#">استرداد وجه <div class="logo2"></div></a></li>
           <li><a href="#">واریز شناسه دار<div class="logo3"></div></a></li>
           <li><a href="#">تسویه و انتقال وجه <div class="logo4"></div></a></li>
@@ -27,6 +27,9 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const menuservices = ref(false);
 function menuopen(){
+  menuservices.value = !menuservices.value
+}
+function menuclose(){
   menuservices.value = !menuservices.value
 }
 const isScrolled = ref(false)

@@ -2,16 +2,10 @@
 <template>
   <head>
     <title>درگاه پرداخت اینترنتی | سرویس های تحراز هویت و استعلام | جیبیت</title>
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    /> -->
   </head>
   <div>
-    
     <MyMenu></MyMenu>
     <router-view></router-view>
-    
   </div>
 </template>
 <script>
