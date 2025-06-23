@@ -30,7 +30,7 @@ function menuopen(){
   menuservices.value = !menuservices.value
 }
 function menuclose(){
-  menuservices.value = !menuservices.value
+  menuservices.value = false
 }
 const isScrolled = ref(false)
 
