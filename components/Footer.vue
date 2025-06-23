@@ -7,8 +7,8 @@
             </div>
             <div class="row1-col2">
                 <p class="text-footer" style="width: 80%;margin: auto;margin-top:45px;"><b>{{ this.data_contant.address }}</b></p>
-                <p class="text-footer" style="width: 80%;margin: auto;line-height: 40px;"><b>021-26106000</b></p>
-                <p class="text-footer" style="width: 80%;margin: auto;"><b>info@jibit.ir</b></p>
+                <p class="text-footer" style="width: 80%;margin: auto;line-height: 40px;"><b>{{ this.data_contant.phone }}</b></p>
+                <p class="text-footer" style="width: 80%;margin: auto;"><b>{{ this.data_contant.email }}</b></p>
             </div>
             <div class="row1-col3">
                 <ul class="ul-footer">
