@@ -1,5 +1,5 @@
 <template>
-  <div :class="['div1', { scrolled: isScrolled }]">
+  <div :class="['div1', { scrolled: isScrolled } ,{hidenmenu : isLoginPage}]">
     <li class="li_logo">
       <NuxtLink to="/"><div class="logo"></div></NuxtLink>
     </li>
@@ -8,16 +8,16 @@
       <div :class="['services', { open: menuservices }]">
         <ul class="ul_services">
           <li><NuxtLink to="/DargahP/DargahPardakht">درگاه پرداخت <div class="logo1"></div></NuxtLink></li>
-          <li><a href="#">استرداد وجه <div class="logo2"></div></a></li>
+          <li><NuxtLink to="/DargahP/EsterdadVagh">استرداد وجه <div class="logo2"></div></NuxtLink></li>
           <li><a href="#">واریز شناسه دار<div class="logo3"></div></a></li>
           <li><a href="#">تسویه و انتقال وجه <div class="logo4"></div></a></li>
           <li><a href="#">سرویس های استعلامی <div class="logo5"></div></a></li>
           <li><a href="#">احراز هویت بایومتریک <div class="logo6"></div></a></li>
         </ul>
       </div>
-      <li><NuxtLink to="ContantPage">ارتباط با ما</NuxtLink></li>
+      <li><NuxtLink to="/ContantPage">ارتباط با ما</NuxtLink></li>
       <li><a href="#">بلاگ</a></li>
-      <li><a href="#">ورود به پنل</a></li>
+      <li><NuxtLink to="/LoginRegister">ورود به پنل</NuxtLink></li>
     </ul>
   </div>
 </template>
@@ -37,6 +37,8 @@ const isScrolled = ref(false)
 function handleScroll() {
   isScrolled.value = window.scrollY > 50
 }
+const route = useRoute()
+const isLoginPage = computed(() => route.path === '/LoginRegister' || '/LoginRegister2')
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
@@ -210,6 +212,8 @@ onUnmounted(() => {
   background-repeat: no-repeat;
   background-size: cover;margin-left: 4%;
 }
-
+.hidenmenu{
+  display: none;
+}
 
 </style>

@@ -2,6 +2,8 @@
 <template>
   <head>
     <title>درگاه پرداخت اینترنتی | سرویس های تحراز هویت و استعلام | جیبیت</title>
+
+
   </head>
   <div>
     <MyMenu></MyMenu>
