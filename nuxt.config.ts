@@ -5,9 +5,11 @@ export default defineNuxtConfig({
   ssr: true,
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
+  modules: ['@pinia/nuxt'],
   css: [
     '~/assets/css/main.css',                 // فایل اصلی CSS که Tailwind داخلشه
-    '@fortawesome/fontawesome-free/css/all.css'
+    '@fortawesome/fontawesome-free/css/all.css',
+    '~/pages/responcive.css'
   ],
   vite: {
     plugins: [

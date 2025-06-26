@@ -38,7 +38,7 @@ function handleScroll() {
   isScrolled.value = window.scrollY > 50
 }
 const route = useRoute()
-const isLoginPage = computed(() => route.path === '/LoginRegister' || '/LoginRegister2')
+const isLoginPage = computed(() => route.path === '/LoginRegister' || route.path === '/LoginRegister2' || route.path === '/LoginRegister3' || route.path === '/LoginRegister4')
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
