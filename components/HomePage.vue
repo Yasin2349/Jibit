@@ -7,9 +7,9 @@
     <servicesSite></ServicesSite>
     <div class="w-[80%] h-[250px] mx-auto flex items-end mt-[0px] mb-[45px]" style="font-family: Vazir, sans-serif;">
         <div class="w-full">
-            <p class="w-full text-[32px] text-[#303c4f] text-right leading-[85px]">سرویس های جیبیت</p>
+            <p class="w-full text-[32px] text-[#303c4f] text-right leading-[85px]">تکیه‌گاه کسب و کارها</p>
             <p class="w-full text-right text-[#697281] rtl">
-                ارائه دهنده خدمات متنوع پرداخت، انتقال وجه و عملیات مالی و بانکی به صورت یکپارچه و پایدار است.
+                بیش از ۳۰۰ کسب و کار بزرگ کشور همه روزه از راهکارهای جیبیت استفاده می‌کنند.
             </p>
         </div>
     </div>
