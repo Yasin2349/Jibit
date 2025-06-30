@@ -5,6 +5,7 @@
       <p class="w-full text-right text-[#697281] font-vazir3 rtl">ارائه دهنده خدمات متنوع پرداخت، انتقال وجه و عملیات مالی و بانکی به صورت یکپارچه و پایدار است.</p>
     </div>
   </div>
+  <ServicesSite></ServicesSite>
 </template>
 
 <script>

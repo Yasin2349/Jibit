@@ -16,7 +16,7 @@
     <div class="div2">
       <transition :name="transitionName" mode="out-in">
         <div class="page" :key="shTab">
-          <div v-if="shTab === 'tab1'" class="page1">
+          <div class="pagee1">
             <div class="img-pag5"></div>
             <div class="document-page1">
               <div class="div-logo-page1"><div class="logo"><div class="logo5"></div></div></div>
@@ -27,7 +27,7 @@
               <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
             </div>
           </div>
-          <div v-else-if="shTab === 'tab2'" class="page1">
+          <div  v-if="shTab === 'tab1'" class="pagee2">
             <div class="img-pag4"></div>
             <div class="document-page1">
               <div class="div-logo-page1"><div class="logo"><div class="logo4"></div></div></div>
@@ -38,7 +38,7 @@
               <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
             </div>
           </div>
-          <div v-else-if="shTab === 'tab3'" class="page1">
+          <div v-else-if="shTab === 'tab3'" class="pagee3">
             <div class="img-pag3"></div>
             <div class="document-page1">
               <div class="div-logo-page1"><div class="logo"><div class="logo3"></div></div></div>
@@ -49,7 +49,7 @@
               <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
             </div>
           </div>
-          <div v-else-if="shTab === 'tab4'" class="page1">
+          <div v-else-if="shTab === 'tab4'" class="pagee4">
             <div class="img-pag2"></div>
             <div class="document-page1">
               <div class="div-logo-page1"><div class="logo"><div class="logo2"></div></div></div>
@@ -60,7 +60,7 @@
               <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
             </div>
           </div>
-          <div v-else-if="shTab === 'tab5'" class="page1" >
+          <div v-else-if="shTab === 'tab5'" class="pagee5" >
             <div class="img-pag1"></div>
             <div class="document-page1">
               <div class="div-logo-page1"><div class="logo"><div class="logo1"></div></div></div>
@@ -97,8 +97,7 @@ export default {
   methods: {
     changepage(tab) {
       const newIndex = this.tabs.findIndex((t) => t.name === tab.name);
-      this.transitionName =
-        newIndex > this.lastTabIndex ? "slide-left" : "slide-right";
+      this.transitionName = newIndex > this.lastTabIndex ? "slide-left" : "slide-right";
       this.lastTabIndex = newIndex;
       this.shTab = tab.name;
     },
@@ -164,6 +163,7 @@ export default {
   width: 100%;
   height: 100%;
   position: absolute;
+  display: block;
 }
 
 .slide-left-enter-active,
@@ -211,7 +211,31 @@ transform: translateX(100%);
     transform: translateX(-100%);
   opacity: 0;
 }
-.page1{
+.pagee1{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagee2{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagee3{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagee4{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagee5{
     height: 100%;
     display: flex;
     justify-content: center;
