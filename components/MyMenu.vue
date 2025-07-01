@@ -17,13 +17,15 @@
       </div>
       <li><NuxtLink to="/ContantPage">ارتباط با ما</NuxtLink></li>
       <li><a href="#">بلاگ</a></li>
-      <li><NuxtLink to="/LoginRegister">ورود به پنل</NuxtLink></li>
+      <li class="li_login"><NuxtLink to="/LoginRegister4">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;"></i></NuxtLink></li>
     </ul>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useRoute } from 'vue-router'
+
 
 const menuservices = ref(false);
 function menuopen(){
@@ -38,8 +40,9 @@ function handleScroll() {
   isScrolled.value = window.scrollY > 50
 }
 const route = useRoute()
-const isLoginPage = computed(() => route.path === '/LoginRegister' || route.path === '/LoginRegister2' || route.path === '/LoginRegister3' || route.path === '/LoginRegister4')
-
+const isLoginPage = computed(() => {
+  return ['/LoginRegister', '/LoginRegister2', '/LoginRegister3', '/LoginRegister4'].includes(route.path)
+})
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
 })
@@ -215,5 +218,11 @@ onUnmounted(() => {
 .hidenmenu{
   display: none;
 }
-
+.li_login{
+  padding: 10px;padding-left: 18px;padding-right: 18px;
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 10px;
+}.li_login:hover{
+  background-color: #d1d1d157;
+}
 </style>

@@ -16,7 +16,9 @@
     <div class="div2">
       <transition :name="transitionName" mode="out-in">
         <div class="page" :key="shTab">
-          <div class="pagee1">
+
+          <!-- tab2: تسویه و انتقال وجه -->
+          <div v-if="shTab === 'tab2'" class="pagee1">
             <div class="img-pag5"></div>
             <div class="document-page1">
               <div class="div-logo-page1"><div class="logo"><div class="logo5"></div></div></div>
@@ -27,7 +29,9 @@
               <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
             </div>
           </div>
-          <div  v-if="shTab === 'tab1'" class="pagee2">
+
+          <!-- tab1 -->
+          <div v-else-if="shTab === 'tab1'" class="pagee2">
             <div class="img-pag4"></div>
             <div class="document-page1">
               <div class="div-logo-page1"><div class="logo"><div class="logo4"></div></div></div>
@@ -38,6 +42,8 @@
               <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
             </div>
           </div>
+
+          <!-- tab3 -->
           <div v-else-if="shTab === 'tab3'" class="pagee3">
             <div class="img-pag3"></div>
             <div class="document-page1">
@@ -49,6 +55,8 @@
               <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
             </div>
           </div>
+
+          <!-- tab4 -->
           <div v-else-if="shTab === 'tab4'" class="pagee4">
             <div class="img-pag2"></div>
             <div class="document-page1">
@@ -60,7 +68,9 @@
               <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
             </div>
           </div>
-          <div v-else-if="shTab === 'tab5'" class="pagee5" >
+
+          <!-- tab5 -->
+          <div v-else-if="shTab === 'tab5'" class="page5" >
             <div class="img-pag1"></div>
             <div class="document-page1">
               <div class="div-logo-page1"><div class="logo"><div class="logo1"></div></div></div>
@@ -71,11 +81,13 @@
               <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
             </div>
           </div>
+
         </div>
       </transition>
     </div>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -104,6 +116,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 @font-face {

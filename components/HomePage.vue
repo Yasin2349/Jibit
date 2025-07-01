@@ -4,7 +4,6 @@
     <BrandLogos />
     <BoxAbout />       <!-- خط فاصله نذار، چون تو قالب Vue بهتره بدون خط فاصله باشه -->
     <AboutSer />
-    <ServicesSite />
 
     <div class="w-[80%] h-[250px] mx-auto flex items-end mt-[0px] mb-[45px]" style="font-family: Vazir, sans-serif;">
         <div class="w-full">
@@ -34,10 +33,8 @@
     <Footer style="margin-top: 160px;"></Footer>
 </template> 
 
-<script>
-export default {
-    name:'HomePage',
-}
+<script setup>
+
 </script>
 
 <style scoped>
