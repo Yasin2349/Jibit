@@ -9,7 +9,7 @@
         <ul class="ul_services">
           <li><NuxtLink to="/DargahP/DargahPardakht">درگاه پرداخت <div class="logo1"></div></NuxtLink></li>
           <li><NuxtLink to="/DargahP/EsterdadVagh">استرداد وجه <div class="logo2"></div></NuxtLink></li>
-          <li><a href="#">واریز شناسه دار<div class="logo3"></div></a></li>
+          <li><NuxtLink to="/DargahP/VarizSH">واریز شناسه دار<div class="logo3"></div></NuxtLink></li>
           <li><a href="#">تسویه و انتقال وجه <div class="logo4"></div></a></li>
           <li><a href="#">سرویس های استعلامی <div class="logo5"></div></a></li>
           <li><a href="#">احراز هویت بایومتریک <div class="logo6"></div></a></li>
@@ -21,28 +21,36 @@
     </ul>
   </div>
 </template>
-
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
+const menuservices = ref(false)
+const isScrolled = ref(false)
 
-const menuservices = ref(false);
-function menuopen(){
+function menuopen() {
   menuservices.value = !menuservices.value
 }
-function menuclose(){
+
+function menuclose() {
   menuservices.value = false
 }
-const isScrolled = ref(false)
 
 function handleScroll() {
   isScrolled.value = window.scrollY > 50
 }
+
 const route = useRoute()
-const isLoginPage = computed(() => {
-  return ['/LoginRegister', '/LoginRegister2', '/LoginRegister3', '/LoginRegister4'].includes(route.path)
+const isLoginPage = ref(false)
+
+
+isLoginPage.value = route.path.includes('LoginRegister4')
+
+
+watch(() => route.path, (newPath) => {
+  isLoginPage.value = newPath.includes('LoginRegister4')
 })
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
 })
@@ -50,7 +58,6 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
-
 </script>
 
 <style scoped>
@@ -222,7 +229,5 @@ onUnmounted(() => {
   padding: 10px;padding-left: 18px;padding-right: 18px;
   border: 1px solid rgb(206, 206, 206);
   border-radius: 10px;
-}.li_login:hover{
-  background-color: #d1d1d157;
 }
 </style>

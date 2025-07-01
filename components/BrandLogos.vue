@@ -1,66 +1,87 @@
 <template>
   <div class="w-full h-[80px] flex items-center">
-    <ul class="w-full flex justify-center items-center direction-rtl">
-      <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo1"></li>
-      <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo2"></li>
-      <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo3"></li>
-      <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo4"></li>
-      <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo5"></li>
-      <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo6"></li>
+    <ul class="w-full flex justify-center items-center rtl">
+      <li
+        class="w-[110px] h-[30px] mx-auto bg-cover bg-bottom bg-no-repeat transition duration-700 ease-in-out li-logo1"
+      ></li>
+      <li
+        class="w-[110px] h-[30px] mx-auto bg-cover bg-bottom bg-no-repeat transition duration-700 ease-in-out li-logo2"
+      ></li>
+      <li
+        class="w-[110px] h-[30px] mx-auto bg-cover bg-bottom bg-no-repeat transition duration-700 ease-in-out li-logo3"
+      ></li>
+      <li
+        class="w-[110px] h-[30px] mx-auto bg-cover bg-bottom bg-no-repeat transition duration-700 ease-in-out li-logo4"
+      ></li>
+      <li
+        class="w-[110px] h-[30px] mx-auto bg-cover bg-bottom bg-no-repeat transition duration-700 ease-in-out li-logo5"
+      ></li>
+      <li
+        class="w-[110px] h-[30px] mx-auto bg-cover bg-bottom bg-no-repeat transition duration-700 ease-in-out li-logo6"
+      ></li>
     </ul>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'BrandLogos'
-}
+<script setup>
+defineProps()
 </script>
 
 <style scoped>
-.direction-rtl {
+
+
+/* RTL helper */
+.rtl {
   direction: rtl;
 }
-.li_logo1 {
-  background-image: url(../public/logo/snapp.png);
+
+/* Logo backgrounds */
+
+.li-logo1 {
+  background-image: url('/logo/snapp.png');
 }
-.li_logo1:hover {
-  background-image: url(../public/logo/snapp2.png);
+.li-logo1:hover {
+  background-image: url('/logo/snapp2.png');
   filter: brightness(1.2);
 }
-.li_logo2 {
-  background-image: url(../public/logo/bitpin.png);
+
+.li-logo2 {
+  background-image: url('/logo/bitpin.png');
 }
-.li_logo2:hover {
-  background-image: url(../public/logo/bitpin2.png);
+.li-logo2:hover {
+  background-image: url('/logo/bitpin2.png');
   filter: brightness(1.2);
 }
-.li_logo3 {
-  background-image: url(../public/logo/blu.png);
+
+.li-logo3 {
+  background-image: url('/logo/blu.png');
 }
-.li_logo3:hover {
-  background-image: url(../public/logo/blu2.png);
+.li-logo3:hover {
+  background-image: url('/logo/blu2.png');
   filter: brightness(1.2);
 }
-.li_logo4 {
-  background-image: url(../public/logo/digipay.png);
+
+.li-logo4 {
+  background-image: url('/logo/digipay.png');
 }
-.li_logo4:hover {
-  background-image: url(../public/logo/digipay2.png);
+.li-logo4:hover {
+  background-image: url('/logo/digipay2.png');
   filter: brightness(1.2);
 }
-.li_logo5 {
-  background-image: url(../public/logo/nobitex.png);
+
+.li-logo5 {
+  background-image: url('/logo/nobitex.png');
 }
-.li_logo5:hover {
-  background-image: url(../public/logo/nobitex2.png);
+.li-logo5:hover {
+  background-image: url('/logo/nobitex2.png');
   filter: brightness(1.2);
 }
-.li_logo6 {
-  background-image: url(../public/logo/finnotech.png);
+
+.li-logo6 {
+  background-image: url('/logo/finnotech.png');
 }
-.li_logo6:hover {
-  background-image: url(../public/logo/finnotech2.png);
+.li-logo6:hover {
+  background-image: url('/logo/finnotech2.png');
   filter: brightness(1.2);
 }
 </style>

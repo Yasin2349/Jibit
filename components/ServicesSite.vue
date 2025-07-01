@@ -1,5 +1,5 @@
 <template>
-  <div class="div1">
+  <div class="div111">
     <div class="divbtns">
       <button
         type="submit"
@@ -12,16 +12,18 @@
         {{ tab.value }}
       </button>
     </div>
-
     <div class="div2">
+      
       <transition :name="transitionName" mode="out-in">
+        
         <div class="page" :key="shTab">
+          
 
           <!-- tab2: تسویه و انتقال وجه -->
-          <div v-if="shTab === 'tab2'" class="pagee1">
+          <div v-if="shTab === 'tab1'" class="pagee1">
             <div class="img-pag5"></div>
             <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo"><div class="logo5"></div></div></div>
+              <div class="div-logo-page1"><div class="logo2"><div class="logo55"></div></div></div>
               <div class="div-title-page1"><H3 class="title">احراز هویت بایومتریک</H3></div>
               <div class="div-text-page1"><p class="text">
                 با سرویس احراز هویت بایومتریک، می‌توان به بررسی ادعای کاربر در خصوص هویت خود با استفاده از داده‌های بصری، تکنیک‌های پردازش تصویر (Image Processing) و یادگیری عمیق (Deep Learning) پرداخت و آن‌ را تایید و یا رد کرد.
@@ -31,10 +33,10 @@
           </div>
 
           <!-- tab1 -->
-          <div v-else-if="shTab === 'tab1'" class="pagee2">
+          <div v-else-if="shTab === 'tab2'" class="pagee2">
             <div class="img-pag4"></div>
             <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo"><div class="logo4"></div></div></div>
+              <div class="div-logo-page1"><div class="logo2"><div class="logo44"></div></div></div>
               <div class="div-title-page1"><H3 class="title">تسویه و انتقال وجه</H3></div>
               <div class="div-text-page1"><p class="text">
                 امکان انتقال وجوه در وب‌سرویس جیبیت به شیوه‌های متنوع برای صاحبان کسب و کار فراهم شده است. امکان جابه‌جایی وجوه از مبدا پلتفرم جیبیت به حساب مشتریان، همکاران و شرکای تجاری شما در تمامی بانک‌ها امکان‌پذیر است.
@@ -47,7 +49,7 @@
           <div v-else-if="shTab === 'tab3'" class="pagee3">
             <div class="img-pag3"></div>
             <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo"><div class="logo3"></div></div></div>
+              <div class="div-logo-page1"><div class="logo2"><div class="logo33"></div></div></div>
               <div class="div-title-page1"><H3 class="title">واریز شناسه دار</H3></div>
               <div class="div-text-page1"><p class="text">
                 سرویس واریز شناسه‌دار این امکان را به مشتریان کسب و کار‌ها می‌دهد تا بدون محدودیت در مبلغ تراکنش و با انتخاب روش مناسب از خدمات واریز وجه و پرداخت استفاده کنند.
@@ -60,7 +62,7 @@
           <div v-else-if="shTab === 'tab4'" class="pagee4">
             <div class="img-pag2"></div>
             <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo"><div class="logo2"></div></div></div>
+              <div class="div-logo-page1"><div class="logo2"><div class="logo22"></div></div></div>
               <div class="div-title-page1"><H3 class="title">سرویس های استعلامی</H3></div>
               <div class="div-text-page1"><p class="text">
                 با وب‌سرویس استعلامی جیبیت کسب و کار‌ها می‌توانند با ایجاد خدماتی نوین در سنجش اصالت اطلاعات بانکی و شناسایی هویت اشخاص تجربه‌ای جدید را برای مشتریان خود به وجود آورند.
@@ -70,10 +72,10 @@
           </div>
 
           <!-- tab5 -->
-          <div v-else-if="shTab === 'tab5'" class="page5" >
+          <div v-else-if="shTab === 'tab5'" class="pagee5">
             <div class="img-pag1"></div>
             <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo"><div class="logo1"></div></div></div>
+              <div class="div-logo-page1"><div class="logo2"><div class="logo11"></div></div></div>
               <div class="div-title-page1"><H3 class="title">درگاه پرداخت</H3></div>
               <div class="div-text-page1"><p class="text">
                 جیبیت به عنوان یکی از بزرگ‌ترین پرداخت‌یار‌های رسمی شاپرک (بانک مرکزی)، با ارائه درگاه پرداخت با قابلیت اتصال به درگاه‌های متنوع و مسیردهی هوشمند بین PSPها در راستای پایداری در سیستم پرداخت و افزایش درآمد در کنار کسب و کارها ایستاده است.
@@ -131,7 +133,7 @@ export default {
   font-family: Vazir3;
   src: url(../public/Vazir-Medium.ttf);
 }
-.div1 {
+.div111 {
   width: 80%;
   height: 610px;
   margin: auto;
@@ -389,7 +391,7 @@ transform: translateX(100%);
   border-radius: 10px;
   line-height: 30px;
 }
-.logo{
+.logo2{
   width: 60px;
   height: 60px;
   background-color: #FFF; 
@@ -399,7 +401,7 @@ transform: translateX(100%);
   border-radius: 20px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, .06);
 }
-.logo1{
+.logo11{
   width: 35px;
   height: 35px;
   background-image: url(https://jibit.ir/wp-content/themes/jibit/images/projectx/projectx-logo.svg);
@@ -407,7 +409,7 @@ transform: translateX(100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.logo2{
+.logo22{
   width: 35px;
   height: 35px;
   background-image: url(https://jibit.ir/wp-content/themes/jibit/images/identicator/identicator-logo.svg);
@@ -415,7 +417,7 @@ transform: translateX(100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.logo3{
+.logo33{
   width: 35px;
   height: 35px;
   background-image: url(https://jibit.ir/wp-content/themes/jibit/images/pip/pip-logo.svg);
@@ -423,7 +425,7 @@ transform: translateX(100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.logo4{
+.logo44{
   width: 35px;
   height: 35px;
   background-image: url(https://jibit.ir/wp-content/themes/jibit/images/transferor/transferor-logo.svg);
@@ -431,7 +433,7 @@ transform: translateX(100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.logo5{
+.logo55{
   width: 35px;
   height: 35px;
   background-image: url(https://jibit.ir/wp-content/themes/jibit/images/alpha/alpha_logo.svg);

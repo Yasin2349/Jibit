@@ -14,6 +14,9 @@
 
 </script>
 <style>
+html{
+  scroll-behavior: smooth;
+}
 body{
   margin: 0%;
   padding: 0%;
@@ -26,5 +29,8 @@ body::-webkit-scrollbar{
 body::-webkit-scrollbar-thumb{
   background-color: rgb(219, 219, 219);
   border-radius: 50px;
+}
+body::-webkit-scrollbar-thumb:hover{
+  background-color: rgb(172, 172, 172);
 }
 </style>
