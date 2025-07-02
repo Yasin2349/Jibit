@@ -16,7 +16,7 @@
         </ul>
       </div>
       <li><NuxtLink to="/ContantPage">ارتباط با ما</NuxtLink></li>
-      <li><a href="#">بلاگ</a></li>
+      <li><NuxtLink to="/blogs">بلاگ</NuxtLink></li>
       <li class="li_login"><NuxtLink to="/LoginRegister4">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;"></i></NuxtLink></li>
     </ul>
   </div>

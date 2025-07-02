@@ -95,7 +95,6 @@
                transition"
       />
     </div>
-
     <!-- بخش تماس با تیم فروش -->
     <div class="w-[40%] pr-[6%]">
       <p class="text-[17px] font-vazir3 text-[#797979] text-start pt-[20px] mt-[60px] pl-[40%]">

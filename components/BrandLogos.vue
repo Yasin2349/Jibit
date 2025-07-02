@@ -42,7 +42,7 @@ defineProps()
 }
 .li-logo1:hover {
   background-image: url('/logo/snapp2.png');
-  filter: brightness(1.2);
+  filter: brightness(3);
 }
 
 .li-logo2 {
@@ -50,7 +50,7 @@ defineProps()
 }
 .li-logo2:hover {
   background-image: url('/logo/bitpin2.png');
-  filter: brightness(1.2);
+  filter: brightness(1.5);
 }
 
 .li-logo3 {
@@ -58,7 +58,7 @@ defineProps()
 }
 .li-logo3:hover {
   background-image: url('/logo/blu2.png');
-  filter: brightness(1.2);
+  filter: brightness(1.5);
 }
 
 .li-logo4 {
@@ -66,7 +66,7 @@ defineProps()
 }
 .li-logo4:hover {
   background-image: url('/logo/digipay2.png');
-  filter: brightness(1.2);
+  filter: brightness(1.5);
 }
 
 .li-logo5 {
@@ -74,7 +74,7 @@ defineProps()
 }
 .li-logo5:hover {
   background-image: url('/logo/nobitex2.png');
-  filter: brightness(1.2);
+  filter: brightness(1.5);
 }
 
 .li-logo6 {
@@ -82,6 +82,9 @@ defineProps()
 }
 .li-logo6:hover {
   background-image: url('/logo/finnotech2.png');
-  filter: brightness(1.2);
+  filter: brightness(1.5);
 }
+
+
+
 </style>
