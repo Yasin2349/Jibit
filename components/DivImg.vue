@@ -1,9 +1,8 @@
 <template>
   <div
     class="section-wrapper w-full h-[700px] flex justify-center items-center
-           bg-[url('/bg_desktop.png')] bg-cover bg-bottom
-           bg-gradient-to-br from-[#d8dce2] via-[#f9fafd] to-[#f9fafd]
-           pt-20 pb-20 relative text-[#1a2d4b]"
+           bg-cover bg-bottom
+           pt-20 pb-20 relative text-[#1a2d4b] back"
   >
     <div class="w-3/5 h-full flex justify-center items-center">
       <img
@@ -86,5 +85,8 @@ onMounted(async () => {
 }
 .font-vazir3 {
   font-family: Vazir3, sans-serif;
+}
+.back{
+  background-image: url('/bg_desktop.png') , linear-gradient(to bottom right , #bcd4fd , #f9fafd , #f9fafd);
 }
 </style>
