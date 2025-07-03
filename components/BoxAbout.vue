@@ -1,29 +1,30 @@
 <template>
-  <div class="w-full h-[260px] mt-[110px]">
-    <ul class="h-full flex justify-center items-center mx-auto">
+  <div class="w-full mt-[110px] div-about">
+    <ul class="flex flex-wrap justify-center items-start mx-auto ul-btns mb-[50px]">
       <li
-        v-for="(item, idx) in items"
-        :key="idx"
-        class="w-[280px] h-[96%] mx-2.5 bg-white rounded-[15px]
-               shadow-[0_3px_2px_rgb(161,161,161)] list-none rtl"
-      >
+  v-for="(item, idx) in items"
+  :key="idx"
+  class="w-[280px] min-h-[235px] mx-2.5 bg-white rounded-[15px]
+         shadow-[0_3px_2px_rgb(161,161,161)] list-none rtl li-btns mt-[25px] flex flex-col justify-start"
+>
         <div
           class="w-[55px] h-[55px] mt-[30px] mr-[30px]
-                 bg-center bg-cover"
+                 bg-center bg-cover div-icon"
           :style="{ backgroundImage: `url(${item.icon})` }"
         ></div>
         <p class="w-[90%] pr-[10%] text-right text-[20px]
-                  text-[#303c4f] font-vazir leading-[55px]">
+                  text-[#303c4f] font-vazir leading-[55px] p-title">
           {{ item.title }}
         </p>
         <p class="w-[90%] text-right mr-[10%] text-[15px]
-                  font-vazir2 font-bold text-[#697281]">
+                  font-vazir2 font-bold text-[#697281] p-text">
           <span v-html="item.text"></span>
         </p>
       </li>
     </ul>
   </div>
 </template>
+
 
 <script setup>
 const items = [
@@ -75,4 +76,32 @@ const items = [
 .rtl {
   direction: rtl;
 }
+@media (max-width: 1024px) {
+  .li-btns {
+    width: 45%;
+  }
+}
+
+/* ======================= */
+/* Media Query برای موبایل */
+/* ======================= */
+@media (max-width: 640px) {
+  .li-btns {
+    width: 100%;
+  }
+
+  .p-title {
+    font-size: 18px;
+  }
+
+  .p-text {
+    font-size: 14px;
+  }
+
+  .div-icon {
+    width: 45px;
+    height: 45px;
+  }
+}
 </style>
+

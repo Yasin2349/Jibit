@@ -30,12 +30,12 @@ defineProps()
 <style scoped>
 
 
-/* RTL helper */
+
 .rtl {
   direction: rtl;
 }
 
-/* Logo backgrounds */
+
 
 .li-logo1 {
   background-image: url('/logo/snapp.png');
