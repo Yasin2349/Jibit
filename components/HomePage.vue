@@ -6,7 +6,7 @@
   <AboutSer />
   <ServicesSite />
 
-  <div class="w-11/12 max-w-5xl h-auto mx-auto flex flex-col sm:flex-row items-end mt-0 mb-11 font-vazir">
+  <div class="w-11/12 max-w-5xl h-auto mx-auto flex flex-col sm:flex-row items-end mt-0 mb-11 font-vazir justify-end pr-[30px]">
     <div class="w-full sm:w-auto">
       <p class="w-full text-[24px] sm:text-[32px] text-[#303c4f] text-right leading-[40px] sm:leading-[85px]">
         تکیه‌گاه کسب و کارها
@@ -18,7 +18,7 @@
     </div>
   </div>
 
-  <div class="about3 flex flex-col sm:flex-row justify-center items-center w-11/12 max-w-5xl h-auto sm:h-[320px] mx-auto gap-4">
+  <div class="about3 flex flex-col sm:flex-row justify-center items-center w-11/12 max-w-5xl h-auto sm:h-[300px] mx-auto gap-4">
     <div
       class="w-full sm:w-1/2 h-auto sm:h-full rounded-[15px] shadow-md
              bg-[url('https://jibit.ir/wp-content/themes/jibit/images/home2/bg_big_numbers_left.svg')]
@@ -26,7 +26,7 @@
     >
       <div
         class="w-[85px] h-[85px] bg-white rounded-[15px] shadow-md
-               mt-12 mr-auto relative"
+               mt-8 mr-[3%] ml-auto relative"
       >
         <div
           class="w-1/2 h-1/2
@@ -52,7 +52,7 @@
     >
       <div
         class="w-[85px] h-[85px] bg-white rounded-[15px] shadow-md
-               mt-12 mr-auto relative"
+               mt-8 mr-[3%] ml-auto relative"
       >
         <div
           class="w-1/2 h-1/2
@@ -85,9 +85,9 @@
         با ایجاد حساب کاربری از خدمات جیبیت برای رشد و ارتقا فرآیند و عملیات مالی کسب و کارتان استفاده کنید.
       </p>
       <button
-        class="mt-5 w-[170px] h-[50px] bg-[#226ce9] border border-[#226ce9]
-               text-white text-sm rounded-md font-vazir3 hover:bg-[#2247e9]
-               transition"
+        class="mt-5 w-[160px] h-[42px] font-Vazir bg-[#226ce9] border border-[#226ce9]
+               text-white text-sm rounded-md hover:bg-[#2247e9]
+               transition btns"
       >
         ساخت حساب کاربری &gt;
       </button>
@@ -98,9 +98,9 @@
         برای ایجاد بسته اختصاصی کسب و کار‌تان با ما تماس بگیرید.
       </p>
       <button
-        class="mt-5 w-[170px] h-[50px] border border-gray-400
-               text-black text-sm rounded-md font-vazir3 hover:bg-gray-200
-               transition"
+        class="mt-5 w-[170px] h-[42px] border border-gray-300 
+               text-gray-600 text-sm rounded-md font-vazir3 hover:bg-gray-200
+               transition btns"
       >
         تماس با تیم فروش &gt;
       </button>
@@ -133,5 +133,8 @@ import ServicesSite from './ServicesSite.vue';
 }
 .rtl {
   direction: rtl;
+}
+.btns{
+  font-family: Vazir3;
 }
 </style>

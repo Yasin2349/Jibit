@@ -1,7 +1,8 @@
 <template>
   <div class="w-full h-[80px] flex items-center">
-    <ul class="w-full flex justify-center items-center rtl">
-      <li
+    <ul class="w-full flex justify-center items-center rtl flex-wrap">
+      <div style="display: flex; width: 330px;" class="div-row1">
+        <li
         class="w-[110px] h-[30px] mx-auto bg-cover bg-bottom bg-no-repeat transition duration-700 ease-in-out li-logo1"
       ></li>
       <li
@@ -10,7 +11,9 @@
       <li
         class="w-[110px] h-[30px] mx-auto bg-cover bg-bottom bg-no-repeat transition duration-700 ease-in-out li-logo3"
       ></li>
-      <li
+      </div>
+      <div style="display: flex; justify-content: center;width: 330px;align-items: center;" class="div-row2">
+        <li
         class="w-[110px] h-[30px] mx-auto bg-cover bg-bottom bg-no-repeat transition duration-700 ease-in-out li-logo4"
       ></li>
       <li
@@ -19,6 +22,8 @@
       <li
         class="w-[110px] h-[30px] mx-auto bg-cover bg-bottom bg-no-repeat transition duration-700 ease-in-out li-logo6"
       ></li>
+      </div>
+      
     </ul>
   </div>
 </template>
@@ -28,15 +33,19 @@ defineProps()
 </script>
 
 <style scoped>
-
-
-
+@media (max-width: 600px) {
+    .div-row1 {
+      width: 500px !important;
+      margin-top: 40px;
+    }
+    .div-row2 {
+      width: 500px !important;
+      margin-top: 25px;
+    }
+}
 .rtl {
   direction: rtl;
 }
-
-
-
 .li-logo1 {
   background-image: url('/logo/snapp.png');
 }

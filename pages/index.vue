@@ -1,11 +1,10 @@
 <template>
   <div>
-    <MyMenu />
     <HomePage />
+    <h1>osjdaposjdo</h1>
   </div>
 </template>
 
 <script setup>
-import MyMenu from '~/components/MyMenu.vue'
-import HomePage from '~/components/HomePage.vue'
+
 </script>

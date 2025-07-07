@@ -2,7 +2,7 @@
   <div
     class="section-wrapper w-full h-[700px] flex justify-center items-center
            bg-cover bg-bottom
-           pt-20 pb-20 relative text-[#1a2d4b] back section-wrapper-responsive"
+           pt-20 pb-20 relative text-[#1a2d4b] z-1 back section-wrapper-responsive"
   >
     <div class="w-3/5 h-full flex justify-center items-center image-container-responsive">
       <img
@@ -62,7 +62,7 @@ onMounted(async () => {
 })
 </script>
 
-<style scoped>
+<style>
 @font-face {
   font-family: Vazir;
   src: url('~/public/vazir-Bold.woff') format('woff'),
@@ -134,4 +134,14 @@ onMounted(async () => {
     margin-top: 0 !important;
   }
 }
+
+@media (max-width: 600px) {
+  .title-responsive {
+    font-size: 28px !important;
+  }
+  .button-responsive{
+    font-size: 15px !important;
+  }
+}
+
 </style>

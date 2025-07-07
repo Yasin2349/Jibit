@@ -5,7 +5,7 @@
   </head>
   <div>
     <MyMenu></MyMenu>
-    <router-view></router-view>
+    <router-view ></router-view>
   </div>
 </template>
 <script>

@@ -133,6 +133,15 @@ export default {
   font-family: Vazir3;
   src: url(../public/Vazir-Medium.ttf);
 }
+
+@media screen and (max-width: 600px) {
+  .div2{
+    height: 350px !important;
+  }
+  .div111{
+    width: 98%;
+  }
+}
 .div111 {
   width: 80%;
   height: 610px;
@@ -224,7 +233,7 @@ transform: translateX(100%);
 }
 .slide-right-leave-to {
     transform: translateX(-100%);
-  opacity: 0;
+    opacity: 0;
 }
 .pagee1{
     height: 100%;

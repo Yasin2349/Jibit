@@ -91,11 +91,11 @@ const items = [
   }
 
   .p-title {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .p-text {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .div-icon {

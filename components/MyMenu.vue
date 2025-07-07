@@ -1,96 +1,100 @@
   <template>
-    <div :class="['div1', { scrolled: isScrolled } ,{hidenmenu : isLoginPage}]">
-      <li class="li_logo">
-        <NuxtLink to="/"><div class="logo"></div></NuxtLink>
+  <div :class="['div1', { scrolled: isScrolled, hidenmenu: isLoginPage }]">
+    
+    <li class="li_logo">
+      <NuxtLink to="/"><div class="logo"></div></NuxtLink>
+    </li>
+
+    
+    <ul :class="['ul-menu2', { open: shmenu }]" id="ul-menu2">
+      <li>
+        <button type="button" style="font-size: 14px; font-family: Vazir3; color: rgb(88, 88, 88);">
+          سرویس‌ها
+        </button>
       </li>
-      <ul :class="['ul-menu2', {'ul-menu2.opne' : shmenu}]" id="ul-menu2">
-        <li><button type="submit" style=" font-size: 14px;font-family: Vazir3;color: rgb(88, 88, 88);">سرویس‌ها</button></li>
-        <div class='services2'>
-          <ul class="ul_services" style="border-bottom: 1px solid rgb(229 212 212);">
-            <li><NuxtLink to="/DargahP/DargahPardakht">درگاه پرداخت <div class="logo1"></div></NuxtLink></li>
-            <li><NuxtLink to="/DargahP/EsterdadVagh">استرداد وجه <div class="logo2"></div></NuxtLink></li>
-            <li><NuxtLink to="/DargahP/VarizSH">واریز شناسه دار<div class="logo3"></div></NuxtLink></li>
-            <li><a href="#">تسویه و انتقال وجه <div class="logo4"></div></a></li>
-            <li><a href="#">سرویس های استعلامی <div class="logo5"></div></a></li>
-            <li><a href="#">احراز هویت بایومتریک <div class="logo6"></div></a></li>
-          </ul>
+      <div class="services2">
+        <ul class="ul_services" style="border-bottom: 1px solid rgb(229 212 212);">
+          <li><NuxtLink to="/DargahP/DargahPardakht">درگاه پرداخت <div class="logo1"></div></NuxtLink></li>
+          <li><NuxtLink to="/DargahP/EsterdadVagh">استرداد وجه <div class="logo2"></div></NuxtLink></li>
+          <li><NuxtLink to="/DargahP/VarizSH">واریز شناسه دار<div class="logo3"></div></NuxtLink></li>
+          <li><a href="#">تسویه و انتقال وجه <div class="logo4"></div></a></li>
+          <li><a href="#">سرویس‌های استعلامی <div class="logo5"></div></a></li>
+          <li><a href="#">احراز هویت بایومتریک <div class="logo6"></div></a></li>
+        </ul>
+      </div>
+      <li><NuxtLink to="/ContantPage" class="contant-btn">ارتباط با ما</NuxtLink></li>
+      <li><NuxtLink to="/blogs" class="blog-btn">بلاگ</NuxtLink></li>
+    </ul>
+
+    
+    <ul class='ul_menu'>
+      <li class="li-sh">
+        <button type="button" @click="menuopen" @blur="menuclose" style="cursor: pointer; font-family: Vazir3; color: rgb(88, 88, 88);">
+          سرویس‌ها <i class="fas fa-chevron-down"></i>
+        </button>
+      </li>
+      <div :class="['services', { open: menuservices }]">
+        <ul class="ul_services">
+          <li><NuxtLink to="/DargahP/DargahPardakht">درگاه پرداخت <div class="logo1"></div></NuxtLink></li>
+          <li><NuxtLink to="/DargahP/EsterdadVagh">استرداد وجه <div class="logo2"></div></NuxtLink></li>
+          <li><NuxtLink to="/DargahP/VarizSH">واریز شناسه دار<div class="logo3"></div></NuxtLink></li>
+          <li><a href="#">تسویه و انتقال وجه <div class="logo4"></div></a></li>
+          <li><a href="#">سرویس‌های استعلامی <div class="logo5"></div></a></li>
+          <li><a href="#">احراز هویت بایومتریک <div class="logo6"></div></a></li>
+        </ul>
+      </div>
+      <li class="li-sh"><NuxtLink to="/ContantPage">ارتباط با ما</NuxtLink></li>
+      <li class="li-sh"><NuxtLink to="/blogs">بلاگ</NuxtLink></li>
+      <li class="li_login li-sh">
+        <NuxtLink to="/LoginRegister4">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;"></i></NuxtLink>
+      </li>
+      <li>
+        <div>
+          <i :class="['fas fa-bars', { show: shhamber }, { show2: shzarb }]" style="font-size: 30px;" @click="toggleMainMenu" id="hamber"></i>
+          <!-- <i :class="['fas fa-xmark', { show: shzarb }]" style="font-size: 30px;" @click="closeMainMenu" id="zarb"></i> -->
         </div>
-        <li><NuxtLink to="/ContantPage" class="contant-btn">ارتباط با ما</NuxtLink></li>
-        <li><NuxtLink to="/blogs" class="blog-btn">بلاگ</NuxtLink></li>
-      </ul>
-      <ul class="ul_menu">
-        <li><button type="submit" @click="menuopen()" @focusout="menuclose()" style="cursor: pointer;font-family: Vazir3;color: rgb(88, 88, 88);">سرویس‌ها         <i class="fas fa-chevron-down"></i></button></li>
-        <div :class="['services', { open: menuservices }]">
-          <ul class="ul_services">
-            <li><NuxtLink to="/DargahP/DargahPardakht">درگاه پرداخت <div class="logo1"></div></NuxtLink></li>
-            <li><NuxtLink to="/DargahP/EsterdadVagh">استرداد وجه <div class="logo2"></div></NuxtLink></li>
-            <li><NuxtLink to="/DargahP/VarizSH">واریز شناسه دار<div class="logo3"></div></NuxtLink></li>
-            <li><a href="#">تسویه و انتقال وجه <div class="logo4"></div></a></li>
-            <li><a href="#">سرویس های استعلامی <div class="logo5"></div></a></li>
-            <li><a href="#">احراز هویت بایومتریک <div class="logo6"></div></a></li>
-          </ul>
-        </div>
-        <li><NuxtLink to="/ContantPage">ارتباط با ما</NuxtLink></li>
-        <li><NuxtLink to="/blogs">بلاگ</NuxtLink></li>
-        <li class="li_login"><NuxtLink to="/LoginRegister4">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;"></i></NuxtLink></li>
-        <li><div><i class="fas fa-bars" style="font-size: 30px;" @click="toggleMainMenu()" id="hamber" ></i><i class="fas fa-xmark" style="font-size: 30px;" @click="closeMainMenu()" id="zarb"></i></div></li>
-        
-      </ul>
-    </div>
-  </template>
-  <script setup>
-  import { ref, onMounted, onUnmounted, watch } from 'vue'
-  import { useRoute } from 'vue-router'
+      </li>
+    </ul>
+  </div>
+</template>
 
-  const menuservices = ref(false)
-  const isScrolled = ref(false)
+<script setup>
+import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { useRoute } from 'vue-router'
 
-  function menuopen() {
-    menuservices.value = !menuservices.value
-  }
+const menuservices = ref(false)
+const isScrolled = ref(false)
+const route = useRoute()
+const isLoginPage = ref(false)
+const shmenu = ref(false)
+const shhamber = ref(true)
+const shzarb = ref(false)
 
-  function menuclose() {
-    menuservices.value = false
-  }
+function menuopen() {
+  menuservices.value = true
+}
+function menuclose() {
+  menuservices.value = false
+}
+function handleScroll() {
+  isScrolled.value = window.scrollY > 50
+}
+function toggleMainMenu() {
+  shmenu.value = !shmenu.value
+}
 
-  function handleScroll() {
-    isScrolled.value = window.scrollY > 50
-  }
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+  isLoginPage.value = route.fullPath.includes('LoginRegister4')
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 
-  const route = useRoute()
-  const isLoginPage = ref(false)
-
-
-  isLoginPage.value = route.path.includes('LoginRegister4')
-
-
-  watch(() => route.path, (newPath) => {
-    isLoginPage.value = newPath.includes('LoginRegister4')
-  })
-
-  onMounted(() => {
-    window.addEventListener('scroll', handleScroll)
-  })
-
-  onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll)
-  })
-  
-  var shmenu = ref(false)
-  function toggleMainMenu() {
-    shmenu = true
-
-    document.getElementById("hamber").style.display = "none"
-    document.getElementById("zarb").style.display = "block"
-  }
-  function closeMainMenu() {
-    shmenu.value = false
-    shhamber.valuec = false
-    document.getElementById("hamber").style.display = "block"
-    document.getElementById("zarb").style.display = "none"
-    shmenu.value = false;
-  }
-  </script>
+watch(() => route.fullPath, (newPath) => {
+  isLoginPage.value = newPath.includes('LoginRegister4')
+})
+</script>
 
   <style scoped>
   .div1 {
@@ -271,8 +275,8 @@
     top: 55px;
     left: 10%;
     padding: 18px;
-    transition: all ease 0.5s;
-    display: none;
+    transition: all 0.4s ease-in-out;
+    visibility: hidden;
     overflow: hidden;
   }
   .ul-menu2.open{
@@ -284,8 +288,9 @@
     top: 55px;
     left: 10%;
     padding: 18px;
-    transition: all ease 0.5s;
-    display: block;
+    transition: all ease-in-out 0.4s;
+    box-shadow: 0px 10px 15px rgb(224, 224, 224);
+    visibility: visible;
     overflow: hidden;
   }
   .contant-btn{
@@ -307,11 +312,47 @@
     color: rgb(99, 99, 99);
     padding: 15px;
   }
-  #zarb{
+  .fas.fa-bars{
+    transition: all ease-in-out 0.4s;
+    display: none;
+    visibility: hidden;
+  }
+  .fas.fa-xmark{
+    transition: all ease-in-out 0.4s;
     display: none;
   }
-  #hamber{
-    display: block;
+  .fas.fa-bars.show{
+    display: inline;
+    z-index: 7;
   }
-
+  .fas.fa-bars.show2{
+    font-size: 0px;
+    z-index: 00;
+  }
+  .fas.fa-xmark.show {
+    display: inline;
+  }
+  @media screen and (max-width: 1259px) {
+      .ul_menu li{
+        margin-right: 35px;
+      }
+      @media screen and (max-width : 1149px) {
+        @media screen and (max-width : 1000px){
+          .li-sh {
+            display: none;
+          }
+          .ul_menu{
+            justify-content: left;
+            padding-left: 10%;
+          }
+          .fas.fa-bars{
+            visibility: visible;
+          }
+        }
+        .ul_menu li{
+          margin-right: 24px;
+        }
+      }
+  }
+  
   </style>
