@@ -6,7 +6,7 @@
   <AboutSer />
   <ServicesSite />
 
-  <div class="w-11/12 max-w-5xl h-auto mx-auto flex flex-col sm:flex-row items-end mt-0 mb-11 font-vazir justify-end pr-[30px]">
+  <div class="w-11/12 max-w-5xl h-auto mx-auto flex flex-col sm:flex-row items-end mt-0 mb-11 font-vazir justify-end pr-[30px] p-text-res-tekye">
     <div class="w-full sm:w-auto">
       <p class="w-full text-[24px] sm:text-[32px] text-[#303c4f] text-right leading-[40px] sm:leading-[85px]">
         تکیه‌گاه کسب و کارها
@@ -77,33 +77,51 @@
            bg-white bg-[url('//jibit.ir/wp-content/themes/jibit/images/transferor/trynow-background.png')]
            bg-top bg-center bg-no-repeat bg-[length:50%] shadow-[0_8.64px_28.8px_rgba(0,0,0,0.06)] flex flex-col sm:flex-row justify-center items-center rtl mb-[175px] gap-8 sm:gap-0"
   >
-    <div class="w-full sm:w-3/5 pr-0 sm:pr-[12%] pl-0 sm:pl-[2%]">
-      <p class="text-[22px] sm:text-[28px] font-vazir text-start pt-5 sm:pt-[20px] pl-0 sm:pl-[10%] leading-[40px] sm:leading-[70px]">
+    <div class="w-full sm:w-3/5 pr-0 sm:pr-[12%] pl-0 sm:pl-[2%] box1-about-s">
+      <p class="text-[22px] sm:text-[28px] font-vazir text-start pt-5 sm:pt-[20px] pl-0 sm:pl-[10%] leading-[40px] sm:leading-[70px] p-title">
         استفاده از سرویس‌های جیبیت
       </p>
-      <p class="text-[14px] sm:text-[17px] font-vazir3 text-[#797979] text-start">
+      <p class="text-[14px] sm:text-[17px] font-vazir3 text-[#797979] text-start text-start2">
         با ایجاد حساب کاربری از خدمات جیبیت برای رشد و ارتقا فرآیند و عملیات مالی کسب و کارتان استفاده کنید.
       </p>
       <button
-        class="mt-5 w-[160px] h-[42px] font-Vazir bg-[#226ce9] border border-[#226ce9]
-               text-white text-sm rounded-md hover:bg-[#2247e9]
-               transition btns"
-      >
-        ساخت حساب کاربری &gt;
-      </button>
+          class="mt-5 w-[160px] h-[42px] font-Vazir bg-[#226ce9] border border-[#226ce9]
+                text-white text-sm rounded-md hover:bg-[#2247e9]
+                transition btns1" 
+        >
+          ساخت حساب کاربری &gt;
+        </button>
+      <div style="width: 100%; display: flex; justify-content: center;margin-top: 35px;">
+        <button
+          class="mt-5 w-[160px] h-[42px] font-Vazir bg-[#226ce9] border border-[#226ce9]
+                text-white text-sm rounded-md hover:bg-[#2247e9]
+                transition btns2"
+        >
+          ساخت حساب کاربری &gt;
+        </button>
+      </div>
     </div>
-
     <div class="w-full sm:w-2/5 pr-0 sm:pr-[6%]">
-      <p class="text-[14px] sm:text-[17px] font-vazir3 text-[#797979] text-start pt-5 sm:pt-[20px] mt-14 sm:mt-[60px] pl-0 sm:pl-[40%]">
+      <p class="text-[14px] sm:text-[17px] font-vazir3 text-[#797979] text-start pt-5 sm:pt-[20px] mt-14 sm:mt-[60px] pl-0 sm:pl-[40%] text-start2">
         برای ایجاد بسته اختصاصی کسب و کار‌تان با ما تماس بگیرید.
       </p>
       <button
-        class="mt-5 w-[170px] h-[42px] border border-gray-300 
-               text-gray-600 text-sm rounded-md font-vazir3 hover:bg-gray-200
-               transition btns"
-      >
-        تماس با تیم فروش &gt;
-      </button>
+          class="mt-5 w-[170px] h-[42px] border border-gray-300 
+                text-gray-600 text-sm rounded-md font-vazir3 hover:bg-gray-200
+                transition btns1"
+          >
+          تماس با تیم فروش &gt;
+        </button>
+      <div style="width: 100%; display: flex; justify-content: center;margin-top: 35px;">
+        <button
+          class="mt-5 w-[170px] h-[42px] border border-gray-300 
+                text-gray-600 text-sm rounded-md font-vazir3 hover:bg-gray-200
+                transition btns2"
+          >
+          تماس با تیم فروش &gt;
+        </button>
+      </div>
+
     </div>
   </div>
 
@@ -136,5 +154,41 @@ import ServicesSite from './ServicesSite.vue';
 }
 .btns{
   font-family: Vazir3;
+}
+@media screen and (max-width: 612px) {
+  .p-text-res-tekye{
+    margin-top: 75px;
+  }
+  .about-services{
+    height: 500px !important;
+  }
+  .box1-about-s{
+    height: 250px !important;
+  }
+  .p-title{
+    font-size: 25px !important;
+    text-align: center !important;
+  }
+  .text-start2{
+    font-size: 15px !important;
+    width: 70%;
+    margin: auto;
+    text-align: center !important;
+  }
+  .btns2{
+    display: block !important;
+    margin: auto !important;
+  }
+  .btns1{
+    display: none !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .p-title{
+    line-height: 50px;
+  }
+}
+.btns2{
+  display: none;
 }
 </style>

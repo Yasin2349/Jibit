@@ -25,7 +25,6 @@
   </div>
 </template>
 
-
 <script setup>
 const items = [
   {
@@ -95,9 +94,8 @@ const items = [
   }
 
   .p-text {
-    font-size: 18px;
+    font-size: 15px;
   }
-
   .div-icon {
     width: 45px;
     height: 45px;

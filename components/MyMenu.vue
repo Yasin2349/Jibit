@@ -50,7 +50,7 @@
       </li>
       <li>
         <div>
-          <i :class="['fas fa-bars', { show: shhamber }, { show2: shzarb }]" style="font-size: 30px;" @click="toggleMainMenu" id="hamber"></i>
+          <i :class="['fas fa-bars', { show: shhamber }, { show2: shzarb }]" style="font-size: 30px;" @click="toggleMainMenu" @mouseout="toggleMainMenu" id="hamber"></i>
           <!-- <i :class="['fas fa-xmark', { show: shzarb }]" style="font-size: 30px;" @click="closeMainMenu" id="zarb"></i> -->
         </div>
       </li>

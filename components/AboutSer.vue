@@ -1,7 +1,7 @@
 <template>
   <div class="w-4/5 h-[250px] mx-auto flex items-end">
     <div class="w-full">
-      <p class="w-full text-[32px] text-[#303c4f] text-right leading-[85px] font-vazir">
+      <p class="w-full text-[32px] text-[#303c4f] text-right leading-[85px] font-vazir title-jibit">
         سرویس های جیبیت
       </p>
       <p class="w-full text-right text-[#697281] font-vazir3 rtl">
@@ -51,14 +51,15 @@
     width: 95% !important;
   }
   .text-\[32px\] {
-    font-size: 20px !important;
+    font-size: 25px !important;
     line-height: 1.2 !important;
   }
   .leading-\[85px\] {
     line-height: 1.2 !important;
   }
   .font-vazir3 {
-    font-size: 12px !important;
+    font-size: 15px !important;
+    margin-top: 25px;
   }
 }
 

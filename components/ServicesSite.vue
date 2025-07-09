@@ -19,7 +19,7 @@
         <div class="page" :key="shTab">
           
 
-          <!-- tab2: تسویه و انتقال وجه -->
+          
           <div v-if="shTab === 'tab1'" class="pagee1">
             <div class="img-pag5"></div>
             <div class="document-page1">
@@ -88,6 +88,58 @@
       </transition>
     </div>
   </div>
+  <div class="div112">
+    <div class="page11">
+      <div class="document-page1">
+        <div class="div-logo-page1"><div class="logo2"><div class="logo11"></div></div></div>
+        <div class="div-title-page1"><H3 class="title">درگاه پرداخت</H3></div>
+        <div class="div-text-page1"><p class="text">
+          جیبیت به عنوان یکی از بزرگ‌ترین پرداخت‌یار‌های رسمی شاپرک (بانک مرکزی)، با ارائه درگاه پرداخت با قابلیت اتصال به درگاه‌های متنوع و مسیردهی هوشمند بین PSPها در راستای پایداری در سیستم پرداخت و افزایش درآمد در کنار کسب و کارها ایستاده است.
+        </p></div>
+        <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+      </div>
+    </div>
+    <div class="page22">
+      <div class="document-page1">
+              <div class="div-logo-page1"><div class="logo2"><div class="logo44"></div></div></div>
+              <div class="div-title-page1"><H3 class="title">تسویه و انتقال وجه</H3></div>
+              <div class="div-text-page1"><p class="text">
+                امکان انتقال وجوه در وب‌سرویس جیبیت به شیوه‌های متنوع برای صاحبان کسب و کار فراهم شده است. امکان جابه‌جایی وجوه از مبدا پلتفرم جیبیت به حساب مشتریان، همکاران و شرکای تجاری شما در تمامی بانک‌ها امکان‌پذیر است.
+              </p></div>
+              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+            </div>
+    </div>
+    <div class="page33">
+      <div class="document-page1">
+              <div class="div-logo-page1"><div class="logo2"><div class="logo33"></div></div></div>
+              <div class="div-title-page1"><H3 class="title">واریز شناسه دار</H3></div>
+              <div class="div-text-page1"><p class="text">
+                سرویس واریز شناسه‌دار این امکان را به مشتریان کسب و کار‌ها می‌دهد تا بدون محدودیت در مبلغ تراکنش و با انتخاب روش مناسب از خدمات واریز وجه و پرداخت استفاده کنند.
+              </p></div>
+              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+            </div>
+    </div>
+    <div class="page44">
+      <div class="document-page1">
+              <div class="div-logo-page1"><div class="logo2"><div class="logo22"></div></div></div>
+              <div class="div-title-page1"><H3 class="title">سرویس های استعلامی</H3></div>
+              <div class="div-text-page1"><p class="text">
+                با وب‌سرویس استعلامی جیبیت کسب و کار‌ها می‌توانند با ایجاد خدماتی نوین در سنجش اصالت اطلاعات بانکی و شناسایی هویت اشخاص تجربه‌ای جدید را برای مشتریان خود به وجود آورند.
+              </p></div>
+              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+            </div>
+    </div>
+    <div class="page55">
+      <div class="document-page1">
+              <div class="div-logo-page1"><div class="logo2"><div class="logo11"></div></div></div>
+              <div class="div-title-page1"><H3 class="title">درگاه پرداخت</H3></div>
+              <div class="div-text-page1"><p class="text">
+                جیبیت به عنوان یکی از بزرگ‌ترین پرداخت‌یار‌های رسمی شاپرک (بانک مرکزی)، با ارائه درگاه پرداخت با قابلیت اتصال به درگاه‌های متنوع و مسیردهی هوشمند بین PSPها در راستای پایداری در سیستم پرداخت و افزایش درآمد در کنار کسب و کارها ایستاده است.
+              </p></div>
+              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+            </div>
+    </div>
+  </div>
 </template>
 
 
@@ -134,12 +186,101 @@ export default {
   src: url(../public/Vazir-Medium.ttf);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .div2{
-    height: 350px !important;
+    height: 435px !important;
   }
   .div111{
-    width: 98%;
+    width: 89% !important;
+    height: 650px !important;
+    margin-bottom: 25px;
+  }
+  .radio-site{
+    height: 80px !important;
+    font-size: 16px !important;
+    border-radius: 10px !important;
+  }
+  .divbtns{
+    height: 80px !important;
+  }
+  .text{
+    font-size: 15px !important;
+  }
+  .document-page1{
+    width: 60% !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .div112{
+    display: block !important;
+  }
+  .div111{
+    display: none !important;
+  }
+  .document-page1{
+    width: 80% !important;
+  }
+  .page11{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .page22{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .page33{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .page44{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .page55{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .div-logo-page1{
+    margin-top: 4% !important;
+  }
+  .div-text-page1{
+    height: 120px !important;
+  }
+  .w-auto{
+    margin-top: 25px !important;
+  }
+}
+@media screen and (max-width: 510px) {
+  .document-page1{
+    width: 95% !important;
+  }
+}
+@media screen and (max-width: 433px) {
+  .div-logo-page1{
+    padding-right: 5% !important;
+  }
+  .title{
+    padding-right: 5% !important;
+  }
+  .text{
+    padding-right: 5% !important;
+  }
+  .btn-more{
+    margin: auto;
+  }
+  .div-btn-more-page1{
+    padding: 0% !important;
+  }
+}
+@media screen and (max-width: 367px) {
+  .text{
+    font-size: 13px !important;
   }
 }
 .div111 {
@@ -472,5 +613,51 @@ transform: translateX(100%);
   padding-right: 65px;
   font-family: Vazir3;
   direction: rtl;
+}
+.div112{
+  width: 95%;
+  margin: auto;
+  margin-top: 25px;
+  display: none;
+}
+.page11{
+  width: 100%;
+  height: 350px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 8px rgb(212, 212, 212);
+  margin-bottom: 15px;
+}
+.page22{
+  width: 100%;
+  height: 350px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 8px rgb(212, 212, 212);
+  margin-bottom: 15px;
+}
+.page33{
+  width: 100%;
+  height: 350px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 8px rgb(212, 212, 212);
+  margin-bottom: 15px;
+}
+.page44{
+  width: 100%;
+  height: 350px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 8px rgb(212, 212, 212);
+  margin-bottom: 15px;
+}
+.page55{
+  width: 100%;
+  height: 350px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 8px rgb(212, 212, 212);
+  margin-bottom: 15px;
 }
 </style>

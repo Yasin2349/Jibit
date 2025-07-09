@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-[80px] flex items-center">
     <ul class="w-full flex justify-center items-center rtl flex-wrap">
-      <div style="display: flex; width: 330px;" class="div-row1">
+      <div style="display: flex; width: 530px;" class="div-row1">
         <li
         class="w-[110px] h-[30px] mx-auto bg-cover bg-bottom bg-no-repeat transition duration-700 ease-in-out li-logo1"
       ></li>
@@ -12,7 +12,7 @@
         class="w-[110px] h-[30px] mx-auto bg-cover bg-bottom bg-no-repeat transition duration-700 ease-in-out li-logo3"
       ></li>
       </div>
-      <div style="display: flex; justify-content: center;width: 330px;align-items: center;" class="div-row2">
+      <div style="display: flex; justify-content: center;width: 530px;align-items: center;" class="div-row2">
         <li
         class="w-[110px] h-[30px] mx-auto bg-cover bg-bottom bg-no-repeat transition duration-700 ease-in-out li-logo4"
       ></li>
@@ -41,6 +41,30 @@ defineProps()
     .div-row2 {
       width: 500px !important;
       margin-top: 25px;
+    }
+    .li-logo1{
+      width: 85px;
+      height: 25px;
+    }
+    .li-logo2{
+      width: 85px;
+      height: 25px;
+    }
+    .li-logo3{
+      width: 85px;
+      height: 25px;
+    }
+    .li-logo4{
+      width: 85px;
+      height: 25px;
+    }
+    .li-logo5{
+      width: 85px;
+      height: 25px;
+    }
+    .li-logo6{
+      width: 85px;
+      height: 25px;
     }
 }
 .rtl {
