@@ -1,0 +1,40 @@
+@media screen and (max-width: 960px){
+    .gif{
+        display: none;
+    }
+    .div1s{
+        margin: auto !important;
+        margin-right: auto !important;
+        height: 550px !important;
+        width: 500px !important;
+        margin-top: 0px !important;
+    }
+    .input-email{
+        height: 40px !important;
+    }
+    .input-name{
+        height: 40px !important;
+    }
+    .input-name2{
+        height: 40px !important;
+    }
+    .input-name1{
+        height: 40px !important;
+    }
+    .input-pass{
+        height: 40px !important;
+    }
+    .toggle-btn{
+        height: 40px !important;
+    }
+    @media screen and (max-width: 550px){
+        .div1s{
+            width: 380px !important ;
+        }
+        @media screen and (max-width: 500px){
+            .div1s{
+                width: 310px !important ;
+            }
+        }
+    }
+}
