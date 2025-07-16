@@ -24,6 +24,7 @@
     </div>
   </div>
   <p class="p-title-about3">مجموعه مقالات</p>
+  <NuxtLink to="/blog">
   <div class="blog">
     <div class="display">
       <div class="image-blog skeleton"></div>
@@ -36,6 +37,8 @@
     </div>
     </div>
   </div>
+  </NuxtLink>
+  <NuxtLink to="/blog">
   <div class="blog">
     <div class="display">
       <div class="image-blog skeleton" style="background-image: url(https://jibit.ir/wp-content/uploads/2025/06/Frame-1321314624-1.jpg);"></div>
@@ -48,6 +51,8 @@
     </div>
     </div>
   </div>
+  </NuxtLink>
+  <NuxtLink to="/blog">
   <div class="blog">
     <div class="display">
       <div class="image-blog skeleton" style="background-image: url(https://jibit.ir/wp-content/uploads/2025/05/کشورهای-پیشرو-در-eKYC-scaled.png);"></div>
@@ -60,6 +65,8 @@
     </div>
     </div>
   </div>
+  </NuxtLink>
+  <NuxtLink to="/blog">
   <div class="blog">
     <div class="display">
       <div class="image-blog skeleton" style="background-image: url(https://jibit.ir/wp-content/uploads/2025/05/تکنولوژی‌های-کلیدی-eKYC-1-scaled.jpg);"></div>
@@ -72,22 +79,28 @@
     </div>
     </div>
     </div>
-    <div class="blog">
-    <div class="display">
-      <div class="image-blog skeleton" style="background-image: url(https://jibit.ir/wp-content/uploads/2025/05/مقررات-eIDAS-scaled.jpg);"></div>
-    </div>
-    <div class="display2">
-      <div class="about-blog">
-        <p class="p-date-blog skeleton">۱۹ خرداد ۱۴۰۴</p>
-        <p class="p-title-blog skeleton">امضای دیجیتال و امضای الکترونیک چیست؟ راهنمای جامع فناوری، امنیت و قوانین</p>
-        <p class="p-text-blog skeleton">تحول دیجیتال در دهه گذشته سرعتی خیره‌کننده گرفته است و بانک‌ها، دولت‌ها و استارتاپ‌ها ناگزیر شده‌اند فرایندهای کاغذی خود را حذف کنند. یکی از ارکان...</p>
-    </div>
-    </div>
-    </div>
+    </NuxtLink>
+    <NuxtLink to="/blog">
+      <div class="blog">
+        <div class="display">
+          <div class="image-blog skeleton" style="background-image: url(https://jibit.ir/wp-content/uploads/2025/05/مقررات-eIDAS-scaled.jpg);"></div>
+        </div>
+        <div class="display2" >
+          <div class="about-blog">
+            <p class="p-date-blog skeleton">۱۹ خرداد ۱۴۰۴</p>
+            <p class="p-title-blog skeleton">امضای دیجیتال و امضای الکترونیک چیست؟ راهنمای جامع فناوری، امنیت و قوانین</p>
+            <p class="p-text-blog skeleton">تحول دیجیتال در دهه گذشته سرعتی خیره‌کننده گرفته است و بانک‌ها، دولت‌ها و استارتاپ‌ها ناگزیر شده‌اند فرایندهای کاغذی خود را حذف کنند. یکی از ارکان...</p>
+          </div>
+        </div>
+      </div>  
+    
+      
+    </NuxtLink>
     <p class="p-title-about3">به مطالعه ادامه دهید ...</p>
     <div class="display" style="justify-content: right;">
       <input dir="rtl" type="submit" value="مطالعه بیشتر >" class="w-[140px] h-[45px] border border-gray-300 rounded-md text-black-100 text-sm font-vazir3 hover:bg-gray-200 transition mt-[10px] mr-[10%] cursor-pointer" />
     </div>
+
     
   <br>
   <br>
@@ -275,4 +288,135 @@ onMounted(() => {
   0% { transform: translateX(-150%); } 
   100% { transform: translateX(150%); } 
 }
+/* برای تبلت و پایین‌تر */
+@media (max-width: 1024px) {
+  .main-section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image-wrapper {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .main-image {
+    max-width: 100%;
+    height: auto;
+  }
+  .text-wrapper {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 0 15px;
+    text-align: right;
+  }
+  .title {
+    font-size: 28px !important;
+  }
+  .desc {
+    font-size: 16px !important;
+  }
+  .btn-wrapper {
+    justify-content: center !important;
+    margin-top: 15px;
+  }
+  .btn-primary {
+    width: 120px !important;
+    height: 45px !important;
+  }
+  .p-date {
+    font-size: 14px !important;
+  }
+  .p-title-about3 {
+    font-size: 24px !important;
+    margin: 60px 0 30px 0 !important;
+  }
+  .btn-readmore-wrapper {
+    justify-content: center !important;
+    margin: 20px 0 !important;
+  }
+  .btn-secondary {
+    width: 130px !important;
+    height: 40px !important;
+  }
+}
+
+/* موبایل کوچک‌تر و موبایل */
+@media (max-width: 640px) {
+  .main-section {
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-top: 50px !important;
+  }
+  .image-wrapper {
+    margin-bottom: 15px !important;
+  }
+  .main-image {
+    border-radius: 10px !important;
+    max-width: 100% !important;
+  }
+  .text-wrapper {
+    padding: 0 10px !important;
+    max-width: 100% !important;
+  }
+  .title {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+  }
+  .desc {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+  .p-date {
+    font-size: 12px !important;
+  }
+  .btn-wrapper {
+    justify-content: center !important;
+  }
+  .btn-primary {
+    width: 110px !important;
+    height: 40px !important;
+    font-size: 13px !important;
+  }
+  .p-title-about3 {
+    font-size: 20px !important;
+    margin: 40px 0 20px 0 !important;
+  }
+  .btn-readmore-wrapper {
+    justify-content: center !important;
+    margin: 15px 0 !important;
+  }
+  .btn-secondary {
+    width: 120px !important;
+    height: 38px !important;
+    font-size: 13px !important;
+  }
+}
+
+/* موبایل خیلی کوچک (مثلاً گوشی‌های زیر 400px) */
+@media (max-width: 400px) {
+  .title {
+    font-size: 18px !important;
+  }
+  .desc {
+    font-size: 12px !important;
+  }
+  .btn-primary {
+    width: 100px !important;
+    height: 35px !important;
+    font-size: 12px !important;
+  }
+  .btn-secondary {
+    width: 100px !important;
+    height: 35px !important;
+    font-size: 12px !important;
+  }
+  .p-date {
+    font-size: 10px !important;
+  }
+  .p-title-about3 {
+    font-size: 18px !important;
+  }
+}
+
+
 </style>

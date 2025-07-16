@@ -2,7 +2,7 @@
   <div class="w-full h-auto bg-cover bg-no-repeat bg-bottom py-30 flex justify-center items-center relative" 
        style="background-image: url('https://jibit.ir/wp-content/themes/jibit/images/projectx/pattern-right-desktop.svg');">
     <div class="container mx-auto flex flex-col lg:flex-row justify-center items-center">
-      <div class="w-full lg:w-3/5 flex justify-left items-center mb-8 lg:mb-0 ml-0">
+      <div class="w-full lg:w-3/5 flex justify-left items-center mb-8 lg:mb-0 ml-0" style="height: 300px;">
         <img src="https://jibit.ir/wp-content/themes/jibit/images/projectx/main-photo.svg" alt="image not found!" class="w-full max-w-[520px] h-auto mt-6 z-1 object-cover img-1" />
       </div>
       <div class="w-full lg:w-2/5 flex flex-col justify-start text-right px-4">
@@ -11,11 +11,11 @@
             <div class="logo"></div>
           </div>
         </div>
-        <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1a2d4b] mt-4 w-full lg:w-[72%] font-vazir3 title11">
-          افزایش درآمد با<br>درگاه پرداخت اینترنتی جیبیت
+        <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1a2d4b] mt-4 w-full lg:w-[72%] font-vazir3 title11" style="line-height: 50px">
+          درگاه پرداخت رمزارزی برای رشد واقعی کسب‌وکار شما
         </p>
         <p class="w-full lg:w-[72%] text-base sm:text-lg leading-relaxed text-[#4d5768] mt-4 font-vazir2 text-dargah" dir="rtl">
-          جیبیت به عنوان یکی از بزرگ‌ترین پرداخت‌یار‌های رسمی شاپرک (بانک مرکزی)، با ارائه درگاه پرداخت با قابلیت اتصال به درگاه‌های متنوع و مسیردهی هوشمند بین PSPها در راستای پایداری در سیستم پرداخت در کنار کسب و کار‌ها ایستاده است.
+          با درگاه پرداخت XdgPay پرداخت‌های رمزارزی را ساده، سریع و امن دریافت کنید. با پشتیبانی از رمزارزهای متنوع، تسویه هوشمند، و API قدرتمند، راهکاری نوین برای پذیرش پرداخت از سراسر دنیا در اختیار شماست. دیگر نگران تحریم‌ها، محدودیت‌های بانکی یا تاخیرهای تسویه نباشید — XdgPay در کنار رشد شماست.
         </p>
         <div class=" lg:w-[72%] flex flex-col sm:flex-row justify-end items-center mt-10 gap-2 div-btns">
           <input dir="rtl" type="submit" value="تماس با تیم فروش >"
@@ -41,33 +41,33 @@
       <li class="w-full sm:w-[280px] rounded-[15px] h-auto bg-white list-none mx-2.5 direction-rtl shadow-[0_3px_2px_rgb(161,161,161)] p-6 li-box">
         <div class="w-[55px] h-[55px] mt-4 mr-4 bg-center bg-cover"
              style="background-image: url('https://jibit.ir/wp-content/themes/jibit/images/projectx/feat4.svg')"></div>
-        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir leading-[50px]">رفع تقلب در پرداخت</p>
+        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir "> کاهش ریسک پرداخت‌های رمزارزی</p>
         <p class="w-full text-right font-vazir2 text-sm sm:text-base font-bold text-[#697281]">
-          با کنترل بر پرداخت با کارت‌های یک کدملی مشخص، می‌توان میزان تقلب (Fruad) در پرداخت را کاهش داد.
+          با تأیید چندمرحله‌ای XdgPay، تراکنش‌های مشکوک شناسایی و امنیت پرداخت‌ها تضمین می‌شود.
         </p>  
       </li>
       <li class="w-full sm:w-[280px] rounded-[15px] h-auto bg-white list-none mx-2.5 direction-rtl shadow-[0_3px_2px_rgb(161,161,161)] p-6 li-box">
         <div class="w-[55px] h-[55px] mt-4 mr-4 bg-center bg-cover"
              style="background-image: url('https://jibit.ir/wp-content/themes/jibit/images/projectx/feat3.svg')"></div>
-        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir leading-[50px]">زمان ثبت تراکنش‌ها</p>
+        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir leading-[50px]">پردازش سریع تراکنش‌ها</p>
         <p class="w-full text-right font-vazir2 text-sm sm:text-base font-bold text-[#697281]">
-          تراکنش‌ها به صورت نرمال در بازه 100 الی 200 میلی‌ثانیه ثبت می‌شوند.
+          با زیرساخت بهینه XdgPay، تراکنش‌های رمزارزی در کمتر از یک ثانیه ثبت می‌شوند.
         </p>
       </li>
       <li class="w-full sm:w-[280px] rounded-[15px] h-auto bg-white list-none mx-2.5 direction-rtl shadow-[0_3px_2px_rgb(161,161,161)] p-6 li-box">
         <div class="w-[55px] h-[55px] mt-4 mr-4 bg-center bg-cover"
              style="background-image: url('https://jibit.ir/wp-content/themes/jibit/images/projectx/feat2.svg')"></div>
-        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir leading-[50px]">حجم لود تراکنش بالا</p>
+        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir leading-[50px]">پایداری در ترافیک بالا</p>
         <p class="w-full text-right font-vazir2 text-sm sm:text-base font-bold text-[#697281]">
-          الگوریتم‌های پیشرفته در زیرساخت، نگرانی کسب و کار‌ها برای ساعات اوج ترافیک تراکنش‌ها را از بین برده است.
+          معماری توزیع‌شده XdgPay، در اوج ترافیک هم پرداخت‌ها را بدون اختلال مدیریت می‌کند.
         </p>
       </li>
       <li class="w-full sm:w-[280px] rounded-[15px] h-auto bg-white list-none mx-2.5 direction-rtl shadow-[0_3px_2px_rgb(161,161,161)] p-6 li-box">
         <div class="w-[55px] h-[55px] mt-4 mr-4 bg-center bg-cover"
              style="background-image: url('https://jibit.ir/wp-content/themes/jibit/images/projectx/feat1.svg')"></div>
-        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir leading-[50px]">۹۹٪ نرخ موفقیت</p>
+        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir leading-[50px]">موفقیت ۹۹٪ در تراکنش‌ها</p>
         <p class="w-full text-right font-vazir2 text-sm sm:text-base font-bold text-[#697281]">
-          با توجه به چند پروایدری بودن زیرساخت، نرخ موفقیت درخواست‌ها تا ۹۹٪ امکان‌پذیر است.
+          ترکیب چند بلاک‌چین و الگوریتم‌های هوشمند، موفقیت تراکنش‌ها را به ۹۹٪ می‌رساند.
         </p>
       </li>
     </ul>
@@ -75,14 +75,14 @@
   <div class="div-about2 container mx-auto mt-16">
     <div class="flex flex-col lg:flex-row items-center gap-6">
       <div class="image w-full lg:w-1/2"></div>
-      <div class="objects w-full lg:w-1/2">
+      <div class="objects w-full lg:w-1/2"  style="margin-bottom: 25px;">
         <div class="divdis2">
           <div class="logo-divimg2"></div>
         </div>
         <p class="title2"><b>مسیردهی هوشمند بین درگاه‌ها</b></p>
         <div class="divtext2">
           <p class="text2">
-            پایداری در سرویس درگاه پرداخت جیبیت موجب شده است تا با فعال‌سازی ۲ درگاه و سوئیچینگ هوشمند بین آنها درصد تراکنش‌های ناموفق به حداقل برسد و امکان قطعی کاهش یابد.<br><br>
+            XdgPay با اتصال هم‌زمان به چند درگاه و سوئیچینگ هوشمند بین آن‌ها، پایداری سرویس را تضمین و نرخ خطا در پرداخت‌ها را به حداقل می‌رساند. <br><br>
             PSPهای فعال:<br>سامان کیش(سپ)، سپهر
           </p>
         </div>
@@ -97,17 +97,17 @@
       <div class="about3-box1 w-full lg:w-1/3">
         <div class="imgbox1"></div>
         <p class="p-title-box1">تعیین اولویت PSP‌ها</p>
-        <p class="text-box1">این امکان در جیبیت فراهم شده است تا کسب و کار‌ها بتوانند اولویت استفاده را از میان دو PSP فعال انتخاب کنند.</p>
+        <p class="text-box1">در XdgPay این امکان وجود دارد که کسب‌وکارها مشخص کنند کدام درگاه پرداخت در اولویت باشد، تا در صورت نیاز، مسیردهی پرداخت‌ها طبق سیاست آن‌ها انجام شود.</p>
       </div>
       <div class="about3-box2 w-full lg:w-1/3">
         <div class="imgbox2"></div>
-        <p class="p-title-box1">دریافت کارمزد از پرداخت‌کننده</p>
-        <p class="text-box1">با این امکان می‌توان علاوه بر مبلغ محصول و یا سرویس انتخابی، کارمزد پرداخت را از حساب مشتریان و خریداران کسر کرد.</p>
+        <p class="p-title-box1"> دریافت کارمزد از پرداخت‌کننده</p>
+        <p class="text-box1">XdgPay امکان کسر کارمزد مستقیم از پرداخت‌کننده را فراهم کرده است؛ ابزاری کاربردی برای سرویس‌هایی که هزینه مالیات یا خدمات را به مشتری منتقل می‌کنند.</p>
       </div>
       <div class="about3-box3 w-full lg:w-1/3">
         <div class="imgbox3"></div>
         <p class="p-title-box1">تسویه خودکار روزانه</p>
-        <p class="text-box1">جیبیت این ویژگی ایجاد کرده است تا به صورت روزانه و خودکار موجودی درگاه اینترنتی خود را برداشت و به حساب خود واریز کنند.</p>
+        <p class="text-box1">با فعال‌سازی تسویه خودکار در XdgPay، موجودی حاصل از فروش به صورت روزانه و منظم به حساب بانکی تعریف‌شده شما واریز می‌شود.</p>
       </div>
     </div>
   </div>
@@ -116,7 +116,7 @@
       <img class="logo-pizito" src="https://jibit.ir/wp-content/themes/jibit/images/projectx/payzito.svg">
       <div class="divdis-text-pizitp">
         <p class="title-pizito"><b>پی‌زیتو؛ افزونه درگاه پرداخت</b></p>
-        <p class="text-pizito">رایگان برای مشتریان جیبیت و بدون نیاز به پیاده‌سازی API بر بستر WordPress و Joomla.</p>
+        <p class="text-pizito">رایگان برای مشتریان XDGPay و بدون نیاز به پیاده‌سازی API بر بستر WordPress و Joomla.</p>
       </div>
       <button class="btn-free">نسخه رایگان ></button>
     </div>
@@ -124,7 +124,7 @@
   <div class="div-about4 container mx-auto mt-12">
     <div class="div-title-about4" style="direction: rtl;">
       <p class="title-about4">تعرفه درگاه پرداخت</p>
-      <p class="text-about4">تعرفه اعلام شده بدون محاسبه مالیات بر ارزش افزوده می‌باشد، مبلغ کارمزد بعلاوه ۱۰ درصد مالیات بر ارزش افزوده کسر می‌گردد.</p>
+      <p class="text-about4">کارمزد درگاه پرداخت XdgPay با هدف شفافیت و پشتیبانی از کسب‌وکارهای نوپا تا حرفه‌ای، به‌صورت پلکانی تنظیم شده است. مبالغ اعلام‌شده بدون احتساب مالیات بر ارزش افزوده هستند و هنگام تسویه، ۱۰٪ مالیات به آن افزوده خواهد شد.</p>
     </div>
     <div class="table-about4">
       <div class="row1-about4">
@@ -144,7 +144,7 @@
       <div class="row22-about4">
         <div class="col23-about4">
           <input dir="rtl" type="submit" value="تماس با تیم فروش >"
-                 class="w-[170px] h-[45px] border border-gray-300 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition" />
+                 class="w-[170px] h-[45px] border border-gray-300 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition btn-tel" />
         </div>
         <div class="col24-about4">
           <p class="p2-table2"><span class="check-circle"><i class="fas fa-check"></i></span> بیش از ۲۰۰ تراکنش</p>
@@ -155,8 +155,8 @@
   <div class="about-services container mx-auto mt-12 mb-[100px]">
     <div class="flex flex-col lg:flex-row gap-6" style="direction: rtl;">
       <div class="div-1-about-services w-full lg:w-3/5">
-        <p class="title-about-services">استفاده از سرویس‌های جیبیت</p>
-        <p class="text-about-services">با ایجاد حساب کاربری از خدمات جیبیت برای رشد و ارتقا فرآیند و عملیات مالی کسب و کارتان استفاده کنید.</p>
+        <p class="title-about-services">استفاده از سرویس‌های XDGPay</p>
+        <p class="text-about-services">با ایجاد حساب کاربری از خدمات XDGPay برای رشد و ارتقا فرآیند و عملیات مالی کسب و کارتان استفاده کنید.</p>
         <input dir="rtl" type="submit" value="ساخت حساب کاربری >"
                class="w-[170px] h-[50px] bg-[#226ce9] text-white text-sm rounded-md border border-[#226ce9] font-vazir3 hover:bg-[#2247e9] mt-4 transition " />
       </div>
@@ -207,6 +207,12 @@ export default {
   }
   .img-1{
     margin-top: 270px;
+  }
+  .about-services{
+    height: 500px !important;
+  }
+  .btn-tel{
+    font-size: 12px !important;
   }
 }
 .w-full {
@@ -467,6 +473,7 @@ export default {
   font-size: 1rem;
   font-family: Vazir3;
   color: rgb(129, 129, 129);
+  padding-left: 20%;
 }
 
 .table-about4 {
@@ -476,6 +483,7 @@ export default {
   border-radius: 10px;
   margin: auto;
   margin-top: 1rem; 
+  
 }
 
 .table2-about4 {
@@ -544,14 +552,20 @@ export default {
   color: white;
   font-size: 14px;
 }
-
-.about-services {
-  height: auto;
+.about-services{
+  width:100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 79%;
+  height: 270px;
+  margin: auto;
+  border-radius: 15px;
+  margin-top: 100px;
   background: url(//jibit.ir/wp-content/themes/jibit/images/transferor/trynow-background.png) center top / 50% no-repeat #fff;
   box-shadow: 0 8.64px 28.8px rgba(0, 0, 0, .06);
-  border-radius: 15px;
-  padding: 2rem;
-  margin-bottom: 2rem;
+  direction: rtl;
 }
 
 .div-1-about-services, .div-2-about-services {

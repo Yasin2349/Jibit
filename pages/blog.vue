@@ -1,7 +1,7 @@
 <template>
     <div class="title-box-blog">
         <div class="div-back">
-            <a href="#" class="a-back"> ادامه مقالات ></a>
+            <NuxtLink class="a-back" to="/blogs"> ادامه مقالات ></NuxtLink>
         </div>
         <div class="texts-title">
             <p class="text-date-title">۱۹ خرداد ۱۴۰۴ . زمان مطالعه: حدود 23 دقیقه</p>
@@ -54,9 +54,32 @@
                 <input type="text" class="input3" placeholder="نام و نام خانوادگی">
             </div>
         </div>
-        
     </div>  
-
+    <p class="p-title-about3">تازه ترین مقالات</p>
+    <div class="div-M2">
+        <div class="div-dis-M2">
+            <div class="img-div-M2" style="background-image: url(https://jibit.ir/wp-content/uploads/2025/05/مقررات-eIDAS-scaled.jpg);"></div>
+            <div>
+                <p class="date-div-M2">۲۵ تیر ۱۴۰۴</p>
+                <p class="title-div-M2">DORA چیست؟ چتر نجات فین‌تک در عصر تهدیدات سایبری هوشمند باشد؟ </p>
+            </div>
+        </div>
+        <div class="div-dis-M2">
+            <div class="img-div-M2" style="background-image: url(https://jibit.ir/wp-content/uploads/2025/05/تکنولوژی‌های-کلیدی-eKYC-1-scaled.jpg);"></div>
+            <div>
+                <p class="date-div-M2">۲۵ تیر ۱۴۰۴</p>
+                <p class="title-div-M2">DORA چیست؟ چتر نجات فین‌تک در عصر تهدیدات سایبری هوشمند باشد؟ </p>
+            </div>
+        </div>
+        <div class="div-dis-M2">
+            <div class="img-div-M2" style="background-image: url(https://jibit.ir/wp-content/uploads/2025/06/Frame-1321314624-1.jpg);"></div>
+            <div>
+                <p class="date-div-M2">۲۵ تیر ۱۴۰۴</p>
+                <p class="title-div-M2">DORA چیست؟ چتر نجات فین‌تک در عصر تهدیدات سایبری هوشمند باشد؟ </p>
+            </div>
+        </div>
+    </div>
+    <Footer></Footer>
 </template>
 
 <script>
@@ -125,7 +148,7 @@ export default {
 }
 .text-title{
     width: 55%;
-    font-size: 18px;
+    font-size: 16px;
     font-family: Vazir3;
     color: rgb(94, 92, 92);
     text-align: right;
@@ -243,5 +266,219 @@ export default {
     padding-right: 4%;
     margin-left: 1%;
     direction: rtl;
+}
+.div-M2{
+    width: 60%;
+    height: 650px;
+    margin: auto;
+    margin-bottom: 150px;
+}
+.div-dis-M2{
+    width: 100%;
+    height: 190px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+.div-dis-M2:hover{
+    background-color: white;
+    box-shadow: 0px 5px 10px rgb(180, 180, 180);
+}
+.img-div-M2{
+    width: 320px;
+    height: 80%;
+    margin-right: 15%;
+    margin-left: 2%;
+    background-color: rgb(194, 194, 194);
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.date-div-M2{
+    width: 90%;
+    text-align: right;
+    font-size: 14px;
+    font-family: Vazir;
+    padding-right: 10%;
+    direction: rtl;
+    cursor: pointer;
+}
+.title-div-M2{
+    width: 90%;
+    text-align: right;
+    font-size: 24px;
+    font-family: Vazir;
+    padding-right: 10%;
+    direction: rtl;
+    cursor: pointer;
+}
+.p-title-about3{
+  width: 100%;
+  font-size: 28px;
+  font-family: Vazir;
+  padding-right: 10%;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-top: 100px;
+  color: #1a2d4b;
+  direction: rtl;
+}
+.p-title-contant{
+    width: 100%;
+    color: black;
+    font-family: Vazir3;
+    font-size: 25px;
+    margin-top: 40px;
+}
+.p2-title-contant{
+    width: 100%;
+    color: rgb(63, 63, 63);
+    font-family: Vazir3;
+    font-size: 15px;
+    margin-top: 15px;
+}
+.input-1{
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    margin-top: 15px;
+    border: 1px solid rgb(185, 185, 185);
+    padding: 15px;
+    font-family: Vazir4;
+}
+.display{
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.input2, .input3{
+    flex: 1 1 48%;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid rgb(185, 185, 185);
+    padding: 10px;
+    font-family: Vazir4;
+}
+.p-title-about3{
+    width: 80%;
+    margin: auto;
+    margin-top: 70px;
+    font-size: 24px;
+    font-family: Vazir3;
+    color: rgb(56, 56, 56);
+    text-align: right;
+    direction: rtl;
+}
+
+
+/* ================= RESPONSIVE STYLES ================== */
+
+@media (max-width: 1200px) {
+    .title-box-blog, .texts-title, .div-back {
+        flex-direction: column;
+        text-align: center;
+    }
+    .title-box-blog {
+        height: auto;
+        gap: 20px;
+    }
+    .texts-title, .div-back {
+        width: 100%;
+    }
+    .title-blog {
+        width: 100%;
+        font-size: 26px;
+    }
+    .text-date-title {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .text-title, .text-M, .title-M, .image-blog, .contant {
+        width: 85%;
+    }
+    .title-M {
+        font-size: 28px;
+    }
+    .text-M {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .div-M2 {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .div-dis-M2 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-title-blog {
+        width: 90%;
+        height: 320px;
+    }
+    .title-blog {
+        font-size: 24px;
+    }
+    .p-title-about3 {
+        font-size: 20px;
+    }
+    .display {
+        flex-direction: column;
+    }
+    .input2, .input3 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .title-box-blog {
+        width: 90%;
+        margin-top: 60px;
+    }
+    .text-title, .text-M, .title-M, .contant {
+        width: 95%;
+    }
+    .title-M {
+        font-size: 22px;
+    }
+    .text-title {
+        font-size: 14px;
+    }
+    .image-blog {
+        height: 250px;
+    }
+    .input-1 {
+        height: 150px;
+    }
+    .p-title-contant {
+        font-size: 20px;
+    }
+    .img-div-M2 {
+        height: 180px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .img-div-M2 {
+        width: 380px !important;
+        height: 100x;
+    }
+    .title-div-M2 {
+        font-size: 15px;
+    }
+    .div-M2{
+        width: 90%;
+    }
 }
 </style>

@@ -45,12 +45,13 @@
       </div>
       <li class="li-sh"><NuxtLink to="/ContantPage">ارتباط با ما</NuxtLink></li>
       <li class="li-sh"><NuxtLink to="/blogs">بلاگ</NuxtLink></li>
-      <li class="li_login li-sh">
-        <NuxtLink to="/LoginRegister4">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;"></i></NuxtLink>
+      <li class="li_login li-sh" style="width: 150px;padding: 10px;margin-right: 0%;text-align: center; background-color: white;">
+        <NuxtLink to="/LoginRegister4" style="font-size: 15px;width: 100%;">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;text-align: center;"></i></NuxtLink>
       </li>
       <li>
-        <div>
-          <i :class="['fas fa-bars', { show: shhamber }, { show2: shzarb }]" style="font-size: 30px;" @click="toggleMainMenu" @mouseout="toggleMainMenu" id="hamber"></i>
+        <div  style="display: flex;width: 180px;text-align: center;">
+          <NuxtLink to="/LoginRegister4" class="login-btn-res" style=" margin-left: 10px; padding: 7px;border-radius: 8px ;border: 1px solid rgb(206, 206, 206) ; background-color: white ;">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;text-align: center ;"></i></NuxtLink>
+          <i :class="['fas fa-bars', { show: shhamber }, { show2: shzarb }]" style=" font-size: 30px;" @click="toggleMainMenu" @mouseout="toggleMainMenu" id="hamber"></i>
           <!-- <i :class="['fas fa-xmark', { show: shzarb }]" style="font-size: 30px;" @click="closeMainMenu" id="zarb"></i> -->
         </div>
       </li>
@@ -71,7 +72,7 @@ const shhamber = ref(true)
 const shzarb = ref(false)
 
 function menuopen() {
-  menuservices.value = true
+  menuservices.value = !menuservices.value
 }
 function menuclose() {
   menuservices.value = false
@@ -110,7 +111,12 @@ watch(() => route.fullPath, (newPath) => {
     background-color: transparent;
     transition: background-color 0.5s ease;
   }
-
+  .textlogo{
+    font-size: 25px;
+    font-family: Vazir3;
+    line-height: 35px;
+    margin-right: 5%;
+  }
 
   .div1.scrolled {
     background-color: white;
@@ -127,8 +133,9 @@ watch(() => route.fullPath, (newPath) => {
   }
 
   .ul_menu li {
+    width: 20%;
     list-style: none;
-    margin-right: 45px;
+    
   }
 
   .ul_menu li a {
@@ -144,14 +151,19 @@ watch(() => route.fullPath, (newPath) => {
     background-size: cover;
     list-style: none;
     margin-right: 11%;
+    display: flex;
   }
 
   .logo {
-    width: 114px;
-    height: 35px;
-    background-image: url(../public/brand.png);
-    background-size: cover;
+    width: 160px;
+    height: 53px;
+    margin-top: 1%;
+    
+    background-image: url(../public/logo-xdgpay2.png);
+    /* background-size: cover; */
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
   }
   .services {
     opacity: 0;
@@ -303,6 +315,9 @@ watch(() => route.fullPath, (newPath) => {
     border-bottom: 1px solid rgb(229 212 212);  
     padding: 15px;
   }
+  .showlogin{
+    display: block;
+  }
   .blog-btn{
     width: 100%;
     display: flex;
@@ -332,6 +347,9 @@ watch(() => route.fullPath, (newPath) => {
   .fas.fa-xmark.show {
     display: inline;
   }
+  .login-btn-res{
+    visibility: hidden;
+  }
   @media screen and (max-width: 1259px) {
       .ul_menu li{
         margin-right: 35px;
@@ -348,11 +366,31 @@ watch(() => route.fullPath, (newPath) => {
           .fas.fa-bars{
             visibility: visible;
           }
+          .login-btn-res{
+            visibility: visible;
+          }
         }
         .ul_menu li{
           margin-right: 24px;
+          
         }
+        
       }
   }
-  
+  @media screen and (max-width: 450px) {
+    .li_logo{
+      width: 10%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .ul_menu{
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .li_logo{
+      margin-right: 2% !important;
+    }
+  }
   </style>

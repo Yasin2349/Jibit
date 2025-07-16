@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-[82%] h-[300px] mx-auto
+    class="w-[82%] h-[350px] mx-auto
            bg-[url('https://jibit.ir/wp-content/themes/jibit/images/transferor/footer-background.png')]
            bg-contain bg-no-repeat bg-left-bottom footer-wrapper"
   >
@@ -9,12 +9,12 @@
     
       <div class="w-[35%] h-full flex flex-col footer-col1">
         <div
-          class="w-[114px] h-[35px]
-                 bg-[url('/public/brand.png')] bg-contain bg-center bg-no-repeat logo-footer"
+          class="w-[114px] h-[40px]
+                 bg-[url('/public/logo-xdgpay2.png')] bg-contain bg-center bg-no-repeat logo-footer"
         ></div>
         <p class="mt-[10px] text-[14px] font-vazir2 text-[#4d5768] text-footer">
           <strong>
-            شرکت ایوان رایان پیام (جیبیت) با توسعه زیرساخت‌های فنی و فراهم آوردن بستری مناسب و قابل اطمینان این امکان را به کسب و کارها می‌دهد تا به سرویس‌های مالی، پرداخت، انتقال وجه و وب‌سرویس‌های احراز هویت مورد نیاز خود دسترسی پیدا کنند.
+            شرکت ایکس‌دی‌جی‌بیت (XdgPay) با توسعه زیرساخت‌های رمزارزی و ارائه راهکارهای نوین پرداخت دیجیتال، به کسب‌وکارها این امکان را می‌دهد تا به درگاه پرداخت رمزارزی، ابزارهای تبدیل ارز دیجیتال، کیف‌پول اختصاصی و API‌های هوشمند دسترسی داشته باشند؛ سریع، ایمن و قابل اعتماد.
           </strong>
         </p>
       </div>

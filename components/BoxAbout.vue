@@ -13,11 +13,11 @@
           :style="{ backgroundImage: `url(${item.icon})` }"
         ></div>
         <p class="w-[90%] pr-[10%] text-right text-[20px]
-                  text-[#303c4f] font-vazir leading-[55px] p-title">
+                  text-[#303c4f] font-vazir leading-[55px] p-title" style="margin-top: 0px; text-align: right;"> 
           {{ item.title }}
         </p>
         <p class="w-[90%] text-right mr-[10%] text-[15px]
-                  font-vazir2 font-bold text-[#697281] p-text">
+                  font-vazir2 font-bold text-[#697281] p-text pl-[30px]">
           <span v-html="item.text"></span>
         </p>
       </li>
@@ -29,23 +29,23 @@
 const items = [
   {
     icon: 'https://jibit.ir/wp-content/themes/jibit/images/home2/usp4.svg',
-    title: 'مقیاس پذیر',
-    text: 'امکان رشد تصاعدی کسب و کار‌ها<br/> مزیتی مهم در پلتفرم جیبیت است.'
+    title: 'امنیت چندلایه',
+    text: 'با بیش از ۱۰ سال تجربه و فناوری SAFU، دارایی‌ت در امانه.'
   },
   {
     icon: 'https://jibit.ir/wp-content/themes/jibit/images/home2/usp3.svg',
-    title: 'امنیت و حریم خصوصی',
-    text: 'ارسال و پردازش درخواست‌ها با حفظ<br/> حریم خصوصی کاربران و امنیت کامل<br/> انجام می‌گیرد.'
+    title: 'سرعت بالا در پردازش',
+    text: 'موتور XdgPay تا ۱۰۰,۰۰۰ سفارش در دقیقه رو پردازش می‌کنه.'
   },
   {
     icon: 'https://jibit.ir/wp-content/themes/jibit/images/home2/usp2.svg',
-    title: 'سریع و راحت',
-    text: 'سرعت در پیاده سازی سرویس‌ها<br/> و راحتی در استفاده از آن‌ها از مزیت‌های<br/> وب‌سرویس‌هاست.'
+    title: 'پشتیبانی شبانه‌روزی',
+    text: 'پشتیبانی ۲۴/۷ از یه تیم حرفه‌ای و همیشه پاسخ‌گو.'
   },
   {
     icon: 'https://jibit.ir/wp-content/themes/jibit/images/home2/usp1.svg',
     title: 'قابل اطمینان',
-    text: 'سرویس‌ها بی‌وقفه و با زمان کارکرد<br/> بیش از ۹۹٪ در کنار کسب و کار‌ها قرار<br/> دارند.'
+    text: 'بیش از ۹۹٪ زمان، بدون وقفه در کنار تو و کسب‌وکارت هستیم.'
   }
 ]
 </script>

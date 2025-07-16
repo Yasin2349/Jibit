@@ -13,10 +13,10 @@
       
       <p class="text-[40px] font-bold text-[#1a2d4b]-500 mt-[10px]  w-[72%] font-vazir3">
         افزایش درآمد با
-درگاه پرداخت اینترنتی جیبیت
+درگاه پرداخت اینترنتی XDGPay
       </p>
       <p class="w-[72%] text-[18px] leading-[29px] text-[#4d5768] mt-4 font-vazir2" dir="rtl">
-        جیبیت به عنوان یکی از بزرگ‌ترین پرداخت‌یار‌های رسمی شاپرک (بانک مرکزی)، با ارائه درگاه پرداخت با قابلیت اتصال به درگاه‌های متنوع و مسیردهی هوشمند بین PSPها در راستای پایداری در سیستم پرداخت در کنار کسب و کار‌ها ایستاده است.
+        XDGPay به عنوان یکی از بزرگ‌ترین پرداخت‌یار‌های رسمی شاپرک (بانک مرکزی)، با ارائه درگاه پرداخت با قابلیت اتصال به درگاه‌های متنوع و مسیردهی هوشمند بین PSPها در راستای پایداری در سیستم پرداخت در کنار کسب و کار‌ها ایستاده است.
       </p>
       <div class="w-[72%] flex justify-end items-center mt-20 gap-2">
         <input dir="rtl" type="submit" value="تماس با تیم  فروش >"
@@ -45,7 +45,7 @@
         ></div>
         <p class="w-[90%] pr-[10%] text-right text-[20px] text-[#303c4f] font-vazir leading-[55px]">مسئولیت رفع مغایرت</p>
         <p class="w-[66%] text-right mr-[10%] font-vazir2 text-[15px] font-bold text-[#697281]">
-          نرخ مغایرت در جیبیت ۰.۱ درصد است و مسئولیت رفع آن به عهده جیبیت خواهد بود.
+          نرخ مغایرت در XDGPay ۰.۱ درصد است و مسئولیت رفع آن به عهده XDGPay خواهد بود.
         </p>
       </li>
 
@@ -56,7 +56,7 @@
         ></div>
         <p class="w-[90%] pr-[10%] text-right text-[20px] text-[#303c4f] font-vazir leading-[55px]">زمان ثبت تراکنش‌ها</p>
         <p class="w-[66%] text-right mr-[10%] font-vazir2 text-[15px] font-bold text-[#697281]">
-          سرعت انجام تراکنش برای صاحبان کسب و کار اهمیت فراوانی دارد، ثبت تراکنش در جیبیت تنها ۱۵۰ms است.
+          سرعت انجام تراکنش برای صاحبان کسب و کار اهمیت فراوانی دارد، ثبت تراکنش در XDGPay تنها ۱۵۰ms است.
         </p>
       </li>
 
@@ -67,7 +67,7 @@
         ></div>
         <p class="w-[90%] pr-[10%] text-right text-[20px] text-[#303c4f] font-vazir leading-[55px]">۲۰۰۰ تراکنش در ثانیه</p>
         <p class="w-[66%] text-right mr-[10%] font-vazir2 text-[15px] font-bold text-[#697281]">
-          وب‌سرویس جیبیت امکان ثبت ۲۰۰۰ تراکنش در ثانیه را برای صاحبان کسب و کار فراهم کرده است.
+          وب‌سرویس XDGPay امکان ثبت ۲۰۰۰ تراکنش در ثانیه را برای صاحبان کسب و کار فراهم کرده است.
 
 
         </p>
@@ -90,7 +90,7 @@
     <div class="objects">
       <p class="title2"><b>انتقال وجه آنی و پایا</b></p>
       <div class="divtext2">
-        <p class="text2"><br>مدیریت زمان و هزینه در جیبیت به دست شماست. در وب‌سرویس انتقال وجه جیبیت فرآیند جابه‌جایی وجوه به دو روش آنی و یا در سیکل‌های پایا امکان‌پذیر است. زمان را به نفع مشتریان و شرکای خود پس‌انداز کنید.
+        <p class="text2"><br>مدیریت زمان و هزینه در XDGPay به دست شماست. در وب‌سرویس انتقال وجه XDGPay فرآیند جابه‌جایی وجوه به دو روش آنی و یا در سیکل‌های پایا امکان‌پذیر است. زمان را به نفع مشتریان و شرکای خود پس‌انداز کنید.
 <br>
 <br>
 بانک‌های فعال:
@@ -107,7 +107,7 @@
       </div>
       <p class="title2" style="padding-right: 18%;margin-top: 100px;"><b>انتقال وجه به صورت تکی و گروهی</b></p>
       <div class="divtext2" style="margin-top: 25px;">
-        <p class="text2" style="text-align: right;margin-right: 18%;">با وب‌سرویس انتقال وجه جیبیت می‌توانید تا سقف هزار تراکنش را در دسته‌های (Batch) دلخواه قرار دهید و آن را به آسانی مدیریت کنید.<br>
+        <p class="text2" style="text-align: right;margin-right: 18%;">با وب‌سرویس انتقال وجه XDGPay می‌توانید تا سقف هزار تراکنش را در دسته‌های (Batch) دلخواه قرار دهید و آن را به آسانی مدیریت کنید.<br>
 این بار صرفه‌جویی در منابع زیر ساخت بهتر از هر زمان دیگری جواب می‌دهد.</p>
       </div>
     </div>
@@ -118,8 +118,8 @@
     <div class="objects">
       <p class="title2" style="margin-top: 100px;"><b>انتقال وجه با شناسه پرداخت</b></p>
       <div class="divtext2">
-        <p class="text2"><br>انتقال وجوه به حساب‌های دارای شناسه پرداخت امکانی است که در وب‌سرویس جیبیت برای صاحبان کسب و کار ایجاد شده است.
-این امکان فرآیند انتقال وجوه از حساب جیبیت شما به حساب‌های نیازمند واریز با شناسه پرداخت مانند حساب‌های سازمان‌های دولتی را به آسانی امکان پذیر می‌کند.
+        <p class="text2"><br>انتقال وجوه به حساب‌های دارای شناسه پرداخت امکانی است که در وب‌سرویس XDGPay برای صاحبان کسب و کار ایجاد شده است.
+این امکان فرآیند انتقال وجوه از حساب XDGPay شما به حساب‌های نیازمند واریز با شناسه پرداخت مانند حساب‌های سازمان‌های دولتی را به آسانی امکان پذیر می‌کند.
 <br></p>
       </div>
     </div>
@@ -134,7 +134,7 @@
     <div class="about3-box2">
       <div class="imgbox2" style="background-image: url('https://jibit.ir/wp-content/themes/jibit/images/transferor/service-feature-2.svg')"></div>
       <p class="p-title-box1">API گزارش‌گیری برای رفع مغایرت</p>
-      <p class="text-box1">رفع مغایرت میان پایگاه‌های داده امکانی است که کسب و کار‌ها می‌توانند با بررسی تراکنش، اقدام به رفع مغایرت بین پلتفرم خود و جیبیت کنند.</p>
+      <p class="text-box1">رفع مغایرت میان پایگاه‌های داده امکانی است که کسب و کار‌ها می‌توانند با بررسی تراکنش، اقدام به رفع مغایرت بین پلتفرم خود و XDGPay کنند.</p>
     </div>
     <div class="about3-box3">
       <div class="imgbox3" style="background-image: url('https://jibit.ir/wp-content/themes/jibit/images/transferor/service-feature-1.svg');"></div>
@@ -197,8 +197,8 @@
   </div>
   <div class="about-services">
     <div class="div-1-about-services">
-      <p class="title-about-services">استفاده از سرویس‌های جیبیت</p>
-      <p class="text-about-services">با ایجاد حساب کاربری از خدمات جیبیت برای رشد و ارتقا فرآیند و عملیات مالی کسب و کارتان استفاده کنید.</p>
+      <p class="title-about-services">استفاده از سرویس‌های XDGPay</p>
+      <p class="text-about-services">با ایجاد حساب کاربری از خدمات XDGPay برای رشد و ارتقا فرآیند و عملیات مالی کسب و کارتان استفاده کنید.</p>
       <input dir="rtl" type="submit" value="ساخت حساب کاربری >"
                class="w-[170px] h-[50px] bg-[#226ce9] text-white text-sm rounded-md border border-[#226ce9] font-vazir3 hover:bg-[#2247e9] mt-[20px] transition" />
     </div>

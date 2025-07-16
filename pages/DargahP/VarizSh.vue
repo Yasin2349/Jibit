@@ -13,7 +13,7 @@
       
       <p class="text-[40px] font-bold text-[#1a2d4b]-500 mt-[10px]  w-[72%] font-vazir3">
         بدون محدودیت با<br>
-واریز شناسه دار جیبیت
+واریز شناسه دار XDGPay
       </p>
       <p class="w-[72%] text-[18px] leading-[29px] text-[#4d5768] mt-4 font-vazir2" dir="rtl">
         سرویس واریز شناسه‌دار این امکان را به مشتریان کسب و کار‌ها می‌دهد تا بدون محدودیت در مبلغ تراکنش و با انتخاب روش مناسب از خدمات واریز وجه و پرداخت استفاده کنند.
@@ -53,7 +53,7 @@
       </div>
       <p class="title2" style="padding-right: 18%;"><b>ابزار‌ها و روش‌های واریز</b></p>
       <div class="divtext2">
-        <p class="text2" style="text-align: right;margin-right: 18%;">دارندگان شناسه واریز جیبیت می‌توانند فرآیند واریز وجوه خود را از روش‌های چون پایا، ساتنا و حساب به حساب و همینطور از طریق ابزار‌های موبایل بانک، اینترنت بانک، دستگاه‌های ATM و ابزار‌های متعدد دیگر صورت پذیرد.</p>
+        <p class="text2" style="text-align: right;margin-right: 18%;">دارندگان شناسه واریز XDGPay می‌توانند فرآیند واریز وجوه خود را از روش‌های چون پایا، ساتنا و حساب به حساب و همینطور از طریق ابزار‌های موبایل بانک، اینترنت بانک، دستگاه‌های ATM و ابزار‌های متعدد دیگر صورت پذیرد.</p>
       </div>
     </div>
     <div class="image2"></div>
@@ -107,8 +107,8 @@
   </div>
   <div class="about-services">
     <div class="div-1-about-services">
-      <p class="title-about-services">استفاده از سرویس‌های جیبیت</p>
-      <p class="text-about-services">با ایجاد حساب کاربری از خدمات جیبیت برای رشد و ارتقا فرآیند و عملیات مالی کسب و کارتان استفاده کنید.</p>
+      <p class="title-about-services">استفاده از سرویس‌های XDGPay</p>
+      <p class="text-about-services">با ایجاد حساب کاربری از خدمات XDGPay برای رشد و ارتقا فرآیند و عملیات مالی کسب و کارتان استفاده کنید.</p>
       <input dir="rtl" type="submit" value="ساخت حساب کاربری >"
                class="w-[170px] h-[50px] bg-[#226ce9] text-white text-sm rounded-md border border-[#226ce9] font-vazir3 hover:bg-[#2247e9] mt-[20px] transition" />
     </div>

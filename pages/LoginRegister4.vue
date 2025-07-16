@@ -18,6 +18,7 @@
               placeholder="نام خانوادگی را وارد کنید ..."
               :class="['input-name1', familyMeta.touched && familyMeta.invalid ? 'input-error' : '']"
               tabindex="2"
+              validate-on-input
             />
             <ErrorMessage name="family" v-slot="{ message }">
               <p class="p-error">{{ message }}</p>
@@ -33,6 +34,7 @@
               placeholder="نام را وارد کنید ..."
               :class="['input-name2', nameMeta.touched && nameMeta.invalid ? 'input-error' : '']"
               tabindex="1"
+              validate-on-input
             />
             <ErrorMessage name="name" v-slot="{ message }">
               <p class="p-error">{{ message }}</p>
@@ -48,6 +50,7 @@
           placeholder="ایمیل را وارد کنید ..."
           :class="['input-email', emailMeta.touched && emailMeta.invalid ? 'input-error' : '']"
           tabindex="3"
+          validate-on-input
         />
         <ErrorMessage name="email" v-slot="{ message }">
           <p class="p-error">{{ message }}</p>
@@ -63,6 +66,7 @@
             :class="['input-pass', passwordMeta.touched && passwordMeta.invalid ? 'input-error' : '']"
             v-model="password"
             tabindex="4"
+            validate-on-input
           />
           <button type="button" @click="togglePassword" class="toggle-btn">
             <i :class="['color2', showPassword ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash']"></i>
@@ -84,7 +88,7 @@
       </Form>
 
       <div class="dis-input-pass" style="justify-content: flex-start;">
-        <NuxtLink to="LoginRegister3" class="link-reg">ورود</NuxtLink>
+        <NuxtLink to="LoginRegister42" class="link-reg">ورود</NuxtLink>
         <p class="title-btn-reg">حساب کاربری دارید؟</p>
       </div>
     </div>
@@ -92,6 +96,7 @@
 </template>
 
 <script setup>
+import axios from 'axios'
 import { ref, computed } from 'vue'
 import { Form, Field, ErrorMessage, useField } from 'vee-validate'
 import * as yup from 'yup'
@@ -109,7 +114,7 @@ const schema = yup.object({
     .min(8, 'پسورد باید حداقل ۸ کاراکتر باشد')
     .matches(/[A-Z]/, 'پسورد باید حداقل یک حرف بزرگ داشته باشد')
     .matches(/\d/, 'پسورد باید حداقل یک عدد داشته باشد')
-    // .matches(/[!@#$%^&*(),.?":{}|<>]/, 'پسورد باید حداقل یک کاراکتر خاص داشته باشد'),
+    .matches(/[!@#$%^&*(),.?":{}|<>]/, 'پسورد باید حداقل یک کاراکتر خاص داشته باشد'),
 })
 
 
@@ -126,10 +131,10 @@ const togglePassword = () => {
 }
 
 const conditions = [
-  (p) => /[A-Z]/.test(p), // حرف بزرگ
-  (p) => /\d/.test(p), // عدد
-  (p) => /[!@#$%^&*(),.?":{}|<>]/.test(p), // کاراکتر خاص
-  (p) => p.length >= 8, // طول >= 8
+  (p) => /[A-Z]/.test(p),
+  (p) => /\d/.test(p),
+  (p) => /[!@#$%^&*(),.?":{}|<>]/.test(p), 
+  (p) => p.length >= 8, 
 ]
 
 const passedCount = computed(() =>
@@ -154,11 +159,20 @@ const color = computed(() => {
       return 'white'
   }
 })
-
-// تابع ارسال فرم
+const token = "eyJhbGciOi";
 const onSubmit = (values) => {
-  alert('ثبت نام با موفقیت انجام شد!\n' + JSON.stringify(values, null, 2))
+  axios.post('http://localhost:3000/users', values, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }).then(response => {
+    console.log("true", response.data)
+  }).catch(error => {
+    console.log("false", error)
+  })
 }
+
+
 </script>
 
 

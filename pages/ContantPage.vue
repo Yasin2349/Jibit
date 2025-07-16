@@ -3,12 +3,12 @@
     <div class="div1">
         <div class="div-map">
             <div class="map">
-                <iframe class="iframe-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1924.9517731383148!2d51.420429002249314!3d35.76628432655129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e05cf76a94675%3A0x8ad3dac843b98e4b!2sJIBIT!5e0!3m2!1sen!2s!4v1622447620753!5m2!1sen!2s"></iframe>
+                <iframe class="iframe-map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d402.0056967673759!2d59.60007550662386!3d36.28694406931608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1752061861159!5m2!1sen!2s"></iframe>
             </div>
         </div> 
         <div class="div-contant">
             <div class="tab1">
-                <p class="title-tab1"><b>راه های ارتباط با جیبیت</b></p>
+                <p class="title-tab1"><b>XdgPay راه های ارتباط با </b></p>
                 <div class="div-table1">
                     <div class="tabl1-row1">
                         <div class="tabl1-col1">

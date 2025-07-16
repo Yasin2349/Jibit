@@ -12,17 +12,17 @@
       />
     </div>
     <div class="w-2/5 h-full flex flex-col justify-start text-right text-container-responsive">
-      <p
+      <h1
         v-if="data_contant.title"
         class="text-[48px] font-vazir3 font-bold text-[#1a2d4b] mt-[100px] w-[72%] title-responsive"
       >
         <b>
           <span class="font-bold">{{ data_contant.title }}</span>
         </b>
-      </p>
+      </h1>
       <p
         v-if="data_contant.text"
-        class="w-[72%] text-[18px] leading-[29px] text-[#4d5768] mt-4 font-vazir2 text-responsive"
+        class="w-[72%] text-[18px] leading-[29px] text-[#4d5768] mt-4 font-vazir3 text-responsive" dir="rtl"
       >
         {{ data_contant.text }}
       </p>

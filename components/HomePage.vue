@@ -4,16 +4,15 @@
   <BrandLogos />
   <BoxAbout />
   <AboutSer />
-  <ServicesSite />
+  <ServicesSite/>
 
-  <div class="w-11/12 max-w-5xl h-auto mx-auto flex flex-col sm:flex-row items-end mt-0 mb-11 font-vazir justify-end pr-[30px] p-text-res-tekye">
+  <div class="w-11/12 max-w-5xl h-auto mx-auto flex flex-col sm:flex-row items-end mt-0 mb-11 font-vazir justify-end pr-[30px] p-text-res-tekye"  style="margin-top: 100px;">
     <div class="w-full sm:w-auto">
       <p class="w-full text-[24px] sm:text-[32px] text-[#303c4f] text-right leading-[40px] sm:leading-[85px]">
-        تکیه‌گاه کسب و کارها
+        پل مطمئن پرداخت رمزارزی
       </p>
       <p class="w-full text-right text-[#697281] rtl text-sm sm:text-base">
-        بیش از ۳۰۰ کسب و کار بزرگ کشور همه روزه از راهکارهای جیبیت استفاده
-        می‌کنند.
+        صدها کسب‌وکار نوین ایرانی با تکیه بر درگاه پرداخت رمزارزی XdgPay، مسیر دریافت پرداخت‌های دیجیتال را ساده و ایمن کرده‌اند.
       </p>
     </div>
   </div>
@@ -40,7 +39,7 @@
       </div>
       <div class="mt-4 pr-6">
         <p class="font-vazir4 text-[14px] sm:text-[15px] text-[#303c4f] font-bold rtl">
-          گردش مالی سالیانه در پلتفرم جیبیت
+          گردش مالی سالیانه روی پلتفرم XdgPay
         </p>
       </div>
     </div>
@@ -66,7 +65,7 @@
       </div>
       <div class="mt-4 pr-6">
         <p class="font-vazir4 text-[14px] sm:text-[15px] text-[#303c4f] font-bold rtl">
-          درخواست از طریق وب‌سرویس‌ها در سال
+          درخواست سالانه از طریق APIهای پرداخت رمزارز
         </p>
       </div>
     </div>
@@ -78,11 +77,11 @@
            bg-top bg-center bg-no-repeat bg-[length:50%] shadow-[0_8.64px_28.8px_rgba(0,0,0,0.06)] flex flex-col sm:flex-row justify-center items-center rtl mb-[175px] gap-8 sm:gap-0"
   >
     <div class="w-full sm:w-3/5 pr-0 sm:pr-[12%] pl-0 sm:pl-[2%] box1-about-s">
-      <p class="text-[22px] sm:text-[28px] font-vazir text-start pt-5 sm:pt-[20px] pl-0 sm:pl-[10%] leading-[40px] sm:leading-[70px] p-title">
-        استفاده از سرویس‌های جیبیت
+      <p class="text-[22px] sm:text-[28px] font-vazir  pt-5 sm:pt-[20px] pl-0 sm:pl-[10%] leading-[40px] sm:leading-[70px] p-title" style="margin-top: 0%; text-align: right;">
+        شروع استفاده از XdgPay
       </p>
       <p class="text-[14px] sm:text-[17px] font-vazir3 text-[#797979] text-start text-start2">
-        با ایجاد حساب کاربری از خدمات جیبیت برای رشد و ارتقا فرآیند و عملیات مالی کسب و کارتان استفاده کنید.
+        با ایجاد حساب کاربری، از سرویس‌های پرداخت رمزارزی XdgPay برای توسعه پرداخت‌های دیجیتال و مدیریت مالی هوشمند کسب‌وکارتان بهره‌مند شوید.
       </p>
       <button
           class="mt-5 w-[160px] h-[42px] font-Vazir bg-[#226ce9] border border-[#226ce9]
@@ -103,7 +102,7 @@
     </div>
     <div class="w-full sm:w-2/5 pr-0 sm:pr-[6%]">
       <p class="text-[14px] sm:text-[17px] font-vazir3 text-[#797979] text-start pt-5 sm:pt-[20px] mt-14 sm:mt-[60px] pl-0 sm:pl-[40%] text-start2">
-        برای ایجاد بسته اختصاصی کسب و کار‌تان با ما تماس بگیرید.
+        برای طراحی پلن اختصاصی و دسترسی به امکانات پیشرفته با ما در ارتباط باشید.
       </p>
       <button
           class="mt-5 w-[170px] h-[42px] border border-gray-300 
