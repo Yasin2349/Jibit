@@ -17,6 +17,7 @@
             <div class="dis-input-pass">
                 <NuxtLink class="link-reg" to="LoginRegister4">ثبت نام  </NuxtLink>
                 <p class="title-btn-reg">  حساب کاربری ندارید ؟</p>
+                
             </div>
         </div>
     </div>

@@ -48,6 +48,10 @@
       <li class="li_login li-sh" style="width: 150px;padding: 10px;margin-right: 0%;margin-left: 3%; text-align: center; background-color: rgba(255, 255, 255, 0.432);">
         <NuxtLink to="/LoginRegister4" style="font-size: 15px;width: 100%;">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;text-align: center;"></i></NuxtLink>
       </li>
+      <button class="btn-DL-Mode"><i class="fas fa-moon" style="color: white;"></i></button>
+      <button class="btn-DL-Mode" style="background-color: white;"><i class="fas fa-sun"></i></button>
+      <button class="btn-DL-Mode" style="background-color: white;">FA</button>
+      <button class="btn-DL-Mode" style="background-color: white;">EN</button>
       <li>
         <div  style="display: flex;width: 180px;text-align: center;">
           <NuxtLink to="/LoginRegister4" class="login-btn-res" style=" margin-left: 10px; padding: 7px;border-radius: 8px ;border: 1px solid rgb(206, 206, 206) ; background-color: white ;">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;text-align: center ;"></i></NuxtLink>
@@ -86,14 +90,15 @@ function toggleMainMenu() {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
-  isLoginPage.value = route.fullPath.includes('LoginRegister4')
+  isLoginPage.value = route.fullPath.includes('LoginRegister4') || route.fullPath.includes('ResetPassword')|| route.fullPath.includes('PasswordVerify')
+
 })
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
 watch(() => route.fullPath, (newPath) => {
-  isLoginPage.value = newPath.includes('LoginRegister4')
+    isLoginPage.value = newPath.includes('LoginRegister4') || newPath.includes('ResetPassword')|| newPath.includes('PasswordVerify')
 })
 </script>
 
@@ -351,6 +356,14 @@ watch(() => route.fullPath, (newPath) => {
   }
   .login-btn-res{
     visibility: hidden;
+  }
+  .btn-DL-Mode{
+    width: 65px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(62, 62, 107);
+    transition: all ease 0.3s ;
+    cursor: pointer;
   }
   @media screen and (max-width: 1259px) {
       .ul_menu li{

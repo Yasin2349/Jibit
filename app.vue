@@ -49,7 +49,7 @@ useHead({
     { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' },
     { httpEquiv: 'Content-Type', content: 'text/html; charset=utf-8' },
     { httpEquiv: 'X-UA-Compatible', content: 'IE=edge' },
-    { name: 'format-detection', content: 'telephone=no' }, // جلوگیری از لینک خوردن شماره تلفن‌ها در موبایل
+    { name: 'format-detection', content: 'telephone=no' },
     { name: 'theme-color', content: '#3737B1' },
 
     
@@ -59,7 +59,7 @@ useHead({
     { property: 'og:url', content: 'https://xdgpay.com/xdgpay' },
     { property: 'og:image', content: 'https://xdgpay.com/images/xdgpay-preview.jpg' },
     { property: 'og:locale', content: 'fa_IR' },
-    { property: 'og:site_name', content: 'Xdgpay' },
+    { property: 'og:site_name', content: 'Xdgpay' },  
 
     
     { name: 'twitter:card', content: 'summary_large_image' },

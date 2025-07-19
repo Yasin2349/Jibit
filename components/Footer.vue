@@ -33,18 +33,19 @@
       
       <div class="w-[20%] h-full flex items-center footer-col3">
         <ul class="w-full h-full flex flex-col justify-center space-y-2 rtl list-none links-footer">
-          <li><a href="#" class="text-[14px] font-vazir2 text-[#4d5768] hover:underline link-footer">ارتباط با ما</a></li>
-          <li><a href="#" class="text-[14px] font-vazir2 text-[#4d5768] hover:underline link-footer">قوانین و مقررات</a></li>
-          <li><a href="#" class="text-[14px] font-vazir2 text-[#4d5768] hover:underline link-footer">بلاگ</a></li>
+          <li><NuxtLink to="/ContantPage" class="text-[14px] font-vazir2 text-[#4d5768] hover:underline link-footer">ارتباط با ما</NuxtLink></li>
+          <li><NuxtLink to="#" class="text-[14px] font-vazir2 text-[#4d5768] hover:underline link-footer">قوانین و مقررات</NuxtLink></li>
+          <li><NuxtLink to="/blogs" class="text-[14px] font-vazir2 text-[#4d5768] hover:underline link-footer">بلاگ</NuxtLink></li>
         </ul>
       </div>
       
       <div class="w-[20%] h-full flex justify-end items-start footer-col4">
         <div
           class="w-[90px] h-[100px]
-                 bg-[url('/public/logo/logo_enamad.png')]
                  bg-cover bg-top bg-no-repeat logo-enamad"
-        ></div>
+        >
+        <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=627329&Code=Qs8AO2QeD0r0mWo9Mz8tENoi8GnGVey3'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=627329&Code=Qs8AO2QeD0r0mWo9Mz8tENoi8GnGVey3' alt='' style='cursor:pointer' code='Qs8AO2QeD0r0mWo9Mz8tENoi8GnGVey3'></a>
+        </div>
       </div>
     </div>
 

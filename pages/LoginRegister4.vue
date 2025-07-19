@@ -161,6 +161,7 @@ const color = computed(() => {
 })
 const token = "eyJhbGciOi";
 const onSubmit = (values) => {
+  alert('Form submitted successfully');
   axios.post('http://localhost:3000/users', values, {
     headers: {
       Authorization: `Bearer ${token}`
