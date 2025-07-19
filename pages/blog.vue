@@ -1,7 +1,7 @@
 <template>
     <div class="title-box-blog">
         <div class="div-back">
-            <NuxtLink class="a-back" to="/blogs"> ادامه مقالات ></NuxtLink>
+            <NuxtLink class="a-back" to="/blogs"><- ادامه مقالات</NuxtLink>
         </div>
         <div class="texts-title">
             <p class="text-date-title">۱۹ خرداد ۱۴۰۴ . زمان مطالعه: حدود 23 دقیقه</p>
@@ -53,6 +53,10 @@
                 <input type="text" class="input2" placeholder="ایمیل">
                 <input type="text" class="input3" placeholder="نام و نام خانوادگی">
             </div>
+            <div class="display" style="justify-content: right;">
+                <button class="btn-contant">ثبت دیدگاه</button>
+            </div>
+            
         </div>
     </div>  
     <p class="p-title-about3">تازه ترین مقالات</p>
@@ -98,7 +102,7 @@ export default {
     src: url(../public/Vazir-Medium.woff);
 }
 .title-box-blog{
-    width: 75%;
+    width: 77%;
     height: 200px;
     margin: auto;
     margin-top: 100px;
@@ -118,11 +122,13 @@ export default {
 .a-back{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     direction: rtl;
     color: black;
     font-family: Vazir;
+    font-size: 18px;
+    margin-top: 25px;
 }
 .text-date-title{
     font-family: Vazir;
@@ -137,7 +143,7 @@ export default {
     color: rgb(31, 31, 31);
 }
 .image-title-blog{
-    width: 80%;
+    width: 78%;
     height: 560px;
     background-image: url('https://jibit.ir/wp-content/uploads/2025/06/امضای-دیجیتال.jpg');
     margin: auto;
@@ -200,7 +206,7 @@ export default {
     width: 55%;
     margin: auto;
     height: 500px;
-    
+
 }
 .p-title-contant{
     width: 100%;
@@ -480,5 +486,19 @@ export default {
     .div-M2{
         width: 90%;
     }
+}
+.btn-contant{
+    width: 110px;
+    height: 45px;
+    background-color: rgb(13, 113, 207);
+    color: white;
+    font-family: Vazir3;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+.btn-contant:hover{
+    background-color: rgb(57, 26, 236);
 }
 </style>

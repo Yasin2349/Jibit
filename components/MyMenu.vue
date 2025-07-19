@@ -45,7 +45,7 @@
       </div>
       <li class="li-sh"><NuxtLink to="/ContantPage">ارتباط با ما</NuxtLink></li>
       <li class="li-sh"><NuxtLink to="/blogs">بلاگ</NuxtLink></li>
-      <li class="li_login li-sh" style="width: 150px;padding: 10px;margin-right: 0%;text-align: center; background-color: white;">
+      <li class="li_login li-sh" style="width: 150px;padding: 10px;margin-right: 0%;margin-left: 3%; text-align: center; background-color: rgba(255, 255, 255, 0.432);">
         <NuxtLink to="/LoginRegister4" style="font-size: 15px;width: 100%;">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;text-align: center;"></i></NuxtLink>
       </li>
       <li>
@@ -109,7 +109,7 @@ watch(() => route.fullPath, (newPath) => {
     direction: rtl;
     z-index: 6;
     background-color: transparent;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.1s ease;
   }
   .textlogo{
     font-size: 25px;
@@ -150,7 +150,7 @@ watch(() => route.fullPath, (newPath) => {
     width: 50%;
     background-size: cover;
     list-style: none;
-    margin-right: 11%;
+    margin-right: 8%;
     display: flex;
   }
 
@@ -277,7 +277,9 @@ watch(() => route.fullPath, (newPath) => {
     padding: 10px;padding-left: 18px;padding-right: 18px;
     border: 1px solid rgb(206, 206, 206);
     border-radius: 10px;
+    transition: all ease 0.3s;
   }
+  
   .ul-menu2{
     width: 300px;
     height: 0px;

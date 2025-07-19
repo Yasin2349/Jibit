@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full h-[700px] bg-cover bg-no-repeat bg-bottom py-20 flex justify-center items-center relative" >
-    <div class="w-3/5 h-full flex justify-center items-center">
+  <div class="w-full bg-cover bg-no-repeat bg-bottom py-20 flex justify-center items-center relative dis-1">
+    <div class="w-[550px] h-full flex justify-center items-center">
       <img 
   src="https://jibit.ir/wp-content/uploads/2025/06/امنیت-اطلاعات-مالی-کسب‌وکارها.png" 
   alt="image not found!" 
@@ -8,17 +8,17 @@
   @load="loading = true" 
 />
     </div>
-    <div class="w-2/5 h-full flex flex-col justify-start text-right">
+    <div class="w-2/5 h-full flex flex-col justify-start text-right dis-2" style="justify-content: right;">
       <b><p class="p-date">۰۸ تیر ۱۴۰۴ . زمان مطالعه: حدود 22 دقیقه</p></b>
       
-      <p class="text-[40px] font-bold text-[#1a2d4b]-500 mt-[10px]  w-[72%] font-vazir3">
+      <p class="text-[40px] font-bold text-[#1a2d4b]-500 mt-[10px]  w-[100%] font-vazir3 title-page">
         مروری بر امنیت اطلاعات مالی کسب‌وکارها
       </p>
-      <p class="w-[72%] text-[18px] leading-[29px] text-[#4d5768] mt-4 font-vazir2" dir="rtl">
+      <p class="w-[100%] text-[18px] leading-[29px] text-[#4d5768] mt-4 font-vazir2" dir="rtl">
         در دنیای امروز، امنیت اطلاعات مالی کسب‌وکارها فقط دغدغه تیم IT نیست؛ مسئله همه کسب‌وکار است. با شتاب‌گرفتن تحول دیجیتال و رشد فین‌تک، تهدیدهای سایبری...
       </p>
-      <div class="w-[72%] flex justify-end items-center mt-15 gap-2">
-        <input dir="rtl" type="submit" value="مطالعه مقاله >"
+      <div class="w-[100%] flex justify-end items-center mt-15 gap-2">
+        <input dir="rtl" type="submit" value="مطالعه مقاله >" style="cursor: pointer;"
                class="w-[136px] h-[50px] bg-[#226ce9] text-white text-sm rounded-md border border-[#226ce9] font-vazir3 hover:bg-[#2247e9] transition" />
       </div>
     </div>
@@ -161,11 +161,12 @@ onMounted(() => {
 }
 .font-vazir3 {
   font-family: Vazir3;
+  
 }
 .p-date{
   width: 100%;
   text-align: right;
-  padding-right: 28%;
+  
   font-size: 16px;
   font-family: Vazir;
   color: #979797;
@@ -339,9 +340,27 @@ onMounted(() => {
     height: 40px !important;
   }
 }
-
+@media screen and (max-width: 929px) {
+  .dis-1{
+    flex-wrap: wrap;
+  }
+  .dis-2{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 793px) {
+  .p-title-blog{
+    font-size: 16px;
+  }
+  .p-text-blog{
+    font-size: 12px;
+  }
+}
 /* موبایل کوچک‌تر و موبایل */
-@media (max-width: 640px) {
+@media (max-width: 646px) {
+  .about-blog{
+    width: 100% !important;
+  }
   .main-section {
     flex-direction: column !important;
     align-items: center !important;
@@ -417,6 +436,20 @@ onMounted(() => {
     font-size: 18px !important;
   }
 }
-
-
+@media screen and (max-width: 562px) {
+  .image-blog{
+    width: 180px !important;
+  }
+  .blog{
+    width: 90%;
+  }
+  .object-cover{
+    width: 85%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .title-page{
+    font-size: 24px !important;
+  }
+}
 </style>

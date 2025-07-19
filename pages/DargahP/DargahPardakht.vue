@@ -467,6 +467,7 @@ export default {
 .title-about4 {
   font-size: 1.5rem;
   font-family: Vazir3;
+  margin-right: 6%;
 }
 
 .text-about4 {
@@ -474,6 +475,7 @@ export default {
   font-family: Vazir3;
   color: rgb(129, 129, 129);
   padding-left: 20%;
+  margin-right: 6%;
 }
 
 .table-about4 {

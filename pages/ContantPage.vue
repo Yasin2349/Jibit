@@ -1,11 +1,7 @@
 <template>
   <div>
     <div class="div1">
-        <div class="div-map">
-            <div class="map">
-                <iframe class="iframe-map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d402.0056967673759!2d59.60007550662386!3d36.28694406931608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1752061861159!5m2!1sen!2s"></iframe>
-            </div>
-        </div> 
+        
         <div class="div-contant">
             <div class="tab1">
                 <p class="title-tab1"><b>XdgPay راه های ارتباط با </b></p>
@@ -14,7 +10,7 @@
                         <div class="tabl1-col1">
                             <p class="p-table" style="font-family: Vazir; color: #a3a9b2;"><b><i class="fas fa-map-marker-alt"></i>  آدرس:</b></p>
                         </div>
-                        <div class="tabl1-col2"><p class="p-table" style="text-align: start;margin-right: 15px;"><b>{{ this.data_contant.address }}</b></p></div>
+                        <div class="tabl1-col2" style="width: 78%;"><p class="p-table" style="text-align: start;"><b>{{ this.data_contant.address }}</b></p></div>
                     </div>
                     <div class="tabl1-row2">
                         <div class="tabl2-col1"><p class="p-table" style="font-family: Vazir; color: #a3a9b2;"><b><i class="fas fa-envelope-open"></i> کد پستی :</b></p></div>
@@ -31,17 +27,22 @@
                         <div class="row1-col2"><p class="p-table-cover" style="font-family: Vazir; color: #4d5768; text-align: start;"><b class="cover">{{ this.data_contant.email }}</b></p></div>
                     </div>
                     <div class="tabl2-row2">
-                        <div class="row2-col1"><p class="p-table" style="font-family: Vazir; color: #a3a9b2;text-align: start;"><b>تلفن :</b></p></div>
+                        <div class="row2-col1"><p class="p-table" style="font-family: Vazir; color: #a3a9b2;text-align: start;"><i class="fas fa-phone"></i>  <b>تلفن :</b></p></div>
                         <div class="row2-col2"><p class="p-table-cover" style="font-family: Vazir; color: #4d5768; text-align: start;"><b class="cover">{{ this.data_contant.phone }}</b></p></div>
                     </div>
                     <p class="p-table-labl" style="font-family: Vazir; color: #4d5768; text-align: start;height: 50px;display: flex;align-items: center;margin-right: 20%;"><b>{{ this.data_contant.phonetime }}</b></p>
                     <div class="tabl2-row3">
-                        <div class="row3-col1"><p class="p-table" style="font-family: Vazir; color: #a3a9b2;text-align: start;"><b>تلگرام :</b></p></div>
+                        <div class="row3-col1"><p class="p-table" style="font-family: Vazir; color: #a3a9b2;text-align: start;"><i class="fab fa-telegram-plane"></i> <b>تلگرام :</b></p></div>
                         <div class="row3-col2"><p class="p-table-cover" style="font-family: Vazir; color: #4d5768; text-align: start;"><b class="cover">{{ this.data_contant.idtelegram }}</b></p></div>
                     </div>
                     <p class="p-table-labl" style="font-family: Vazir; color: #4d5768; text-align: start; font-size: 15px; font-family: Vazir;margin-right: 20%;"><b>{{ this.data_contant.teltime }}
 روزهای پنج‌شنبه، جمعه و تعطیلات رسمی: از ساعت ۹:۰۰ تا ۲۰:۰۰</b></p>
                 </div>
+            </div>
+        </div> 
+        <div class="div-map">
+            <div class="map">
+                <iframe class="iframe-map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d402.0056967673759!2d59.60007550662386!3d36.28694406931608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1752061861159!5m2!1sen!2s"></iframe>
             </div>
         </div> 
     </div>
@@ -77,23 +78,66 @@ export default {
 <style scoped>
 .div1{
     width: 100%;
-    height: 820px;
+    height: auto;
+    max-height: 1400px;
     display: flex;
     align-items: end;
     flex-wrap: wrap;
+    direction: rtl;
 }
 .div-map{
-    width: 50%;
+    margin: auto;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: end;
     align-items: end;
 }
 .div-contant{
-    width: 50%;
+    width: 500px;
     height: 100%;
     justify-content: end;
     align-items: end;
+    margin: auto;
+    direction: ltr;
+}
+@media screen and (max-width: 768px) {
+    .div-contant{
+        width: 89%;
+    }
+    .title-tab2{
+        margin-top: 50px;
+    }
+    .div-map{
+        width: 89%;
+        justify-content: center;
+    }
+    .iframe-map{
+        margin-top: 80px;
+        height: 300px !important;
+    }
+}
+@media screen and (max-width: 562px) {
+    .title-tab1{
+        height: 50px;
+        text-align: right;
+        line-height: 45px !important;
+        /* margin: auto !important; */
+        margin-right: 10% !important;
+        margin: auto;
+        width: 80%  !important;
+    }
+    .title-tab1 b{
+        font-size: 30px !important;
+    }
+}
+@media screen and (max-width: 430px) {
+    .title-tab1 b{
+        font-size: 24px !important;
+    }
+    .div-table2{
+        width: 88% !important;
+    }
 }
 .map{
     width: 555px;
@@ -153,13 +197,13 @@ export default {
 }
 
 .tabl1-col1{
-    width: 24%;
+    width: 20%;
     height: 100%;
 }
 
 .p-table{
     width: 100%;
-    text-align: center;
+    text-align: right;
     font-family: Vazir2;
     font-size: 14px;
     margin-top: 20px;
@@ -258,5 +302,7 @@ export default {
     justify-content: center;
     align-items: center;
 }
-
+@media screen and (max-width: 1200px) {
+    
+}
 </style>

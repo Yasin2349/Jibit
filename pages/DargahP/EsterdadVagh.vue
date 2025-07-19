@@ -92,7 +92,7 @@
       <div class="image w-full lg:w-1/2" style="background-image: url('https://jibit.ir/wp-content/themes/jibit/images/refund/photo-2.svg');"></div>
     </div>
   </div>
-  <p class="p-title-about3">سایر امکانات</p>
+  <p class="p-title-about3" style="padding-right: 10%; font-family: Vazir;">سایر امکانات</p>
   <div class="div-about3 container mx-auto mt-12">
     <div class="flex flex-col lg:flex-row gap-6 div-rtl" style="height: 100%;">
       <div class="about3-box1 w-full lg:w-1/3">
@@ -196,9 +196,9 @@
                class="w-[170px] h-[50px] bg-[#226ce9] text-white text-sm rounded-md border border-[#226ce9] font-vazir3 hover:bg-[#2247e9] mt-4 transition" />
       </div>
       <div class="div-2-about-services w-full lg:w-2/5">
-        <p class="text-about-services2">برای ایجاد بسته اختصاصی کسب و کار‌تان با ما تماس بگیرید.</p>
+        <p class="text-about-services2"  style="margin-top: 37px;">برای ایجاد بسته اختصاصی کسب و کار‌تان با ما تماس بگیرید.</p>
         <input dir="rtl" type="submit" value="تماس با تیم فروش >"
-               class="w-[170px] h-[50px] border border-gray-400 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition mt-4" />
+               class="w-[170px] h-[50px] border border-gray-400 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition mt-10" />
       </div>
     </div>
   </div>
@@ -401,12 +401,14 @@ export default {
 .title-about4 {
   font-size: 1.5rem;
   font-family: Vazir3;
+  padding-right: 6%;
 }
 
 .text-about4 {
   font-size: 1rem;
   font-family: Vazir3;
   color: rgb(129, 129, 129);
+  padding-right: 6%;
 }
 
 .table-about4 {
@@ -500,6 +502,7 @@ export default {
   text-align: right;
   direction: rtl;
   margin-top: 1rem;
+  margin-right: 6%;
 }
 
 .p-title-about4::before {
@@ -518,6 +521,8 @@ export default {
   background: url(//jibit.ir/wp-content/themes/jibit/images/transferor/trynow-background.png) center top / 50% no-repeat #fff;
   box-shadow: 0 8.64px 28.8px rgba(0, 0, 0, .06);
   direction: rtl;
+  margin-bottom: 200px;
+  margin-top: 50px;
 }
 
 .div-1-about-services, .div-2-about-services {
@@ -562,6 +567,7 @@ export default {
 
   .title2, .title-about4, .title-about-services, .p-title-about3 {
     font-size: 1.25rem;
+    
   }
 
   .text2, .text-about4, .text-about-services, .text-about-services2 {
