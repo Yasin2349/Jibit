@@ -28,8 +28,8 @@
 
     
     <ul class='ul_menu'>
-      <li class="li-sh">
-        <button type="button" @click="menuopen" @blur="menuclose" style="cursor: pointer; font-family: Vazir3; color: rgb(88, 88, 88);">
+      <li class="li-sh" style="width: 20%;">
+        <button class="bnt-ser-menu" type="button" @click="menuopen" @blur="menuclose" style="cursor: pointer; font-family: Vazir3; color: rgb(88, 88, 88);">
           سرویس‌ها <i class="fas fa-chevron-down"></i>
         </button>
       </li>
@@ -43,15 +43,22 @@
           <li><a href="#">احراز هویت بایومتریک <div class="logo6"></div></a></li>
         </ul>
       </div>
-      <li class="li-sh"><NuxtLink to="/ContantPage">ارتباط با ما</NuxtLink></li>
-      <li class="li-sh"><NuxtLink to="/blogs">بلاگ</NuxtLink></li>
-      <li class="li_login li-sh" style="width: 150px;padding: 10px;margin-right: 0%;margin-left: 3%; text-align: center; background-color: rgba(255, 255, 255, 0.432);">
-        <NuxtLink to="/LoginRegister4" style="font-size: 15px;width: 100%;">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;text-align: center;"></i></NuxtLink>
+      <li class="li-sh" style="width: 20%;"><NuxtLink to="/ContantPage">ارتباط با ما</NuxtLink></li>
+      <li class="li-sh F" style="margin-left: 10%;" ><NuxtLink to="/blogs">بلاگ</NuxtLink></li>
+      <li class="li_login li-sh" style="width: 110px;padding: 10px;margin-left: 3%; text-align: center; background-color: rgba(255, 255, 255, 0.432);">
+        <NuxtLink to="/LoginRegister4" class="a-login" style="font-size: 15px;width: 100%;">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;text-align: center;"></i></NuxtLink>
       </li>
-      <button class="btn-DL-Mode"><i class="fas fa-moon" style="color: white;"></i></button>
-      <button class="btn-DL-Mode" style="background-color: white;"><i class="fas fa-sun"></i></button>
-      <button class="btn-DL-Mode" style="background-color: white;">FA</button>
-      <button class="btn-DL-Mode" style="background-color: white;">EN</button>
+
+      <button class="btn-DL-Mode" @click="SH_Mode" :class="sh_Mode ? 'btn-DL-Mode' : 'btn-DL-Mode2'">
+        <i
+          :class="sh_Mode ? 'fas fa-moon' : 'fas fa-sun'"
+          :style="{ color: sh_Mode ? 'white' : 'black' }"
+        ></i>
+      </button>
+      <button class="btn-DL-Mode" @click="toggleLang" style="background-color: white;">
+        {{ sh_LN ? 'FA' : 'EN' }}
+      </button>
+      
       <li>
         <div  style="display: flex;width: 180px;text-align: center;">
           <NuxtLink to="/LoginRegister4" class="login-btn-res" style=" margin-left: 10px; padding: 7px;border-radius: 8px ;border: 1px solid rgb(206, 206, 206) ; background-color: white ;">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;text-align: center ;"></i></NuxtLink>
@@ -74,6 +81,17 @@ const isLoginPage = ref(false)
 const shmenu = ref(false)
 const shhamber = ref(true)
 const shzarb = ref(false)
+
+const sh_Mode = ref(true)
+const sh_LN = ref(false)
+
+function SH_Mode(){
+  sh_Mode.value = !sh_Mode.value;
+  document.body.classList.toggle('dark')
+}
+function SH_LN(){
+  
+}
 
 function menuopen() {
   menuservices.value = !menuservices.value
@@ -100,9 +118,21 @@ onUnmounted(() => {
 watch(() => route.fullPath, (newPath) => {
     isLoginPage.value = newPath.includes('LoginRegister4') || newPath.includes('ResetPassword')|| newPath.includes('PasswordVerify')
 })
+
+// const langStore = useLangStore()
+
+// const t = langStore.t
 </script>
 
   <style scoped>
+  @media screen and (max-width: 1024px) {
+    .li-sh.F{
+      margin-right: 2% !important;
+    }
+    .a-login{
+      font-size: 14px !important;
+    }
+  }
   .div1 {
     width: 100%;
     height: 63px;
@@ -129,7 +159,7 @@ watch(() => route.fullPath, (newPath) => {
   }
 
   .ul_menu {
-    width: 50%;
+    width: 60%;
     height: 100%;
     display: flex;
     justify-content: start;
@@ -138,7 +168,7 @@ watch(() => route.fullPath, (newPath) => {
   }
 
   .ul_menu li {
-    width: 20%;
+    width: 0%;
     list-style: none;
     
   }
@@ -364,6 +394,19 @@ watch(() => route.fullPath, (newPath) => {
     background-color: rgb(62, 62, 107);
     transition: all ease 0.3s ;
     cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .btn-DL-Mode2{
+    width: 65px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    transition: all ease 0.3s ;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .btn-DL-Mode:hover {
+    transform: scale(1.1);
   }
   @media screen and (max-width: 1259px) {
       .ul_menu li{
@@ -394,7 +437,14 @@ watch(() => route.fullPath, (newPath) => {
   }
   @media screen and (max-width: 450px) {
     .li_logo{
-      width: 10%;
+      width: 10% !important; 
+      margin: 5%;
+    }
+    .logo{
+      width: 70px !important;
+    }
+    .ul_menu{
+      margin-right:0% ;
     }
   }
   @media screen and (max-width: 768px) {
@@ -402,10 +452,27 @@ watch(() => route.fullPath, (newPath) => {
       display: flex;
       justify-content: center;
     }
+    .btn-DL-Mode{
+      width: 50px;
+    }
   }
   @media screen and (max-width: 360px) {
     .li_logo{
       margin-right: 2% !important;
     }
   }
+@keyframes pop {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) rotate(15deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
   </style>

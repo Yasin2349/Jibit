@@ -9,7 +9,8 @@ export default defineNuxtConfig({
   css: [
     '~/assets/css/main.css',                 // فایل اصلی CSS که Tailwind داخلشه
     '@fortawesome/fontawesome-free/css/all.css',
-    '~/pages/responcive.css'
+    '~/pages/responcive.css',
+    '@/assets/scss/theme.scss'
   ],
   vite: {
     plugins: [

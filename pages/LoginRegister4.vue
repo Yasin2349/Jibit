@@ -5,9 +5,13 @@
 
     <div class="div1s">
       <Form :validation-schema="schema" @submit="onSubmit" v-slot="{ meta }">
-        <p class="title-login">
+        
+        <div class="dis">
+          <NuxtLink to="/"><div class="logo-login"></div></NuxtLink>
+          <p class="title-login">
           به <b style="color:rgb(10, 74, 77); padding: 0 8px;">XDGPay</b> خوش آمدید
-        </p>
+          </p>  
+        </div>
 
         <div class="dis-input-pass">
           <div style="width: 50%;">
@@ -81,9 +85,6 @@
         <ErrorMessage name="password" v-slot="{ message }">
           <p class="p-error">{{ message }}</p>
         </ErrorMessage>
-
-        
-
         <input type="submit" class="btn-login" value="ثبت نام" :disabled="!meta.valid"/>
       </Form>
 
@@ -96,7 +97,7 @@
 </template>
 
 <script setup>
-import axios from 'axios'
+
 import { ref, computed } from 'vue'
 import { Form, Field, ErrorMessage, useField } from 'vee-validate'
 import * as yup from 'yup'
@@ -159,19 +160,23 @@ const color = computed(() => {
       return 'white'
   }
 })
-const token = "eyJhbGciOi";
-const onSubmit = (values) => {
-  alert('Form submitted successfully');
-  axios.post('http://localhost:3000/users', values, {
-    headers: {
-      Authorization: `Bearer ${token}`
-    }
-  }).then(response => {
-    console.log("true", response.data)
-  }).catch(error => {
-    console.log("false", error)
-  })
+
+const onSubmit = async (values) => {
+  try {
+    const res = await $fetch('https://xdgbit.free.beeceptor.com', {
+      method: 'POST',
+      body: {
+        name: values.name,
+        family: values.family,
+        email: values.email,
+        password: values.password,
+      }
+    })
+  } catch (err) {
+    console.error('خطا در ثبت‌نام:', err)
+  }
 }
+
 
 
 </script>
@@ -257,15 +262,30 @@ html, body, #app {
 .title-login{
     font-size: 25px;
     height: 86px;
-    border-bottom: 1px solid rgb(226, 226, 226);
+    width: 70%;
     display: flex;
     align-items: center;
-    padding-right: 8%;
     font-weight: 600;
     color:  rgb(220, 228, 233);
     direction: rtl;
     text-align: right;
     font-family: Vazir;
+    margin-right: 0%;
+}
+.logo-login{
+  width: 80px;
+  height: 50px ;
+  background-image: url(../public/logo-xdgpay2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+
+}
+.dis{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(226, 226, 226);
 }
 .input-email{
     width: 86%;

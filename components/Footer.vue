@@ -130,6 +130,7 @@ export default {
 
   .logo-footer {
     margin: 0 auto 10px auto;
+    
   }
 
   .text-footer {

@@ -5,7 +5,7 @@
   v-for="(item, idx) in items"
   :key="idx"
   class="w-[280px] min-h-[235px] mx-2.5 bg-white rounded-[15px]
-         shadow-[0_3px_2px_rgb(161,161,161)] list-none rtl li-btns mt-[25px] flex flex-col justify-start"
+         shadow-[0_3px_2px_rgb(161,161,161)] list-none rtl li-btns mt-[25px] flex flex-col justify-start box-about"
 >
         <div
           class="w-[55px] h-[55px] mt-[30px] mr-[30px]

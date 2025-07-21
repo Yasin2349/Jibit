@@ -2,7 +2,7 @@
   <div
     class="section-wrapper w-full h-[700px] flex justify-center items-center
            bg-cover bg-bottom
-           pt-20 pb-20 relative text-[#1a2d4b] z-1 back section-wrapper-responsive"
+           pt-20 pb-20 relative text-[#1a2d4b] z-1 back section-wrapper-responsive back-divimg"
   >
     <div class="w-3/5 h-full flex justify-center items-center image-container-responsive">
       <img
@@ -32,14 +32,14 @@
           type="submit"
           value="تماس با تیم فروش >"
           class="w-[170px] h-[50px] border border-gray-400 rounded-md
-                 text-black text-sm font-vazir3 hover:bg-gray-200 transition button-responsive"
+                 text-black text-sm font-vazir3 hover:bg-gray-200 transition button-responsive1"
         />
         <input
           dir="rtl"
           type="submit"
           value="ساخت حساب کاربری >"
           class="w-[170px] h-[50px] bg-[#226ce9] text-white text-sm rounded-md
-                 border border-[#226ce9] font-vazir3 hover:bg-[#2247e9] transition button-responsive"
+                 border border-[#226ce9] font-vazir3 hover:bg-[#2247e9] transition button-responsive2"
         />
       </div>
     </div>

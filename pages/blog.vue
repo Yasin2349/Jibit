@@ -44,20 +44,21 @@
     <br>
     <br>
     <div style="width: 100%;background-color: rgb(237, 243, 255);">
+        <form action="" method="get">
         <div class="contant">
             <p class="p-title-contant">دیدگاهتان را بنویسید</p>
             <p class="p2-title-contant">نشانی ایمیل شما منتشر نخواهد شد. بخش‌های موردنیاز علامت‌گذاری شده‌اند *</p>
             <p class="p2-title-contant" style="color: rgb(112, 112, 112);">دیدگاه*</p>
-            <textarea class="input-1" placeholder=""></textarea>
+            <textarea name="text-message" class="input-1" placeholder=""></textarea>
             <div class="display">
-                <input type="text" class="input2" placeholder="ایمیل">
-                <input type="text" class="input3" placeholder="نام و نام خانوادگی">
+                <input name="text-name" type="text" class="input2" placeholder="ایمیل">
+                <input name="text-family" type="text" class="input3" placeholder="نام و نام خانوادگی">
             </div>
             <div class="display" style="justify-content: right;">
-                <button class="btn-contant">ثبت دیدگاه</button>
+                <button class="btn-contant" name="submit">ثبت دیدگاه</button>
             </div>
-            
         </div>
+        </form>
     </div>  
     <p class="p-title-about3">تازه ترین مقالات</p>
     <div class="div-M2">
