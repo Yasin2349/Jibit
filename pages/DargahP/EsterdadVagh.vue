@@ -198,7 +198,7 @@
       <div class="div-2-about-services w-full lg:w-2/5">
         <p class="text-about-services2"  style="margin-top: 37px;">برای ایجاد بسته اختصاصی کسب و کار‌تان با ما تماس بگیرید.</p>
         <input dir="rtl" type="submit" value="تماس با تیم فروش >"
-               class="w-[170px] h-[50px] border border-gray-400 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition mt-10" />
+               class="w-[170px] h-[50px] border border-gray-400 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition mt-10 btn1" />
       </div>
     </div>
   </div>

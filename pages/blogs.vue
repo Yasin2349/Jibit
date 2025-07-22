@@ -98,7 +98,7 @@
     </NuxtLink>
     <p class="p-title-about3">به مطالعه ادامه دهید ...</p>
     <div class="display" style="justify-content: right;">
-      <input dir="rtl" type="submit" value="مطالعه بیشتر >" class="w-[140px] h-[45px] border border-gray-300 rounded-md text-black-100 text-sm font-vazir3 hover:bg-gray-200 transition mt-[10px] mr-[10%] cursor-pointer" />
+      <input dir="rtl" type="submit" value="مطالعه بیشتر >" class="w-[140px] h-[45px] border border-gray-300 rounded-md text-black-100 text-sm font-vazir3 hover:bg-gray-200 transition mt-[10px] mr-[10%] cursor-pointer btn1" />
     </div>
 
     

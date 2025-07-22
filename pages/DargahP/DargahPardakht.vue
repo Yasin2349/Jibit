@@ -144,7 +144,7 @@
       <div class="row22-about4">
         <div class="col23-about4">
           <input dir="rtl" type="submit" value="تماس با تیم فروش >"
-                 class="w-[170px] h-[45px] border border-gray-300 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition btn-tel" />
+                 class="w-[170px] h-[45px] border border-gray-300 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition btn-tel btn1" />
         </div>
         <div class="col24-about4">
           <p class="p2-table2"><span class="check-circle"><i class="fas fa-check"></i></span> بیش از ۲۰۰ تراکنش</p>
@@ -162,8 +162,8 @@
       </div>
       <div class="div-2-about-services w-full lg:w-2/5">
         <p class="text-about-services2">برای ایجاد بسته اختصاصی کسب و کار‌تان با ما تماس بگیرید.</p>
-        <input dir="rtl" type="submit" value="تماس با تیم فروش >"
-               class="w-[170px] h-[50px] border border-gray-400 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition mt-4" />
+        <input dir="rtl" type="submit" value="تماس با تیم فروش >" 
+               class="w-[170px] h-[50px] border border-gray-400 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition mt-4 btn1" />
       </div>
     </div>
   </div>

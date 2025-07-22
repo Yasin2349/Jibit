@@ -2,10 +2,10 @@
   <div class="w-4/5 h-[250px] mx-auto flex items-end">
     <div class="w-full">
       <p class="w-full text-[32px] text-[#303c4f] text-right leading-[85px] font-vazir title-jibit" dir="rtl">
-        سرویس های XDGPay
+        {{ langStore.t('title_slider') }}
       </p>
       <p class="w-full text-right text-[#697281] font-vazir3 rtl text">
-        ارائه دهنده خدمات متنوع پرداخت، انتقال وجه و عملیات مالی و بانکی به صورت یکپارچه و پایدار است.
+        {{ langStore.t('text_slider') }}
       </p>
     </div>
   </div>
@@ -14,6 +14,10 @@
 </template>
 
 <script setup>
+import { useLangStore } from '~/stores/lang'
+
+const langStore = useLangStore()
+
 </script>
 <style scoped>
 .font-vazir {

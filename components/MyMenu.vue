@@ -23,39 +23,39 @@
         </ul>
       </div>
       <li><NuxtLink to="/ContantPage" class="contant-btn">ارتباط با ما</NuxtLink></li>
-      <li><NuxtLink to="/blogs" class="blog-btn">بلاگ</NuxtLink></li>
+      <li><NuxtLink to="/blogs" class="blog-btn">{{ langStore.t('btn_blog') }}</NuxtLink></li>
     </ul>
 
     
     <ul class='ul_menu'>
-      <li class="li-sh" style="width: 20%;">
+      <li class="li-sh" style="width: 18%;">
         <button class="bnt-ser-menu" type="button" @click="menuopen" @blur="menuclose" style="cursor: pointer; font-family: Vazir3; color: rgb(88, 88, 88);">
           سرویس‌ها <i class="fas fa-chevron-down"></i>
         </button>
       </li>
       <div :class="['services', { open: menuservices }]">
         <ul class="ul_services">
-          <li><NuxtLink to="/DargahP/DargahPardakht">درگاه پرداخت <div class="logo1"></div></NuxtLink></li>
-          <li><NuxtLink to="/DargahP/EsterdadVagh">استرداد وجه <div class="logo2"></div></NuxtLink></li>
+          <li><NuxtLink to="/DargahP/DargahPardakht">{{ langStore.t('btn1_slider') }} <div class="logo1"></div></NuxtLink></li>
+          <li><NuxtLink to="/DargahP/EsterdadVagh">{{ langStore.t('btn2_slider') }}<div class="logo2"></div></NuxtLink></li>
           <li><NuxtLink to="/DargahP/VarizSH">واریز شناسه دار<div class="logo3"></div></NuxtLink></li>
           <li><a href="#">تسویه و انتقال وجه <div class="logo4"></div></a></li>
           <li><a href="#">سرویس‌های استعلامی <div class="logo5"></div></a></li>
           <li><a href="#">احراز هویت بایومتریک <div class="logo6"></div></a></li>
         </ul>
       </div>
-      <li class="li-sh" style="width: 20%;"><NuxtLink to="/ContantPage">ارتباط با ما</NuxtLink></li>
-      <li class="li-sh F" style="margin-left: 10%;" ><NuxtLink to="/blogs">بلاگ</NuxtLink></li>
+      <li class="li-sh" style="width: 15%;"><NuxtLink to="/ContantPage">ارتباط با ما</NuxtLink></li>
+      <li class="li-sh F" style="margin-left: 8%;" ><NuxtLink to="/blogs">بلاگ</NuxtLink></li>
       <li class="li_login li-sh" style="width: 110px;padding: 10px;margin-left: 3%; text-align: center; background-color: rgba(255, 255, 255, 0.432);">
         <NuxtLink to="/LoginRegister4" class="a-login" style="font-size: 15px;width: 100%;">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;text-align: center;"></i></NuxtLink>
       </li>
 
       <button class="btn-DL-Mode" @click="SH_Mode" :class="sh_Mode ? 'btn-DL-Mode' : 'btn-DL-Mode2'">
         <i
-          :class="sh_Mode ? 'fas fa-moon' : 'fas fa-sun'"
+          :class="!sh_Mode ? 'fas fa-moon' : 'fas fa-sun'"
           :style="{ color: sh_Mode ? 'white' : 'black' }"
         ></i>
       </button>
-      <button class="btn-DL-Mode" @click="toggleLang" style="background-color: white;">
+      <button class="btn-DL-Mode" id="btn-DL-Mode5" @click="toggleLang" style="background-color: white;margin-right: 2%;">
         {{ sh_LN ? 'FA' : 'EN' }}
       </button>
       
@@ -71,8 +71,10 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import { useLangStore } from '@/stores/lang'
+const langStore = useLangStore()
 
 const menuservices = ref(false)
 const isScrolled = ref(false)
@@ -81,47 +83,82 @@ const isLoginPage = ref(false)
 const shmenu = ref(false)
 const shhamber = ref(true)
 const shzarb = ref(false)
-
-const sh_Mode = ref(true)
-const sh_LN = ref(false)
-
-function SH_Mode(){
+function SH_Mode() {
   sh_Mode.value = !sh_Mode.value;
-  document.body.classList.toggle('dark')
-}
-function SH_LN(){
+
   
+  if (sh_Mode.value) {
+    document.body.classList.add('dark');
+  } else {
+    document.body.classList.remove('dark');
+  }
+
+  
+  localStorage.setItem('darkMode', sh_Mode.value ? 'true' : 'false');
 }
+
+onMounted(() => {
+  
+  const darkModeStored = localStorage.getItem('darkMode');
+  
+  if (darkModeStored === 'true') {
+    sh_Mode.value = true;
+    document.body.classList.add('dark');
+  } else {
+    sh_Mode.value = false;
+    document.body.classList.remove('dark');
+  }
+
+  toggleLang()
+})
+
+
+
+const sh_Mode = ref(false)
+const sh_LN = ref(true)
+
+function toggleLang() {
+  if(sh_LN.value === true){
+    document.body.classList.remove('ltr-mode');
+    langStore.setLang('fa')
+  } else if(sh_LN.value === false){
+    document.body.classList.add('ltr-mode');
+    langStore.setLang('en')
+  }
+  sh_LN.value = !sh_LN.value
+}
+
+
 
 function menuopen() {
   menuservices.value = !menuservices.value
 }
+
 function menuclose() {
   menuservices.value = false
 }
+
 function handleScroll() {
   isScrolled.value = window.scrollY > 50
 }
+
 function toggleMainMenu() {
   shmenu.value = !shmenu.value
 }
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
-  isLoginPage.value = route.fullPath.includes('LoginRegister4') || route.fullPath.includes('ResetPassword')|| route.fullPath.includes('PasswordVerify')
-
+  isLoginPage.value = route.fullPath.includes('LoginRegister4') || route.fullPath.includes('ResetPassword') || route.fullPath.includes('PasswordVerify')
 })
+
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
 watch(() => route.fullPath, (newPath) => {
-    isLoginPage.value = newPath.includes('LoginRegister4') || newPath.includes('ResetPassword')|| newPath.includes('PasswordVerify')
+  isLoginPage.value = newPath.includes('LoginRegister4') || newPath.includes('ResetPassword') || newPath.includes('PasswordVerify')
 })
 
-// const langStore = useLangStore()
-
-// const t = langStore.t
 </script>
 
   <style scoped>
@@ -135,7 +172,7 @@ watch(() => route.fullPath, (newPath) => {
   }
   .div1 {
     width: 100%;
-    height: 63px;
+    height: 70px;
     position: fixed;
     top: 0;
     display: flex;
@@ -388,8 +425,8 @@ watch(() => route.fullPath, (newPath) => {
     visibility: hidden;
   }
   .btn-DL-Mode{
-    width: 65px;
-    height: 50px;
+    width: 50px;
+    height: 45px;
     border-radius: 10px;
     background-color: rgb(62, 62, 107);
     transition: all ease 0.3s ;
@@ -397,8 +434,8 @@ watch(() => route.fullPath, (newPath) => {
     transition: all 0.3s ease;
   }
   .btn-DL-Mode2{
-    width: 65px;
-    height: 50px;
+    width: 50px;
+    height: 45px;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     transition: all ease 0.3s ;

@@ -1,6 +1,6 @@
 <template class="background-Home">
   <DivImg />
-  <BrandLogos />
+  <!-- <BrandLogos /> -->
   <BoxAbout />
   <AboutSer />
   <ServicesSite/>
@@ -134,6 +134,9 @@ import DivImg from './DivImg.vue';
 import Footer from './Footer.vue';
 import MyMenu from './MyMenu.vue';
 import ServicesSite from './ServicesSite.vue';
+
+import { useLangStore } from '@/stores/lang'
+const langStore = useLangStore() 
 
 // const langStore = useLangStore()
 

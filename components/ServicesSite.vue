@@ -92,7 +92,7 @@
     <div class="page11">
       <div class="document-page1">
         <div class="div-logo-page1"><div class="logo2"><div class="logo11"></div></div></div>
-        <div class="div-title-page1"><H3 class="title">درگاه پرداخت</H3></div>
+        <div class="div-title-page1"><H3 class="title">{{ langStore.t('btn1_slider') }}</H3></div>
         <div class="div-text-page1"><p class="text">
           XDGPay به عنوان یکی از بزرگ‌ترین پرداخت‌یار‌های رسمی شاپرک (بانک مرکزی)، با ارائه درگاه پرداخت با قابلیت اتصال به درگاه‌های متنوع و مسیردهی هوشمند بین PSPها در راستای پایداری در سیستم پرداخت و افزایش درآمد در کنار کسب و کارها ایستاده است.
         </p></div>
@@ -102,7 +102,7 @@
     <div class="page22">
       <div class="document-page1">
               <div class="div-logo-page1"><div class="logo2"><div class="logo44"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">تسویه و انتقال وجه</H3></div>
+              <div class="div-title-page1"><H3 class="title">{{ langStore.t('btn2_slider') }}</H3></div>
               <div class="div-text-page1"><p class="text">
                 امکان انتقال وجوه در وب‌سرویس XDGPay به شیوه‌های متنوع برای صاحبان کسب و کار فراهم شده است. امکان جابه‌جایی وجوه از مبدا پلتفرم XDGPay به حساب مشتریان، همکاران و شرکای تجاری شما در تمامی بانک‌ها امکان‌پذیر است.
               </p></div>
@@ -112,7 +112,7 @@
     <div class="page33">
       <div class="document-page1">
               <div class="div-logo-page1"><div class="logo2"><div class="logo33"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">واریز شناسه دار</H3></div>
+              <div class="div-title-page1"><H3 class="title">{{ langStore.t('btn3_slider') }}</H3></div>
               <div class="div-text-page1"><p class="text">
                 سرویس واریز شناسه‌دار این امکان را به مشتریان کسب و کار‌ها می‌دهد تا بدون محدودیت در مبلغ تراکنش و با انتخاب روش مناسب از خدمات واریز وجه و پرداخت استفاده کنند.
               </p></div>
@@ -122,7 +122,7 @@
     <div class="page44">
       <div class="document-page1">
               <div class="div-logo-page1"><div class="logo2"><div class="logo22"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">سرویس های استعلامی</H3></div>
+              <div class="div-title-page1"><H3 class="title">{{ langStore.t('btn4_slider') }}</H3></div>
               <div class="div-text-page1"><p class="text">
                 با وب‌سرویس استعلامی XDGPay کسب و کار‌ها می‌توانند با ایجاد خدماتی نوین در سنجش اصالت اطلاعات بانکی و شناسایی هویت اشخاص تجربه‌ای جدید را برای مشتریان خود به وجود آورند.
               </p></div>
@@ -132,7 +132,7 @@
     <div class="page55">
       <div class="document-page1">
               <div class="div-logo-page1"><div class="logo2"><div class="logo11"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">درگاه پرداخت</H3></div>
+              <div class="div-title-page1"><H3 class="title">{{ langStore.t('btn5_slider') }}</H3></div>  
               <div class="div-text-page1"><p class="text">
                 XDGPay به عنوان یکی از بزرگ‌ترین پرداخت‌یار‌های رسمی شاپرک (بانک مرکزی)، با ارائه درگاه پرداخت با قابلیت اتصال به درگاه‌های متنوع و مسیردهی هوشمند بین PSPها در راستای پایداری در سیستم پرداخت و افزایش درآمد در کنار کسب و کارها ایستاده است.
               </p></div>
@@ -143,33 +143,37 @@
 </template>
 
 
-<script>
-export default {
-  name: "ServicesSite",
-  data() {
-    return {
-      tabs: [
-        { name: "tab5", value: "درگاه پرداخت" },
-        { name: "tab4", value: "سرویس های استعلامی" },
-        { name: "tab3", value: "واریز شناسه دار" },
-        { name: "tab2", value: "تسویه و انتقال وجه" },
-        { name: "tab1", value: "احراز هویت بایومتریک" },
-      ],
-      shTab: "tab1",
-      lastTabIndex: 0,
-      transitionName: "slide-left",
-    };
-  },
-  methods: {
-    changepage(tab) {
-      const newIndex = this.tabs.findIndex((t) => t.name === tab.name);
-      this.transitionName = newIndex > this.lastTabIndex ? "slide-left" : "slide-right";
-      this.lastTabIndex = newIndex;
-      this.shTab = tab.name;
-    },
-  },
-};
+<script setup>
+import { ref } from 'vue'
+import { useLangStore } from '~/stores/lang'
+
+const langStore = useLangStore()
+const name_btn1 = ref(langStore.t('btn1_slider'))
+const name_btn2 = ref(langStore.t('btn2_slider'))
+const name_btn3 = ref(langStore.t('btn3_slider'))
+const name_btn4 = ref(langStore.t('btn4_slider'))
+const name_btn5 = ref(langStore.t('btn5_slider'))
+
+const tabs = [
+  { name: "tab5", value: name_btn1 },
+  { name: "tab4", value: name_btn2},
+  { name: "tab3", value: name_btn3 },
+  { name: "tab2", value: name_btn4 },
+  { name: "tab1", value: name_btn5 },
+]
+
+const shTab = ref("tab1")
+const lastTabIndex = ref(0)
+const transitionName = ref("slide-left")
+
+function changepage(tab) {
+  const newIndex = tabs.findIndex((t) => t.name === tab.name)
+  transitionName.value = newIndex > lastTabIndex.value ? "slide-left" : "slide-right"
+  lastTabIndex.value = newIndex
+  shTab.value = tab.name
+}
 </script>
+
 
 
 <style scoped>
@@ -183,7 +187,7 @@ export default {
 }
 @font-face {
   font-family: Vazir3;
-  src: url(../public/Vazir-Medium.ttf);
+  src: url(../public/Vazir-Medium.t4tf);
 }
 
 @media screen and (max-width: 768px) {

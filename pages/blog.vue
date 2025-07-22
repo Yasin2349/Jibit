@@ -87,7 +87,7 @@
     <Footer></Footer>
 </template>
 
-<script>
+<script >
 export default {
     name:'blog'
 }

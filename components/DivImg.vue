@@ -17,27 +17,27 @@
         class="text-[48px] font-vazir3 font-bold text-[#1a2d4b] mt-[100px] w-[72%] title-responsive"
       >
         <b>
-          <span class="font-bold">{{ data_contant.title }}</span>
+          <span class="font-bold">{{ langStore.t('title_home_page') }}</span>
         </b>
       </h1>
       <p
         v-if="data_contant.text"
         class="w-[72%] text-[18px] leading-[29px] text-[#4d5768] mt-4 font-vazir3 text-responsive" dir="rtl"
       >
-        {{ data_contant.text }}
+        {{ langStore.t('text_home_page') }}
       </p>
       <div class="w-[72%] flex justify-end items-center mt-20 gap-2 buttons-container-responsive">
         <input
           dir="rtl"
           type="submit"
-          value="تماس با تیم فروش >"
+          :value="langStore.t('value_btn_home_page1')"
           class="w-[170px] h-[50px] border border-gray-400 rounded-md
                  text-black text-sm font-vazir3 hover:bg-gray-200 transition button-responsive1"
         />
         <input
           dir="rtl"
           type="submit"
-          value="ساخت حساب کاربری >"
+           :value="langStore.t('value_btn_home_page2')"
           class="w-[170px] h-[50px] bg-[#226ce9] text-white text-sm rounded-md
                  border border-[#226ce9] font-vazir3 hover:bg-[#2247e9] transition button-responsive2"
         />
@@ -47,6 +47,10 @@
 </template>
 
 <script setup>
+import { useLangStore } from '~/stores/lang'
+
+const langStore = useLangStore()
+
 import { ref, onMounted } from 'vue'
 
 const data_contant = ref({})
