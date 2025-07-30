@@ -14,9 +14,10 @@
 </template>
 
 <script setup>
-import { useLangStore } from '~/stores/lang'
+import { useLangStore } from '@/stores/lang'
 
 const langStore = useLangStore()
+langStore.loadLangFromCookie()
 
 </script>
 <style scoped>

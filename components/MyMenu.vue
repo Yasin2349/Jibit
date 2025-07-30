@@ -1,5 +1,5 @@
   <template>
-  <div :class="['div1', { scrolled: isScrolled, hidenmenu: isLoginPage }]">
+  <div :class="['div1 mx-auto', { scrolled: isScrolled, hidenmenu: isLoginPage }]">
     
     <li class="li_logo">
       <NuxtLink to="/"><div class="logo"></div></NuxtLink>
@@ -7,7 +7,7 @@
 
     
     <ul :class="['ul-menu2', { open: shmenu }]" id="ul-menu2">
-      <li>
+      <li>  
         <button type="button" style="font-size: 14px; font-family: Vazir3; color: rgb(88, 88, 88);">
           سرویس‌ها
         </button>
@@ -30,23 +30,23 @@
     <ul class='ul_menu'>
       <li class="li-sh" style="width: 18%;">
         <button class="bnt-ser-menu" type="button" @click="menuopen" @blur="menuclose" style="cursor: pointer; font-family: Vazir3; color: rgb(88, 88, 88);">
-          سرویس‌ها <i class="fas fa-chevron-down"></i>
+          {{ langStore.t('link_menu_servic') }}<i class="fas fa-chevron-down"></i>
         </button>
       </li>
       <div :class="['services', { open: menuservices }]">
         <ul class="ul_services">
           <li><NuxtLink to="/DargahP/DargahPardakht">{{ langStore.t('btn1_slider') }} <div class="logo1"></div></NuxtLink></li>
           <li><NuxtLink to="/DargahP/EsterdadVagh">{{ langStore.t('btn2_slider') }}<div class="logo2"></div></NuxtLink></li>
-          <li><NuxtLink to="/DargahP/VarizSH">واریز شناسه دار<div class="logo3"></div></NuxtLink></li>
-          <li><a href="#">تسویه و انتقال وجه <div class="logo4"></div></a></li>
-          <li><a href="#">سرویس‌های استعلامی <div class="logo5"></div></a></li>
-          <li><a href="#">احراز هویت بایومتریک <div class="logo6"></div></a></li>
+          <li><NuxtLink to="/DargahP/VarizSH">{{ langStore.t('btn3_slider') }}<div class="logo3"></div></NuxtLink></li>
+          <li><a href="#">{{ langStore.t('btn4_slider') }}<div class="logo4"></div></a></li>
+          <li><a href="#">{{ langStore.t('btn5_slider') }}<div class="logo5"></div></a></li>
+          <li><a href="#">{{ langStore.t('btn6_slider') }}<div class="logo6"></div></a></li>
         </ul>
       </div>
-      <li class="li-sh" style="width: 15%;"><NuxtLink to="/ContantPage">ارتباط با ما</NuxtLink></li>
-      <li class="li-sh F" style="margin-left: 8%;" ><NuxtLink to="/blogs">بلاگ</NuxtLink></li>
+      <li class="li-sh" style="width: 15%;"><NuxtLink to="/ContantPage">{{ langStore.t('btn_contact_menu') }}</NuxtLink></li>
+      <li class="li-sh F" style="margin-left: 8%;" ><NuxtLink to="/blogs">{{ langStore.t('link_menu_blog') }}</NuxtLink></li>
       <li class="li_login li-sh" style="width: 110px;padding: 10px;margin-left: 3%; text-align: center; background-color: rgba(255, 255, 255, 0.432);">
-        <NuxtLink to="/LoginRegister4" class="a-login" style="font-size: 15px;width: 100%;">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;text-align: center;"></i></NuxtLink>
+        <NuxtLink to="/LoginRegister4" class="a-login" style="font-size: 15px;width: 100%;">{{ langStore.t('link_menu_login') }}<i class="fa-solid fa-chevron-{{ langStore.t('dire') }} fa-xs" style="font-size: 10px;text-align: center;"></i></NuxtLink>
       </li>
 
       <button class="btn-DL-Mode" @click="SH_Mode" :class="sh_Mode ? 'btn-DL-Mode' : 'btn-DL-Mode2'">
@@ -63,7 +63,7 @@
         <div  style="display: flex;width: 180px;text-align: center;">
           <NuxtLink to="/LoginRegister4" class="login-btn-res" style=" margin-left: 10px; padding: 7px;border-radius: 8px ;border: 1px solid rgb(206, 206, 206) ; background-color: white ;">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;text-align: center ;"></i></NuxtLink>
           <i :class="['fas fa-bars', { show: shhamber }, { show2: shzarb }]" style=" font-size: 30px;" @click="toggleMainMenu" @mouseout="toggleMainMenu" id="hamber"></i>
-          <!-- <i :class="['fas fa-xmark', { show: shzarb }]" style="font-size: 30px;" @click="closeMainMenu" id="zarb"></i> -->
+          
         </div>
       </li>
     </ul>
@@ -74,7 +74,9 @@
 import { ref, onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useLangStore } from '@/stores/lang'
+
 const langStore = useLangStore()
+langStore.loadLangFromCookie()
 
 const menuservices = ref(false)
 const isScrolled = ref(false)
@@ -246,7 +248,7 @@ watch(() => route.fullPath, (newPath) => {
     background-color: #fff;
     position: absolute;
     top: 55px;
-    right: 58%;
+    right: 50%;
     border-radius: 15px;
     box-shadow: 0px 2px 2px rgb(231, 231, 231);
     transition: all ease-in-out 0.7s;

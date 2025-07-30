@@ -146,9 +146,10 @@
 
 <script setup>
 import { computed, ref } from 'vue'
-import { useLangStore } from '~/stores/lang'
+import { useLangStore } from '@/stores/lang'
 
 const langStore = useLangStore()
+langStore.loadLangFromCookie()
 
 const tabs = computed(() => [
   { name: "tab5", value: langStore.t('btn1_slider') },

@@ -136,7 +136,9 @@ import MyMenu from './MyMenu.vue';
 import ServicesSite from './ServicesSite.vue';
 
 import { useLangStore } from '@/stores/lang'
-const langStore = useLangStore() 
+
+const langStore = useLangStore()
+langStore.loadLangFromCookie()
 
 // const langStore = useLangStore()
 

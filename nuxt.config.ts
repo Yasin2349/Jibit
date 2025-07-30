@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
   css: [
-    '~/assets/css/main.css',               
+    '~/assets/css/main.css',
     '@fortawesome/fontawesome-free/css/all.css',
     '~/pages/responcive.css',
     '@/assets/scss/theme.scss'

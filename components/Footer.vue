@@ -67,9 +67,10 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useLangStore } from '~/stores/lang'
+import { useLangStore } from '@/stores/lang'
 
 const langStore = useLangStore()
+langStore.loadLangFromCookie()
 
 const data_contant = ref({})
 

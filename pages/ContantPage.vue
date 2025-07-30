@@ -87,6 +87,7 @@ export default {
 }
 .div-map{
     margin: auto;
+    margin-top: 150px;
     width: 40%;
     height: 100%;
     display: flex;

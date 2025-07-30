@@ -80,9 +80,10 @@
 </template>
 
 <script setup>
-import { useLangStore } from '~/stores/lang'
+import { useLangStore } from '@/stores/lang'
 
 const langStore = useLangStore()
+langStore.loadLangFromCookie()
 const items = [
   {
     icon: 'https://jibit.ir/wp-content/themes/jibit/images/home2/usp4.svg',

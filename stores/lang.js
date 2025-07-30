@@ -1,9 +1,10 @@
 // stores/lang.js
 import { defineStore } from 'pinia'
+import { useCookie } from '#app' // فقط برای Nuxt
 
 export const useLangStore = defineStore('lang', {
   state: () => ({
-    currentLang: 'fa', // یا 'en'
+    currentLang: 'fa',
     translations: {
       fa: {
         title_home_page:"خرید و فروش امن و سریع ارزهای دیجیتال",
@@ -24,9 +25,10 @@ export const useLangStore = defineStore('lang', {
         btn2_slider:"سرویس های استعلامی",
         btn3_slider:"واریز شناسه دار",
         btn4_slider:"تسویه و انتفال وجه",
-        btn5_slider:"اهراز حویت بایومتریک",
+        btn5_slider:"سرویس های استعلامی",
+        btn6_slider:"اهراز حویت بایومتریک",
         btn_blog:"بلاگ",
-        btn_contant:"ارتباط با ما",
+        btn_contact_menu:"ارتباط با ما",
         btn_services:"سرویس ها",
 
         title_page1_silder:"درگاه پرداخت",
@@ -61,11 +63,15 @@ export const useLangStore = defineStore('lang', {
         address_footer:"امام خمینی 24 , مجتمع مرمر",
         phone: "۰۲۱-۲۲۸۶۶۶۶۶۶",
         email:"support@xdgpay.com",
-        btn_contact:"ارتباط با ما",
+        btn_contact2:"ارتباط با ما",
         btn_GH:"قوانین و مقررات",
         btn_blog:"بلاگ",
         text_footer2:"© کلیه حقوق متعلق به XDGPay می‌باشد",
-
+        link_menu_servic:"سرویس ها",
+        link_menu_contactus:"ارتباط با ما",
+        link_menu_blog:"بلاگ",
+        link_menu_login:"ورود به پنل",
+        dire:"left"
       },
       en: {
         title_home_page:"Safe and fast buying and selling of digital currencies",
@@ -86,9 +92,10 @@ export const useLangStore = defineStore('lang', {
         btn2_slider:"Inquiry services",
         btn3_slider:"ID-bearing deposit",
         btn4_slider:"Settlement and transfer of funds",
-        btn5_slider:"Biometric authentication",
+        btn5_slider:"Inquiry services",
+        btn6_slider:"Biometric authentication",
         btn_blog:"blog",
-        btn_Contact:"Contact us",
+        btn_contact_menu:"Contact us",
         btn_services:"services",
 
         title_page1_silder:"Payment gateway",
@@ -123,10 +130,16 @@ export const useLangStore = defineStore('lang', {
         address_footer:"24 Imam Khomeini St., Marmara Complex",
         phone: "021-228666666",
         email:"support@xdgpay.com",
-        btn_contact:"Contact us",
+        btn_contact2:"Contact us",
         btn_GH:"Rules and regulations",
         btn_blog:"blog",
         text_footer2:"© All rights reserved by XDGPay",
+
+        link_menu_servic:"services",
+        link_menu_contactus:"Contact Us",
+        link_menu_blog:"Blog",
+        link_menu_login:"Login",
+        dire:"rigth"
       },
     },
   }),
@@ -139,6 +152,15 @@ export const useLangStore = defineStore('lang', {
     setLang(lang) {
       if (['fa', 'en'].includes(lang)) {
         this.currentLang = lang
+        const langCookie = useCookie('lang') // نام کوکی
+        langCookie.value = lang
+      }
+    },
+
+    loadLangFromCookie() {
+      const langCookie = useCookie('lang')
+      if (langCookie.value && ['fa', 'en'].includes(langCookie.value)) {
+        this.currentLang = langCookie.value
       }
     },
   },

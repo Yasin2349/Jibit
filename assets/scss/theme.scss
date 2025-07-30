@@ -1,5 +1,59 @@
 @use './variables' as *;
 body.ltr-mode {
+  .li_logo{
+    margin-left: 9% !important;
+    margin-right: 0% !important;
+  }
+  .services{
+    direction: rtl !important;
+  }
+  .ul_services{
+    direction: rtl !important;
+  }
+  .ul_services li{
+    direction: rtl !important;
+  }
+  .logo1{
+    margin-right: 5%;
+  }
+  .logo2{
+    margin-right: 5%;
+  }
+  .logo3{
+    margin-right: 5%;
+  }
+  .logo4{
+    margin-right: 5%;
+  }
+  .logo5{
+    margin-right: 5%;
+  }
+  .ul_services li a{
+    direction: rtl !important;
+    text-align: left;
+  }
+  .services{
+    right: 31%;
+  }
+  .li-sh{
+    margin-right: 0 !important;
+  }
+  .li-sh.F{
+    margin-left: 3% !important;
+    margin-right: 10% !important;
+  }
+  .li_login{
+    margin-right: 2% !important;
+  }
+  .btn-DL-Mode{
+    margin-right: 2% !important;
+  }
+  .services{
+    direction: ltr;
+  }
+  .div1{
+    direction: ltr;
+  }
   direction: ltr;
   .p-title{
     padding-left: 0px !important;
@@ -110,7 +164,7 @@ body.ltr-mode {
   }
   background-color: $back-body;
   .div1.scrolled{
-    background-color: #03063f !important;
+    background-color: #010335 !important;
   }
   .div1.scrolled a{
     color: $color-text-dark;
