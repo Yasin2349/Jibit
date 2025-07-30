@@ -24,11 +24,11 @@
             <div class="img-pag5"></div>
             <div class="document-page1">
               <div class="div-logo-page1"><div class="logo2"><div class="logo55"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">احراز هویت بایومتریک</H3></div>
+              <div class="div-title-page1"><H3 class="title">{{ langStore.t('title_page5_silder') }}</H3></div>
               <div class="div-text-page1"><p class="text">
-                سرویس احراز هویت بایومتریک XdgPay با بهره‌گیری از فناوری‌های پیشرفته تصویر و یادگیری عمیق، امکان تایید هویت کاربران را با دقت بالا فراهم می‌کند. امنیت داده‌های شما در این فرایند تضمین شده است.
+                {{ langStore.t('text_page5_silder') }}
               </p></div>
-              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more"></div>
             </div>
           </div>
 
@@ -37,11 +37,11 @@
             <div class="img-pag4"></div>
             <div class="document-page1">
               <div class="div-logo-page1"><div class="logo2"><div class="logo44"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">تسویه و انتقال وجه</H3></div>
+              <div class="div-title-page1"><H3 class="title">{{ langStore.t('title_page4_silder') }}</H3></div>
               <div class="div-text-page1"><p class="text">
-                پلتفرم XdgPay انتقال سریع و امن وجه را بین حساب‌های مختلف با روش‌های متنوع ممکن کرده است تا کسب‌وکارها بدون دغدغه، مدیریت مالی خود را بهینه کنند.
+                {{ langStore.t('text_page4_silder') }}
               </p></div>
-              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more"></div>
             </div>
           </div>
 
@@ -50,11 +50,11 @@
             <div class="img-pag3"></div>
             <div class="document-page1">
               <div class="div-logo-page1"><div class="logo2"><div class="logo33"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">واریز شناسه دار</H3></div>
+              <div class="div-title-page1"><H3 class="title">{{ langStore.t('title_page3_silder') }}</H3></div>
               <div class="div-text-page1"><p class="text">
-                با سرویس واریز شناسه‌دار XdgPay امکان پرداخت‌های آسان و بدون محدودیت مبلغ برای مشتریان فراهم است که انتخاب روش‌های متنوع پرداخت، انعطاف‌پذیری بیشتری به همراه دارد.
+                {{ langStore.t('text_page3_silder') }}
               </p></div>
-              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more"></div>
             </div>
           </div>
 
@@ -63,11 +63,11 @@
             <div class="img-pag2"></div>
             <div class="document-page1">
               <div class="div-logo-page1"><div class="logo2"><div class="logo22"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">سرویس های استعلامی</H3></div>
+              <div class="div-title-page1"><H3 class="title">{{ langStore.t('title_page2_silder') }}</H3></div>
               <div class="div-text-page1"><p class="text">
-                سرویس استعلامی XdgPay به کسب‌وکارها امکان می‌دهد با صحت‌سنجی اطلاعات بانکی و هویتی، خدماتی نوآورانه و قابل اعتماد برای مشتریان خود ایجاد کنند.
+                {{ langStore.t('text_page2_silder') }}
               </p></div>
-              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more"></div>
             </div>
           </div>
 
@@ -76,11 +76,12 @@
             <div class="img-pag1"></div>
             <div class="document-page1">
               <div class="div-logo-page1"><div class="logo2"><div class="logo11"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">درگاه پرداخت</H3></div>
+              <div class="div-title-page1"><H3 class="title">درگاه پرداخت {{ langStore.t('title_page1_silder') }}</H3></div>
               <div class="div-text-page1"><p class="text">
-                درگاه پرداخت XdgPay با اتصال به شبکه‌های پرداخت مختلف و سیستم مسیردهی هوشمند، امکان تراکنش‌های سریع، مطمئن و پایدار را برای کسب‌وکارها فراهم می‌کند. با پشتیبانی کامل از شاپرک و فناوری‌های نوین، تجربه‌ای بدون دغدغه و افزایش درآمد را برای شما تضمین می‌کند.
+                {{ langStore.t('text_page1_silder') }}
+                
               </p></div>
-              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more"></div>
             </div>
           </div>
 
@@ -144,35 +145,31 @@
 
 
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useLangStore } from '~/stores/lang'
 
 const langStore = useLangStore()
-const name_btn1 = ref(langStore.t('btn1_slider'))
-const name_btn2 = ref(langStore.t('btn2_slider'))
-const name_btn3 = ref(langStore.t('btn3_slider'))
-const name_btn4 = ref(langStore.t('btn4_slider'))
-const name_btn5 = ref(langStore.t('btn5_slider'))
 
-const tabs = [
-  { name: "tab5", value: name_btn1 },
-  { name: "tab4", value: name_btn2},
-  { name: "tab3", value: name_btn3 },
-  { name: "tab2", value: name_btn4 },
-  { name: "tab1", value: name_btn5 },
-]
+const tabs = computed(() => [
+  { name: "tab5", value: langStore.t('btn1_slider') },
+  { name: "tab4", value: langStore.t('btn2_slider') },
+  { name: "tab3", value: langStore.t('btn3_slider') },
+  { name: "tab2", value: langStore.t('btn4_slider') },
+  { name: "tab1", value: langStore.t('btn5_slider') },
+])
 
 const shTab = ref("tab1")
 const lastTabIndex = ref(0)
 const transitionName = ref("slide-left")
 
 function changepage(tab) {
-  const newIndex = tabs.findIndex((t) => t.name === tab.name)
+  const newIndex = tabs.value.findIndex((t) => t.name === tab.name)
   transitionName.value = newIndex > lastTabIndex.value ? "slide-left" : "slide-right"
   lastTabIndex.value = newIndex
   shTab.value = tab.name
 }
 </script>
+
 
 
 
@@ -189,7 +186,19 @@ function changepage(tab) {
   font-family: Vazir3;
   src: url(../public/Vazir-Medium.t4tf);
 }
-
+@media screen and (max-width: 1020px) {
+  .document-page1{
+    width: 40% !important;
+  }
+}
+@media screen and (max-width: 944px) {
+  .document-page1{
+    width: 45% !important;
+  }
+  .text{
+    font-size: 14px !important;
+  }
+}
 @media screen and (max-width: 768px) {
   .div2{
     height: 435px !important;

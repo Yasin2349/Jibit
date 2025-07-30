@@ -5,45 +5,11 @@
 
     <div class="div1s">
       <Form :validation-schema="schema" @submit="onSubmit" v-slot="{ meta }">
-        
         <div class="dis">
-          <NuxtLink to="/"><div class="logo-login"></div></NuxtLink>
-          <p class="title-login">
-          به <b style="color:rgb(10, 74, 77); padding: 0 8px;">XDGPay</b> خوش آمدید
+          <NuxtLink to="/LoginRegister4"><div class="logo-login"></div></NuxtLink>
+          <p class="title-login" style="text-align: center;">
+          بازیابی پسورد
           </p>  
-        </div>
-
-        <div class="dis-input-pass">
-          <div style="width: 50%;">
-            <p class="title-input11">نام خانوادگی</p>
-            <Field name="family"
-              as="input"
-              type="text"
-              placeholder="نام خانوادگی را وارد کنید ..."
-              :class="['input-name1', familyMeta.touched && familyMeta.invalid ? 'input-error' : '']"
-              tabindex="2"
-              validate-on-input
-            />
-            <ErrorMessage name="family" v-slot="{ message }">
-              <p class="p-error">{{ message }}</p>
-            </ErrorMessage>
-          </div>
-
-          <div style="width: 50%;">
-            <p class="title-input2">نام</p>
-            <Field
-              name="name"
-              as="input"
-              type="text"
-              placeholder="نام را وارد کنید ..."
-              :class="['input-name2', nameMeta.touched && nameMeta.invalid ? 'input-error' : '']"
-              tabindex="1"
-              validate-on-input
-            />
-            <ErrorMessage name="name" v-slot="{ message }">
-              <p class="p-error">{{ message }}</p>
-            </ErrorMessage>
-          </div>
         </div>
 
         <p class="title-input1">آدرس ایمیل</p>
@@ -54,132 +20,59 @@
           placeholder="ایمیل را وارد کنید ..."
           :class="['input-email', emailMeta.touched && emailMeta.invalid ? 'input-error' : '']"
           tabindex="3"
-          validate-on-input
         />
         <ErrorMessage name="email" v-slot="{ message }">
           <p class="p-error">{{ message }}</p>
         </ErrorMessage>
 
-        <p class="title-input1">پسورد</p>
-        <div class="dis-input-pass">
-          <Field
-            name="password"
-            as="input"
-            :type="showPassword ? 'text' : 'password'"
-            placeholder="پسورد را وارد کنید ..."
-            :class="['input-pass', passwordMeta.touched && passwordMeta.invalid ? 'input-error' : '']"
-            v-model="password"
-            tabindex="4"
-            validate-on-input
-          />
-          <button type="button" @click="togglePassword" class="toggle-btn">
-            <i :class="['color2', showPassword ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash']"></i>
-          </button>
-        </div>
-        <div class="password-strength-bar">
-          <div
-            class="strength"
-            :style="{ width: width + '%', backgroundColor: color }"
-          ></div>
-        </div>
-        <ErrorMessage name="password" v-slot="{ message }">
-          <p class="p-error">{{ message }}</p>
-        </ErrorMessage>
-        <input type="submit" class="btn-login" value="ثبت نام" :disabled="!meta.valid"/>
+        
+
+        <input type="submit" class="btn-login" value="ارسال کد تایید" :disabled="!meta.valid"/>
       </Form>
 
       <div class="dis-input-pass" style="justify-content: flex-start;">
-        <NuxtLink to="LoginRegister42" class="link-reg">ورود</NuxtLink>
-        <p class="title-btn-reg">حساب کاربری دارید؟</p>
+        <NuxtLink to="LoginRegister4" class="link-reg">ثبت نام</NuxtLink>
+        <p class="title-btn-reg">حساب کاربری ندارید؟</p>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-
-import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router' // ✅ اصلاح شد
 import { Form, Field, ErrorMessage, useField } from 'vee-validate'
 import * as yup from 'yup'
 import LottieAnimation from '~/pages/LottieAnimation.vue'
 import LottieBackground from '~/pages/LottieBackground.vue'
 
+const router = useRouter()
 
 const schema = yup.object({
-  family: yup.string().required('نام خانوادگی الزامی است'),
-  name: yup.string().required('نام الزامی است'),
   email: yup.string().email('ایمیل معتبر نیست').required('ایمیل الزامی است'),
-  password: yup
-    .string()
-    .required('پسورد الزامی است')
-    .min(8, 'پسورد باید حداقل ۸ کاراکتر باشد')
-    .matches(/[A-Z]/, 'پسورد باید حداقل یک حرف بزرگ داشته باشد')
-    .matches(/\d/, 'پسورد باید حداقل یک عدد داشته باشد')
-    .matches(/[!@#$%^&*(),.?":{}|<>]/, 'پسورد باید حداقل یک کاراکتر خاص داشته باشد'),
 })
 
-
-const { meta: familyMeta } = useField('family')
-const { meta: nameMeta } = useField('name')
 const { meta: emailMeta } = useField('email')
-const { meta: passwordMeta } = useField('password')
-
-const password = ref('')
-
-const showPassword = ref(false)
-const togglePassword = () => {
-  showPassword.value = !showPassword.value
-}
-
-const conditions = [
-  (p) => /[A-Z]/.test(p),
-  (p) => /\d/.test(p),
-  (p) => /[!@#$%^&*(),.?":{}|<>]/.test(p), 
-  (p) => p.length >= 8, 
-]
-
-const passedCount = computed(() =>
-  conditions.reduce((acc, fn) => acc + (fn(password.value) ? 1 : 0), 0)
-)
-
-const width = computed(() => passedCount.value * 25)
-
-const color = computed(() => {
-  switch (passedCount.value) {
-    case 0:
-      return 'white'
-    case 1:
-      return 'red'
-    case 2:
-      return 'orange'
-    case 3:
-      return 'yellow'
-    case 4:
-      return 'green'
-    default:
-      return 'white'
-  }
-})
 
 const onSubmit = async (values) => {
   try {
-    const res = await $fetch('https://xdgbit.free.beeceptor.com', {
+    const res = await $fetch('', {
       method: 'POST',
       body: {
-        name: values.name,
-        family: values.family,
         email: values.email,
-        password: values.password,
       }
     })
+
+    console.log('نتیجه ثبت‌نام:', res)
+    setTimeout(() => {
+      router.push('/PasswordVerify');
+    }, 2000);
+    alert("کد تایید به ایمیل شما ارسال شد")
   } catch (err) {
     console.error('خطا در ثبت‌نام:', err)
   }
 }
-
-
-
 </script>
+
 
 
 <style scoped>
@@ -265,12 +158,12 @@ html, body, #app {
     width: 70%;
     display: flex;
     align-items: center;
+    padding-right: 8%;
     font-weight: 600;
     color:  rgb(220, 228, 233);
     direction: rtl;
     text-align: right;
     font-family: Vazir;
-    margin-right: 0%;
 }
 .logo-login{
   width: 80px;
@@ -279,7 +172,7 @@ html, body, #app {
   background-position: center;
   background-repeat: no-repeat;
   background-size:contain;
-  margin-bottom: 15px   ;
+
 }
 .dis{
   display: flex;
@@ -300,6 +193,7 @@ html, body, #app {
     font-family: Vazir3;
     font-size: 13px;
     outline: none;
+    margin-bottom: 121px;
 }
 .input-email2{
     width: 86%;
@@ -499,6 +393,15 @@ html, body, #app {
     font-family: Vazir3;
     color: rgb(80, 80, 80);
 }
+.title-btn-reg2{
+    margin: auto;
+    margin-left: 0%;
+    margin-top: 30px;
+    font-family: Vazir3;
+    font-size: 14px;
+    color: rgb(80, 80, 80);
+}
+
 .link-reg{
     margin: auto;
     margin-right: 0%;

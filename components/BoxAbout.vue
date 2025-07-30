@@ -11,7 +11,7 @@
           :style="{ backgroundImage: `url(${items[0].icon})` }"
         ></div>
         <p class="w-[90%] pr-[10%] text-right text-[20px]
-                  text-[#303c4f] font-vazir leading-[55px] p-title" style="margin-top: 0px; text-align: right;"> 
+                  text-[#303c4f] font-vazir leading-[55px] p-title2" style="margin-top: 0px; text-align: right;"> 
           {{ langStore.t('title_box_about1') }}
         </p>
         <p class="w-[90%] text-right mr-[10%] text-[15px]
@@ -29,7 +29,7 @@
           :style="{ backgroundImage: `url(${items[1].icon})` }"
         ></div>
         <p class="w-[90%] pr-[10%] text-right text-[20px]
-                  text-[#303c4f] font-vazir leading-[55px] p-title" style="margin-top: 0px; text-align: right;"> 
+                  text-[#303c4f] font-vazir leading-[55px] p-title2" style="margin-top: 0px; text-align: right;"> 
           {{ langStore.t('title_box_about2') }}
         </p>
         <p class="w-[90%] text-right mr-[10%] text-[15px]
@@ -47,7 +47,7 @@
           :style="{ backgroundImage: `url(${items[2].icon})` }"
         ></div>
         <p class="w-[90%] pr-[10%] text-right text-[20px]
-                  text-[#303c4f] font-vazir leading-[55px] p-title" style="margin-top: 0px; text-align: right;"> 
+                  text-[#303c4f] font-vazir leading-[55px] p-title2" style="margin-top: 0px; text-align: right;"> 
           {{ langStore.t('title_box_about3') }}
         </p>
         <p class="w-[90%] text-right mr-[10%] text-[15px]
@@ -65,7 +65,7 @@
           :style="{ backgroundImage: `url(${items[3].icon})` }"
         ></div>
         <p class="w-[90%] pr-[10%] text-right text-[20px]
-                  text-[#303c4f] font-vazir leading-[55px] p-title" style="margin-top: 0px; text-align: right;"> 
+                  text-[#303c4f] font-vazir leading-[55px] p-title2" style="margin-top: 0px; text-align: right;"> 
           {{ langStore.t('title_box_about4') }}
         </p>
         <p class="w-[90%] text-right mr-[10%] text-[15px]

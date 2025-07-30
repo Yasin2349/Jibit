@@ -5,130 +5,148 @@
 
     <div class="div1s">
       <Form :validation-schema="schema" @submit="onSubmit" v-slot="{ meta }">
-        
-        <div class="dis">
-          <NuxtLink to="/"><div class="logo-login"></div></NuxtLink>
-          <p class="title-login">
-          به <b style="color:rgb(10, 74, 77); padding: 0 8px;">XDGPay</b> خوش آمدید
+         <div class="dis">
+          <NuxtLink to="/LoginRegister4"><div class="logo-login"></div></NuxtLink>
+          <p class="title-login" style="text-align: center;">
+          بازیابی پسورد
           </p>  
         </div>
+        
+        <p class="title-input1" style="direction: rtl;">ایمیل خود را وارد کنید :</p>
 
-        <div class="dis-input-pass">
-          <div style="width: 50%;">
-            <p class="title-input11">نام خانوادگی</p>
-            <Field name="family"
-              as="input"
-              type="text"
-              placeholder="نام خانوادگی را وارد کنید ..."
-              :class="['input-name1', familyMeta.touched && familyMeta.invalid ? 'input-error' : '']"
-              tabindex="2"
-              validate-on-input
-            />
-            <ErrorMessage name="family" v-slot="{ message }">
-              <p class="p-error">{{ message }}</p>
-            </ErrorMessage>
-          </div>
-
-          <div style="width: 50%;">
-            <p class="title-input2">نام</p>
-            <Field
-              name="name"
-              as="input"
-              type="text"
-              placeholder="نام را وارد کنید ..."
-              :class="['input-name2', nameMeta.touched && nameMeta.invalid ? 'input-error' : '']"
-              tabindex="1"
-              validate-on-input
-            />
-            <ErrorMessage name="name" v-slot="{ message }">
-              <p class="p-error">{{ message }}</p>
-            </ErrorMessage>
-          </div>
-        </div>
-
-        <p class="title-input1">آدرس ایمیل</p>
         <Field
           name="email"
           as="input"
           type="email"
           placeholder="ایمیل را وارد کنید ..."
-          :class="['input-email', emailMeta.touched && emailMeta.invalid ? 'input-error' : '']"
-          tabindex="3"
-          validate-on-input
+          :class="['input-email', pass1.touched && pass1.invalid ? 'input-error' : '']"
+          tabindex="1"
         />
-        <ErrorMessage name="email" v-slot="{ message }">
-          <p class="p-error">{{ message }}</p>
-        </ErrorMessage>
-
-        <p class="title-input1">پسورد</p>
-        <div class="dis-input-pass">
-          <Field
-            name="password"
-            as="input"
-            :type="showPassword ? 'text' : 'password'"
-            placeholder="پسورد را وارد کنید ..."
-            :class="['input-pass', passwordMeta.touched && passwordMeta.invalid ? 'input-error' : '']"
-            v-model="password"
-            tabindex="4"
-            validate-on-input
-          />
-          <button type="button" @click="togglePassword" class="toggle-btn">
-            <i :class="['color2', showPassword ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash']"></i>
-          </button>
+        <div style="height: 20px;margin-top: 0px;">
+          <ErrorMessage name="email" v-slot="{ message }" style="height: 10px;">
+            <p class="p-error">{{ message }}</p>
+          </ErrorMessage> 
         </div>
+        <p class="title-input1" style="direction: rtl;margin-top: 0%;">کد تایید را وارد کنید :</p>
+        <Field
+          name="codeV"
+          as="input"
+          type="text"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          maxlength="6"
+          placeholder="کد ارسال شده را وارد کنید ..."
+          :class="['input-email', pass1.touched && pass1.invalid ? 'input-error' : '']"
+          tabindex="1"
+          v-model="code"
+          @input="filterNumeric"
+        />
+
+
+        <div style="height: 20px;margin-top: 0px;">
+          <ErrorMessage name="codeV" v-slot="{ message }" style="height: 10px;">
+            <p class="p-error">{{ message }}</p>
+          </ErrorMessage> 
+        </div>
+      
+        <div class="password-row" style="display: flex;justify-content: center;align-items: center;">
+  <div class="password-row" style="display: flex;height: 75px; direction: rtl;">
+  <div class="password-col"  style="height: 50px;">
+    <p class="title-input1">رمز عبور جدید :</p>
+    <div class="dis-input-pass">
+      <Field
+        name="NPassword"
+        as="input"
+        :type="showPassword1 ? 'text' : 'password'"
+        placeholder="رمز عبور جدید را وارد کنید ..."
+        class="input-pass"
+        tabindex="2"
+        validate-on-input
+        maxlength="6"
+      />
+      <button type="button" @click="showPassword1 = !showPassword1" class="toggle-btn">
+        <i :class="['color2', showPassword1 ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash']"></i>
+      </button>
+    </div>
+    <ErrorMessage name="NPassword" v-slot="{ message }">
+      <p class="p-error">{{ message }}</p>
+    </ErrorMessage>
+  </div>
+
+  <div class="password-col" style="height: auto;">
+    <p class="title-input1">تکرار رمز عبور :</p>
+    <div class="dis-input-pass">
+      <Field
+        name="PasswordV2"
+        as="input"
+        :type="showPassword2 ? 'text' : 'password'"
+        placeholder="تکرار رمز عبور را وارد کنید ..."
+        class="input-pass"
+        tabindex="3"
+        validate-on-input
+        maxlength="6"
+      />
+      <button type="button" @click="showPassword2 = !showPassword2" class="toggle-btn">
+        <i :class="['color2', showPassword2 ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash']"></i>
+      </button>
+    </div>
+    <ErrorMessage name="PasswordV2" v-slot="{ message }">
+      <p class="p-error">{{ message }}</p>
+    </ErrorMessage>
+  </div>
+</div>
+</div>
+
         <div class="password-strength-bar">
           <div
             class="strength"
             :style="{ width: width + '%', backgroundColor: color }"
           ></div>
         </div>
-        <ErrorMessage name="password" v-slot="{ message }">
-          <p class="p-error">{{ message }}</p>
-        </ErrorMessage>
-        <input type="submit" class="btn-login" value="ثبت نام" :disabled="!meta.valid"/>
+
+        
+        <div class="dis" style="border-color: rgb(7, 74, 77); padding-bottom: 10px;">
+          <p v-if="time > 0" class="p-timer">
+            زمان باقی‌مانده: <b>{{ formatTime }}</b>
+          </p>
+          <button v-else @click="restart" class="btn-resend-code">ارسال دوباره کد</button>
+        </div>
+        <input
+          type="submit"
+          class="btn-login"
+          value="ارسال کد تایید"
+          :disabled="!(meta.dirty && meta.valid)"
+        />
       </Form>
 
       <div class="dis-input-pass" style="justify-content: flex-start;">
-        <NuxtLink to="LoginRegister42" class="link-reg">ورود</NuxtLink>
-        <p class="title-btn-reg">حساب کاربری دارید؟</p>
+        <NuxtLink to="LoginRegister4" class="link-reg">ثبت نام</NuxtLink>
+        <p class="title-btn-reg">حساب کاربری ندارید؟</p>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-
-import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router' 
 import { Form, Field, ErrorMessage, useField } from 'vee-validate'
 import * as yup from 'yup'
 import LottieAnimation from '~/pages/LottieAnimation.vue'
 import LottieBackground from '~/pages/LottieBackground.vue'
+import { ref, computed, onMounted } from 'vue'
 
-
-const schema = yup.object({
-  family: yup.string().required('نام خانوادگی الزامی است'),
-  name: yup.string().required('نام الزامی است'),
-  email: yup.string().email('ایمیل معتبر نیست').required('ایمیل الزامی است'),
-  password: yup
-    .string()
-    .required('پسورد الزامی است')
-    .min(8, 'پسورد باید حداقل ۸ کاراکتر باشد')
-    .matches(/[A-Z]/, 'پسورد باید حداقل یک حرف بزرگ داشته باشد')
-    .matches(/\d/, 'پسورد باید حداقل یک عدد داشته باشد')
-    .matches(/[!@#$%^&*(),.?":{}|<>]/, 'پسورد باید حداقل یک کاراکتر خاص داشته باشد'),
-})
-
-
-const { meta: familyMeta } = useField('family')
-const { meta: nameMeta } = useField('name')
-const { meta: emailMeta } = useField('email')
+const router = useRouter()
 const { meta: passwordMeta } = useField('password')
 
 const password = ref('')
 
-const showPassword = ref(false)
+const showPassword1 = ref(false)
+const showPassword2 = ref(false)
 const togglePassword = () => {
-  showPassword.value = !showPassword.value
+  showPassword1.value = !showPassword1.value
+}
+const togglePassword2 = () => {
+  showPassword2.value = !showPassword2.value
 }
 
 const conditions = [
@@ -142,47 +160,82 @@ const passedCount = computed(() =>
   conditions.reduce((acc, fn) => acc + (fn(password.value) ? 1 : 0), 0)
 )
 
-const width = computed(() => passedCount.value * 25)
+const time = ref(240) 
+let timer
 
-const color = computed(() => {
-  switch (passedCount.value) {
-    case 0:
-      return 'white'
-    case 1:
-      return 'red'
-    case 2:
-      return 'orange'
-    case 3:
-      return 'yellow'
-    case 4:
-      return 'green'
-    default:
-      return 'white'
-  }
+
+
+const formatTime = computed(() => {
+  const m = String(Math.floor(time.value / 60)).padStart(2, '0')
+  const s = String(time.value % 60).padStart(2, '0')
+  return `${m}:${s}`
 })
+
+const countdown = () => {
+  timer = setInterval(() => {
+    if (time.value > 0) time.value--
+    else clearInterval(timer)
+  }, 1000)
+}
+const restart = () => {
+  
+  time.value = 240
+  countdown()
+}
+
+onMounted(() => {
+  countdown() 
+})
+
+const schema = yup.object({
+  PasswordV1: yup
+    .string()
+    .required('کد تایید را وارد کنید!')
+    .min(6, 'کد باید حداقل 6 کاراکتر باشد'),
+  // PasswordV2: yup
+  //   .string()
+  //   .required('کد تایید تکراری را وارد کنید!')
+  //   .oneOf([yup.ref('PasswordV1')], 'کدهای وارد شده یکسان نیستند'),
+  email: yup.string().email('ایمیل معتبر نیست').required('ایمیل الزامی است'),
+  codeV: yup.string().required('کد الزامی است').min(6, 'کد باید 6 رقم باشد'),
+  NPassword: yup
+    .string()
+    .required('رمز عبور الزامی است')
+    .min(6, 'رمز عبور باید حداقل 6 کاراکتر باشد'),
+
+  PasswordV2: yup
+    .string()
+    .required('تکرار رمز عبور الزامی است')
+    .oneOf([yup.ref('NPassword')], 'رمز عبور با تکرار آن یکسان نیست'),
+})
+
+
+const { meta: pass1 } = useField('PasswordV1')
+const { meta: pass2 } = useField('PasswordV2')
 
 const onSubmit = async (values) => {
   try {
-    const res = await $fetch('https://xdgbit.free.beeceptor.com', {
+    const res = await $fetch('', {
       method: 'POST',
       body: {
-        name: values.name,
-        family: values.family,
-        email: values.email,
-        password: values.password,
+        password: values.PasswordV2,
       }
     })
+
+    console.log('نتیجه ثبت‌نام:', res)
+
   } catch (err) {
     console.error('خطا در ثبت‌نام:', err)
   }
 }
-
-
-
 </script>
 
-
 <style scoped>
+@media screen and (max-width: 768px) {
+  .div1s{
+    height: 625px !important;
+  }
+}
 @font-face {
   font-family: Vazir;
   src: url(../public/Vazir-Bold.woff);
@@ -220,7 +273,7 @@ html, body, #app {
 .div1s {
   position: relative; /* مهم برای اینکه ::before نسبی به این باشه */
   width: 400px;
-  height: 600px;
+  height: 645px;
   background-color: rgba(172, 172, 172, 0.219); /* می‌تونی این رو شفاف کنی */
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 14px;
@@ -265,12 +318,12 @@ html, body, #app {
     width: 70%;
     display: flex;
     align-items: center;
+    padding-right: 8%;
     font-weight: 600;
     color:  rgb(220, 228, 233);
     direction: rtl;
     text-align: right;
     font-family: Vazir;
-    margin-right: 0%;
 }
 .logo-login{
   width: 80px;
@@ -279,7 +332,7 @@ html, body, #app {
   background-position: center;
   background-repeat: no-repeat;
   background-size:contain;
-  margin-bottom: 15px   ;
+
 }
 .dis{
   display: flex;
@@ -300,6 +353,8 @@ html, body, #app {
     font-family: Vazir3;
     font-size: 13px;
     outline: none;
+    margin-bottom: 10px;
+    text-align: center;
 }
 .input-email2{
     width: 86%;
@@ -417,10 +472,11 @@ html, body, #app {
     font-size: 14px;
     text-align: right;
     color:white;
-    margin-top: 30px;
+    margin-top: 0px;
     padding-right: 7%;
     margin-bottom: 5px;
     font-family: Vazir3;
+    direction: rtl;
 }
 .title-input11{
     width: 100%;
@@ -451,7 +507,7 @@ html, body, #app {
 }
 .toggle-btn{
     background-color: transparent;
-    width: 8%;
+    width: 15%;
     height: 55px;   
     border-right: 1px solid rgb(141, 141, 141);
     border-bottom: 1px solid rgb(141, 141, 141);
@@ -499,6 +555,15 @@ html, body, #app {
     font-family: Vazir3;
     color: rgb(80, 80, 80);
 }
+.title-btn-reg2{
+    margin: auto;
+    margin-left: 0%;
+    margin-top: 30px;
+    font-family: Vazir3;
+    font-size: 14px;
+    color: rgb(80, 80, 80);
+}
+
 .link-reg{
     margin: auto;
     margin-right: 0%;
@@ -523,6 +588,10 @@ html, body, #app {
     color: red;
     font-family: Vazir3;
     font-size: 14px;
+    margin-top: 0px;
+}
+.password-row{
+  margin-bottom: 13px;
 }
 .input-error {
   border: 2px solid #ff0800 !important;
@@ -554,4 +623,24 @@ html, body, #app {
   background-color: white;
   border-radius: 5px;
 }
+.p-timer{
+  color: rgb(6, 69, 73);
+  font-family: Vazir;
+}
+.p-timer b{
+  padding: 3px;
+  background-color: rgb(6, 69, 73);
+  color: white;
+  font-family: Vazir2;
+  border-radius: 5px;
+}
+.btn-resend-code{
+  padding: 10px;
+  background-color: rgb(6, 69, 73);
+  border-radius: 5px;
+  color: white;
+  font-family: Vazir;
+  cursor: pointer;
+}
+
 </style>

@@ -14,28 +14,28 @@
         ></div>
         <p class="mt-[10px] text-[14px] font-vazir2 text-[#4d5768] text-footer">
           <strong>
-            شرکت ایکس‌دی‌جی‌بیت (XdgPay) با توسعه زیرساخت‌های رمزارزی و ارائه راهکارهای نوین پرداخت دیجیتال، به کسب‌وکارها این امکان را می‌دهد تا به درگاه پرداخت رمزارزی، ابزارهای تبدیل ارز دیجیتال، کیف‌پول اختصاصی و API‌های هوشمند دسترسی داشته باشند؛ سریع، ایمن و قابل اعتماد.
+            {{ langStore.t('text_footer') }}
           </strong>
         </p>
       </div>
      
       <div class="w-[30%] h-full flex flex-col items-start justify-center space-y-2 footer-col2">
         <p class="w-[80%] mt-[45px] text-[14px] font-vazir2 text-[#4d5768] text-footer">
-          <strong>{{ data_contant.address }}</strong>
-        </p>
+          <strong>{{ langStore.t('address_footer') }}</strong>
+        </p>  
         <p class="w-[80%] leading-[40px] text-[14px] font-vazir2 text-[#4d5768] text-footer">
-          <strong>{{ data_contant.phone }}</strong>
+          <strong>{{ langStore.t('phone') }}</strong>
         </p>
         <p class="w-[80%] text-[14px] font-vazir2 text-[#4d5768] text-footer">
-          <strong>{{ data_contant.email }}</strong>
+          <strong>{{ langStore.t('email') }}</strong>
         </p>
       </div>
       
       <div class="w-[20%] h-full flex items-center footer-col3">
         <ul class="w-full h-full flex flex-col justify-center space-y-2 rtl list-none links-footer">
-          <li><NuxtLink to="/ContantPage" class="text-[14px] font-vazir2 text-[#4d5768] hover:underline link-footer">ارتباط با ما</NuxtLink></li>
-          <li><NuxtLink to="#" class="text-[14px] font-vazir2 text-[#4d5768] hover:underline link-footer">قوانین و مقررات</NuxtLink></li>
-          <li><NuxtLink to="/blogs" class="text-[14px] font-vazir2 text-[#4d5768] hover:underline link-footer">بلاگ</NuxtLink></li>
+          <li><NuxtLink to="/ContantPage" class="text-[14px] font-vazir2 text-[#4d5768] hover:underline link-footer">{{ langStore.t('btn_contact') }}</NuxtLink></li>
+          <li><NuxtLink to="#" class="text-[14px] font-vazir2 text-[#4d5768] hover:underline link-footer">{{ langStore.t('btn_GH') }}</NuxtLink></li>
+          <li><NuxtLink to="/blogs" class="text-[14px] font-vazir2 text-[#4d5768] hover:underline link-footer">{{ langStore.t('btn_blog') }}</NuxtLink></li>
         </ul>
       </div>
       
@@ -52,7 +52,7 @@
     
     <div class="flex justify-between w-full h-[20%] items-center footer-row2">
       <div class="w-[50%] flex justify-center items-center footer-copy">
-        <p class="text-[14px] font-vazir2 text-[#4d5768]">© کلیه حقوق متعلق به جیبیت می‌باشد</p>
+        <p class="text-[14px] font-vazir2 text-[#4d5768]" dir="rtl">{{ langStore.t('text_footer2') }}</p>
       </div>
       <div class="w-[50%] flex justify-end items-center footer-icon">
         <svg class="w-6 h-6 text-[#4d5768]" viewBox="0 0 24 24" fill="none">
@@ -65,23 +65,23 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'footer',
-  data() {
-    return {
-      data_contant: {}
-    }
-  },
-  mounted() {
-    fetch("../data/footer.json")
-      .then(res => res.json())
-      .then(data => {
-        this.data_contant = data;
-      });
-  }
-}
+<script setup>
+import { ref, onMounted } from 'vue'
+import { useLangStore } from '~/stores/lang'
+
+const langStore = useLangStore()
+
+const data_contant = ref({})
+
+onMounted(() => {
+  fetch('../data/footer.json')
+    .then(res => res.json())
+    .then(data => {
+      data_contant.value = data
+    })
+})
 </script>
+
 
 <style scoped>
 @font-face {
@@ -103,7 +103,9 @@ export default {
   direction: rtl;
 }
 
-
+.footer-col1{
+  margin-left: 6%  !important;
+}
 @media (max-width: 1024px) {
   .footer-wrapper {
     width: 95% !important;
@@ -134,9 +136,11 @@ export default {
   }
 
   .text-footer {
-    width: 90% !important;
+    width: 80% !important;
     margin: 0 auto !important;
+    
   }
+  
 
   .links-footer {
     flex-direction: row !important;

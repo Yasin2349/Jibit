@@ -9,42 +9,12 @@
         <div class="dis">
           <NuxtLink to="/"><div class="logo-login"></div></NuxtLink>
           <p class="title-login">
-          به <b style="color:rgb(10, 74, 77); padding: 0 8px;">XDGPay</b> خوش آمدید
-          </p>  
+            به <b style="color:rgb(10, 74, 77); padding: 0 8px;">XDGPay</b> خوش آمدید
+          </p>
         </div>
 
-        <div class="dis-input-pass">
-          <div style="width: 50%;">
-            <p class="title-input11">نام خانوادگی</p>
-            <Field name="family"
-              as="input"
-              type="text"
-              placeholder="نام خانوادگی را وارد کنید ..."
-              :class="['input-name1', familyMeta.touched && familyMeta.invalid ? 'input-error' : '']"
-              tabindex="2"
-              validate-on-input
-            />
-            <ErrorMessage name="family" v-slot="{ message }">
-              <p class="p-error">{{ message }}</p>
-            </ErrorMessage>
-          </div>
+        
 
-          <div style="width: 50%;">
-            <p class="title-input2">نام</p>
-            <Field
-              name="name"
-              as="input"
-              type="text"
-              placeholder="نام را وارد کنید ..."
-              :class="['input-name2', nameMeta.touched && nameMeta.invalid ? 'input-error' : '']"
-              tabindex="1"
-              validate-on-input
-            />
-            <ErrorMessage name="name" v-slot="{ message }">
-              <p class="p-error">{{ message }}</p>
-            </ErrorMessage>
-          </div>
-        </div>
 
         <p class="title-input1">آدرس ایمیل</p>
         <Field
@@ -54,7 +24,6 @@
           placeholder="ایمیل را وارد کنید ..."
           :class="['input-email', emailMeta.touched && emailMeta.invalid ? 'input-error' : '']"
           tabindex="3"
-          validate-on-input
         />
         <ErrorMessage name="email" v-slot="{ message }">
           <p class="p-error">{{ message }}</p>
@@ -70,7 +39,6 @@
             :class="['input-pass', passwordMeta.touched && passwordMeta.invalid ? 'input-error' : '']"
             v-model="password"
             tabindex="4"
-            validate-on-input
           />
           <button type="button" @click="togglePassword" class="toggle-btn">
             <i :class="['color2', showPassword ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash']"></i>
@@ -85,19 +53,24 @@
         <ErrorMessage name="password" v-slot="{ message }">
           <p class="p-error">{{ message }}</p>
         </ErrorMessage>
-        <input type="submit" class="btn-login" value="ثبت نام" :disabled="!meta.valid"/>
+
+        
+
+        <input type="submit" class="btn-login" value="ورود" :disabled="!meta.valid"/>
       </Form>
 
       <div class="dis-input-pass" style="justify-content: flex-start;">
-        <NuxtLink to="LoginRegister42" class="link-reg">ورود</NuxtLink>
+        <NuxtLink to="LoginRegister4" class="link-reg">ثبت نام</NuxtLink>
         <p class="title-btn-reg">حساب کاربری دارید؟</p>
+      </div>
+      <div class="dis-input-pass">
+        <NuxtLink to="/ResetPassword" class="title-btn-reg2" style="margin: auto; margin-top: 25px; color: blue;">رمز عبور خود را فراموش کرده اید ؟</NuxtLink>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-
 import { ref, computed } from 'vue'
 import { Form, Field, ErrorMessage, useField } from 'vee-validate'
 import * as yup from 'yup'
@@ -115,7 +88,6 @@ const schema = yup.object({
     .min(8, 'پسورد باید حداقل ۸ کاراکتر باشد')
     .matches(/[A-Z]/, 'پسورد باید حداقل یک حرف بزرگ داشته باشد')
     .matches(/\d/, 'پسورد باید حداقل یک عدد داشته باشد')
-    .matches(/[!@#$%^&*(),.?":{}|<>]/, 'پسورد باید حداقل یک کاراکتر خاص داشته باشد'),
 })
 
 
@@ -163,21 +135,18 @@ const color = computed(() => {
 
 const onSubmit = async (values) => {
   try {
-    const res = await $fetch('https://xdgbit.free.beeceptor.com', {
+    const res = await $fetch('', {
       method: 'POST',
       body: {
-        name: values.name,
-        family: values.family,
         email: values.email,
         password: values.password,
       }
     })
+    console.log('نتیجه ثبت‌نام:', res)
   } catch (err) {
     console.error('خطا در ثبت‌نام:', err)
   }
 }
-
-
 
 </script>
 
@@ -259,34 +228,33 @@ html, body, #app {
     margin: auto;
     margin-right: 0%;
 }
-.title-login{
-    font-size: 25px;
-    height: 86px;
-    width: 70%;
+  .title-login{
+      font-size: 25px;
+      height: 86px;
+      width: 70%;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      color:  rgb(220, 228, 233);
+      direction: rtl;
+      text-align: right;
+      font-family: Vazir;
+  }
+  .logo-login{
+    width: 80px;
+    height: 50px ;
+    background-image: url(../public/logo-xdgpay2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+
+  }
+  .dis{
     display: flex;
+    justify-content: center;
     align-items: center;
-    font-weight: 600;
-    color:  rgb(220, 228, 233);
-    direction: rtl;
-    text-align: right;
-    font-family: Vazir;
-    margin-right: 0%;
-}
-.logo-login{
-  width: 80px;
-  height: 50px ;
-  background-image: url(../public/logo-xdgpay2.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size:contain;
-  margin-bottom: 15px   ;
-}
-.dis{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid rgb(226, 226, 226);
-}
+    border-bottom: 1px solid rgb(226, 226, 226);
+  }
 .input-email{
     width: 86%;
     height: 55px;
@@ -499,6 +467,15 @@ html, body, #app {
     font-family: Vazir3;
     color: rgb(80, 80, 80);
 }
+.title-btn-reg2{
+    margin: auto;
+    margin-left: 0%;
+    margin-top: 30px;
+    font-family: Vazir3;
+    font-size: 14px;
+    color: rgb(80, 80, 80);
+}
+
 .link-reg{
     margin: auto;
     margin-right: 0%;

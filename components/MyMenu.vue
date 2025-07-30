@@ -148,7 +148,7 @@ function toggleMainMenu() {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
-  isLoginPage.value = route.fullPath.includes('LoginRegister4') || route.fullPath.includes('ResetPassword') || route.fullPath.includes('PasswordVerify')
+  isLoginPage.value = route.fullPath.includes('LoginRegister4') || route.fullPath.includes('ResetPassword') || route.fullPath.includes('PasswordVerify')  || route.fullPath.includes('login') || route.fullPath.includes('register')  
 })
 
 onUnmounted(() => {
@@ -156,7 +156,7 @@ onUnmounted(() => {
 })
 
 watch(() => route.fullPath, (newPath) => {
-  isLoginPage.value = newPath.includes('LoginRegister4') || newPath.includes('ResetPassword') || newPath.includes('PasswordVerify')
+  isLoginPage.value = newPath.includes('LoginRegister4') || newPath.includes('ResetPassword') || newPath.includes('PasswordVerify') || newPath.includes('login') || newPath.includes('register')
 })
 
 </script>

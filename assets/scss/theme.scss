@@ -1,0 +1,316 @@
+@use './variables' as *;
+body.ltr-mode {
+  direction: ltr;
+  .p-title{
+    padding-left: 0px !important;
+  }
+  .links-footer{
+    direction: ltr;
+  }
+  p, h1, h2, h3, h4, h5, h6, span, .box-about , label{
+    direction: ltr;
+    text-align: left;
+  }
+  .p-title{
+    text-align: left !important;
+    line-height: 28px;
+    margin-bottom: 20px;
+    padding-left: 0% !important;
+  }
+  .p-title2{
+    text-align: left !important;
+    line-height: 28px;
+    margin-bottom: 20px;
+    padding-left: 10% !important;
+  }
+  .p-text{
+    direction: ltr;
+    text-align: left;
+    padding-left: 10%;
+  }
+  .box1-about-s{
+    direction: ltr;
+  }
+  .div-icon{
+    margin-left: 10% !important;
+    margin-bottom: 8px;
+  }
+  .btns1{
+    width: 170px !important;
+    text-align: left;
+    direction: ltr;
+  }
+  .divbtns{
+    direction: rtl;
+  }
+  .page{
+    direction: ltr;
+  }
+  .pagee1{
+    direction: rtl;
+  }
+  .pagee2{
+    direction: rtl;
+  }
+  .pagee3{
+    direction: rtl;
+  }
+  .pagee4{
+    direction: rtl;
+  }
+  .pagee5{
+    direction: rtl;
+  }
+  .div-logo-page1{
+    padding-left: 15%;
+  }
+  .div-text-page1{
+    padding-left: 15%;
+  }
+  .text{
+    text-align: left;
+  }
+  .btn-more{
+    margin-left: 15%;
+  }
+  .title{
+    padding-left: 15%;
+    text-align: left;
+    direction: rtl;
+  }
+}
+
+.dark{
+  h1{
+    color: $color-text-dark;
+  }
+  button{
+    color: $color-text-dark;
+  }
+  .ul-menu2{
+    background-color: $back-body !important;
+  }
+  h2{
+    color: $color-text-dark;
+  }
+  h3{
+    color: $color-text-dark;
+  }
+  h4{
+    color: $color-text-dark;
+  }
+  h5{
+    color: $color-text-dark;
+  }
+  p{
+    color: $color-text-dark;
+  }
+  a{
+    color: $color-text-dark;
+  }
+  background-color: $back-body;
+  .div1.scrolled{
+    background-color: #03063f !important;
+  }
+  .div1.scrolled a{
+    color: $color-text-dark;
+  }
+  .bnt-ser-menu{
+    color: $color-text-dark;
+  }
+  #__nuxt{
+    background-color: $back-body;
+  }
+  .back-divimg{
+    background-color: $back-body;
+  }
+  .back{
+    background-image: none;
+  }
+  .title-responsive{
+    color: $color-text-dark;
+  }
+  .text-responsive{
+    color: $color-text-dark;
+  }
+  .button-responsive1{
+    color: $btn;
+    background-color: $btn-back;
+    border-color: $btn-back;
+  }
+  .button-responsive1:hover{
+    background-color: $btn-back-hover;
+  }
+  .title-jibit{
+    color:  $btn;
+  }
+  .text{
+    color: $btn;
+  }
+  .radio-site{
+    background-color: $btnslider-back-hover;
+    color: white !important;
+  }
+  .li-box{
+    background-color: $btnslider-back-hover;
+    box-shadow: $btnslider-shadow;
+  }
+  // .image{
+  //   background-color: $btnslider-back-hover;
+  // }
+  .imgbox1{
+    background-color: $btnslider-back-hover;
+  }
+  .imgbox2{
+    background-color: $btnslider-back-hover;
+  }
+  .imgbox3{
+    background-color: $btnslider-back-hover;
+  }
+  .box-about{
+      background-color: $btn-back;
+      color: white !important;
+      box-shadow: $btnslider-back-hover-shadow;
+  }
+  .box-about p{
+    color: white !important;
+  }
+  .pagee3{
+    background-color: $btn-back ;
+  }
+  .table2-about4{
+    background-color: $btn-back ;
+    border: 0px !important;
+  }
+  .services{
+    box-shadow: $btnslider-shadow;
+  }
+  .ul_services{
+    background-color: #03063f !important;
+  }
+  .ul_services li a:hover{
+    background-color: $btn-back;
+  }
+  .login-btn-res{
+    background-color: $btn-back;
+    color: white !important;
+  }
+  .fas.fa-bars.show{
+    margin-top: 5px !important;
+  }
+  .fas.fa-bars.show::before{
+    padding: 2px;padding-left: 4px;padding-right: 4px;
+    border-radius: 4px;
+    background-color: rgb(96, 81, 231) !important;
+  }
+  .btn1{
+    background-color: rgba(58, 104, 255, 0.144);
+    color: white !important;
+    transition: all ease 0.5s !important;
+  }
+  .div-pizito2{
+     background: linear-gradient(90deg, #171f66 50%, #8066bd 100%) !important;
+     border: 0px !important;
+  }
+  #btn-DL-Mode5{
+    color: rgb(245, 245, 245) !important;
+    background-color: rgb(32, 48, 138) !important;
+  }
+  .btn1:hover{
+    background-color: rgb(23, 49, 136);
+    color: white !important;
+  }
+  .pagee3 h3{
+    color: white !important;
+  }
+  .page11{
+    background-color: $btn-back ;
+    box-shadow: $btnslider-shadow;
+  }
+  .page22{
+    background-color: $btn-back ;
+    box-shadow: $btnslider-shadow;
+  }
+  .page33{
+    background-color: $btn-back ;
+    box-shadow: $btnslider-shadow;
+  }
+  .page44{
+    background-color: $btn-back ;
+    box-shadow: $btnslider-shadow;
+  }
+  .page55{
+    background-color: $btn-back ;
+    box-shadow: $btnslider-shadow;
+  }
+  .btn-more{
+    background-color: rgb(54, 101, 255) !important;
+    color: white !important;
+    border: 0px !important;
+  }
+  .ul-menu2.open{
+    background-color: #03063f !important;
+        box-shadow: $btnslider-shadow;
+  }.ul-menu2{
+    background-color: #03063f !important;
+        box-shadow: $btnslider-shadow;
+  }
+  .ul-menu2 ul{
+    background-color: #03063f !important;
+  }
+  .ul-menu2.open ul{
+    background-color: #03063f !important;
+  }
+  .pagee1 h3{
+    color: white !important;
+  }
+  .pagee2{
+    background-color: $btn-back ;
+  }
+  .pagee2 h3{
+    color: white !important;
+  }
+  .pagee4{
+    background-color: $btn-back ;
+  }
+  .pagee4 h3{
+    color: white !important;
+  }
+  .pagee5{
+    background-color: $btn-back ;
+  }
+  .pagee5 h3{
+    color: white !important;
+  }
+  .div2{
+    background-color: $btn-back ;
+    box-shadow: $btnslider-shadow;
+  }
+  .about-services{
+    background-color: $btn-back;
+  }
+  .about-services .btns1:hover{
+    background-color: $btn-back-hover;
+  }
+  .about-services .btns1{
+    background-color: $btn-back;
+  }
+  .btns1{
+    direction: ltr;
+    margin-right: 12%;
+  }
+  
+  .btn-DL-Mode22{
+    color: black !important;
+  }
+  .btn-DL-Mode{
+    background-color: rgb(32, 48, 138) !important;
+  }
+  .li_login{
+    background-color: rgb(32, 48, 138) !important;
+    border: 0px !important;
+  }
+  .blog:hover{
+    background-color: $btn-back;
+  }
+}
