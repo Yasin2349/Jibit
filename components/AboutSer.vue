@@ -1,5 +1,5 @@
 <template>
-  <div class="w-4/5 h-[250px] mx-auto flex items-end">
+  <div class="w-[77%] h-[250px] mx-auto flex items-end">
     <div class="w-full">
       <p class="w-full text-[32px] text-[#303c4f] text-right leading-[85px] font-vazir title-jibit" dir="rtl">
         {{ langStore.t('title_slider') }}

@@ -1,7 +1,7 @@
 <template>
   <div
     class="section-wrapper w-full h-[700px] flex justify-center items-center
-           bg-cover bg-bottom
+           bg-cover bg-bottom pl-[90px]
            pt-20 pb-20 relative text-[#1a2d4b] z-1 back section-wrapper-responsive back-divimg"
   >
     <div class="w-3/5 h-full flex justify-center items-center image-container-responsive">

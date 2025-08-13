@@ -27,14 +27,14 @@
     </div>
   </div>
   <div class="w-[83%] h-[80px] flex items-center m-auto">
-    <ul class="w-full flex justify-center items-center direction-rtl">
+    <!-- <ul class="w-full flex justify-center items-center direction-rtl">
       <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo1"></li>
       <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo2"></li>
       <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo3"></li>
       <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo4"></li>
       <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo5"></li>
       <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo6"></li>
-    </ul>
+    </ul> -->
   </div>
   <div class="w-full h-[260px] mt-[110px]">
     <ul class="h-full flex justify-center items-center mx-auto">
@@ -849,4 +849,5 @@ export default {
   margin-top: 100px;
   color: #1a2d4b;
 }
+
 </style>

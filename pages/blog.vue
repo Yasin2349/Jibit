@@ -43,7 +43,7 @@
     <br>
     <br>
     <br>
-    <div style="width: 100%;background-color: rgb(237, 243, 255);">
+    <div style="width: 100%;background-color: rgb(237, 243, 255);" class="send_form">
         <form action="" method="get">
         <div class="contant">
             <p class="p-title-contant">دیدگاهتان را بنویسید</p>

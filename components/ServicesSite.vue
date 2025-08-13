@@ -298,7 +298,7 @@ function changepage(tab) {
   }
 }
 .div111 {
-  width: 80%;
+  width: 77%;
   height: 610px;
   margin: auto;
   margin-bottom: 0px;

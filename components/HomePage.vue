@@ -1,11 +1,10 @@
 <template class="background-Home">
   <DivImg />
-  <!-- <BrandLogos /> -->
   <BoxAbout />
   <AboutSer />
   <ServicesSite/>
 
-  <div class="w-11/12 max-w-5xl h-auto mx-auto flex flex-col sm:flex-row items-end mt-0 mb-11 font-vazir justify-end pr-[30px] p-text-res-tekye"  style="margin-top: 100px;">
+  <div class="w-11/12 max-w-[77%] h-auto mx-auto flex flex-col sm:flex-row items-end mt-0 mb-11 font-vazir justify-end pr-[30px] p-text-res-tekye"  style="margin-top: 100px;">
     <div class="w-full sm:w-auto">
       <p class="w-full text-[24px] sm:text-[32px] text-[#303c4f] text-right leading-[40px] sm:leading-[85px] text">
         {{ langStore.t('title_polM') }}
@@ -16,7 +15,7 @@
     </div>
   </div>
 
-  <div class="about3 flex flex-col sm:flex-row justify-center items-center w-11/12 max-w-5xl h-auto sm:h-[300px] mx-auto gap-4">
+  <div class="about3 flex flex-col sm:flex-row justify-center items-center w-11/12 max-w-[77%] h-auto sm:h-[300px] mx-auto gap-4">
     <div
       class="w-full sm:w-1/2 h-auto sm:h-full rounded-[15px] shadow-md
              bg-[url('https://jibit.ir/wp-content/themes/jibit/images/home2/bg_big_numbers_left.svg')]
@@ -71,7 +70,7 @@
   </div>
 
   <div
-    class="about-services w-11/12 max-w-5xl h-auto sm:h-[270px] mx-auto mt-[100px] rounded-[15px]
+    class="about-services w-11/12 max-w-[77%] h-auto sm:h-[270px] mx-auto mt-[100px] rounded-[15px]
            bg-white bg-[url('//jibit.ir/wp-content/themes/jibit/images/transferor/trynow-background.png')]
            bg-top bg-center bg-no-repeat bg-[length:50%] shadow-[0_8.64px_28.8px_rgba(0,0,0,0.06)] flex flex-col sm:flex-row justify-center items-center rtl mb-[175px] gap-8 sm:gap-0"
   >

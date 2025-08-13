@@ -1,5 +1,12 @@
 @use './variables' as *;
 body.ltr-mode {
+  .p-title2{
+    font-size: 17px !important;
+    line-height: 19px !important;
+  }
+  .box-about{
+    height: 280px !important;
+  }
   .li_logo{
     margin-left: 9% !important;
     margin-right: 0% !important;
@@ -202,24 +209,24 @@ body.ltr-mode {
     color: $btn;
   }
   .radio-site{
-    background-color: $btnslider-back-hover;
+    background-color: rgb(32, 48, 138) !important;
     color: white !important;
   }
   .li-box{
-    background-color: $btnslider-back-hover;
+    background-color: rgb(32, 48, 138) !important;
     box-shadow: $btnslider-shadow;
   }
   // .image{
   //   background-color: $btnslider-back-hover;
   // }
   .imgbox1{
-    background-color: $btnslider-back-hover;
+    background-color: white !important;
   }
   .imgbox2{
-    background-color: $btnslider-back-hover;
+    background-color: white !important;
   }
   .imgbox3{
-    background-color: $btnslider-back-hover;
+    background-color: white !important;
   }
   .box-about{
       background-color: $btn-back;
@@ -353,7 +360,23 @@ body.ltr-mode {
     direction: ltr;
     margin-right: 12%;
   }
+  .btn4{
+    color: white;
+  }
+  .btn3{
+    cursor: pointer;
+  }
+  .send_form{
+    background-color: #03063f !important;
+  }
+  .p-title-contant{
+    background-color: #03063f !important;
+  }
   
+  .btn4:hover{
+    background-color: rgba(78, 147, 226, 0.288);
+    cursor: pointer;
+  }
   .btn-DL-Mode22{
     color: black !important;
   }

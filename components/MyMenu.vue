@@ -1,70 +1,70 @@
-  <template>
-  <div :class="['div1 mx-auto', { scrolled: isScrolled, hidenmenu: isLoginPage }]">
+```vue
+<template>
+  <div :class="['div1 container mx-auto flex items-center justify-between fixed top-0 z-50', { 'bg-white shadow-md': isScrolled, 'hidden': isLoginPage }]">
     
-    <li class="li_logo">
+    <li class="li_logo" style="list-style:none;">
       <NuxtLink to="/"><div class="logo"></div></NuxtLink>
     </li>
 
     
-    <ul :class="['ul-menu2', { open: shmenu }]" id="ul-menu2">
+    <ul :class="['ul-menu2 absolute top-14 ltr:left-4 rtl:right-4 bg-white rounded-2xl shadow-lg transition-all duration-300', { 'w-72 h-[500px] p-4 visible': shmenu, 'w-72 h-0 invisible': !shmenu }]" id="ul-menu2">
       <li>  
-        <button type="button" style="font-size: 14px; font-family: Vazir3; color: rgb(88, 88, 88);">
+        <button type="button" class="text-sm font-vazir3 text-gray-600">
           سرویس‌ها
         </button>
       </li>
       <div class="services2">
-        <ul class="ul_services" style="border-bottom: 1px solid rgb(229 212 212);">
-          <li><NuxtLink to="/DargahP/DargahPardakht">درگاه پرداخت <div class="logo1"></div></NuxtLink></li>
-          <li><NuxtLink to="/DargahP/EsterdadVagh">استرداد وجه <div class="logo2"></div></NuxtLink></li>
-          <li><NuxtLink to="/DargahP/VarizSH">واریز شناسه دار<div class="logo3"></div></NuxtLink></li>
-          <li><a href="#">تسویه و انتقال وجه <div class="logo4"></div></a></li>
-          <li><a href="#">سرویس‌های استعلامی <div class="logo5"></div></a></li>
-          <li><a href="#">احراز هویت بایومتریک <div class="logo6"></div></a></li>
+        <ul class="ul_services border-b border-gray-200">
+          <li><NuxtLink to="/DargahP/DargahPardakht" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">درگاه پرداخت <div class="logo1"></div></NuxtLink></li>
+          <li><NuxtLink to="/DargahP/EsterdadVagh" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">استرداد وجه <div class="logo2"></div></NuxtLink></li>
+          <li><NuxtLink to="/DargahP/VarizSH" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">واریز شناسه دار<div class="logo3"></div></NuxtLink></li>
+          <li><a href="#" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">تسویه و انتقال وجه <div class="logo4"></div></a></li>
+          <li><a href="#" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">سرویس‌های استعلامی <div class="logo5"></div></a></li>
+          <li><a href="#" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">احراز هویت بایومتریک <div class="logo6"></div></a></li>
         </ul>
       </div>
-      <li><NuxtLink to="/ContantPage" class="contant-btn">ارتباط با ما</NuxtLink></li>
-      <li><NuxtLink to="/blogs" class="blog-btn">{{ langStore.t('btn_blog') }}</NuxtLink></li>
+      <li><NuxtLink to="/ContantPage" class="contant-btn flex items-center justify-center text-gray-600 font-vazir3 border-b border-gray-200 py-4">ارتباط با ما</NuxtLink></li>
+      <li><NuxtLink to="/blogs" class="blog-btn flex items-center justify-center text-gray-600 font-vazir3 py-4">{{ langStore.t('btn_blog') }}</NuxtLink></li>
     </ul>
 
     
-    <ul class='ul_menu'>
-      <li class="li-sh" style="width: 18%;">
-        <button class="bnt-ser-menu" type="button" @click="menuopen" @blur="menuclose" style="cursor: pointer; font-family: Vazir3; color: rgb(88, 88, 88);">
+    <ul class="ul_menu flex items-center gap-6 ltr:mr-8 rtl:ml-8">
+      <li class="li-sh w-[18%] hidden lg:block">
+        <button class="bnt-ser-menu flex items-center gap-2 text-gray-600 font-vazir3 cursor-pointer" type="button" @click="menuopen" @blur="menuclose">
           {{ langStore.t('link_menu_servic') }}<i class="fas fa-chevron-down"></i>
         </button>
       </li>
-      <div :class="['services', { open: menuservices }]">
-        <ul class="ul_services">
-          <li><NuxtLink to="/DargahP/DargahPardakht">{{ langStore.t('btn1_slider') }} <div class="logo1"></div></NuxtLink></li>
-          <li><NuxtLink to="/DargahP/EsterdadVagh">{{ langStore.t('btn2_slider') }}<div class="logo2"></div></NuxtLink></li>
-          <li><NuxtLink to="/DargahP/VarizSH">{{ langStore.t('btn3_slider') }}<div class="logo3"></div></NuxtLink></li>
-          <li><a href="#">{{ langStore.t('btn4_slider') }}<div class="logo4"></div></a></li>
-          <li><a href="#">{{ langStore.t('btn5_slider') }}<div class="logo5"></div></a></li>
-          <li><a href="#">{{ langStore.t('btn6_slider') }}<div class="logo6"></div></a></li>
+      <div :class="['services absolute top-14 ltr:right-1/2 rtl:left-1/2 bg-white rounded-2xl shadow-md transition-all duration-300', { 'opacity-100 h-[420px] w-72': menuservices, 'opacity-0 h-0 w-72': !menuservices }]">
+        <ul class="ul_services flex flex-col">
+          <li><NuxtLink to="/DargahP/DargahPardakht" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn1_slider') }} <div class="logo1"></div></NuxtLink></li>
+          <li><NuxtLink to="/DargahP/EsterdadVagh" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn2_slider') }}<div class="logo2"></div></NuxtLink></li>
+          <li><NuxtLink to="/DargahP/VarizSH" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn3_slider') }}<div class="logo3"></div></NuxtLink></li>
+          <li><a href="#" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn4_slider') }}<div class="logo4"></div></a></li>
+          <li><a href="#" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn5_slider') }}<div class="logo5"></div></a></li>
+          <li><a href="#" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn6_slider') }}<div class="logo6"></div></a></li>
         </ul>
       </div>
-      <li class="li-sh" style="width: 15%;"><NuxtLink to="/ContantPage">{{ langStore.t('btn_contact_menu') }}</NuxtLink></li>
-      <li class="li-sh F" style="margin-left: 8%;" ><NuxtLink to="/blogs">{{ langStore.t('link_menu_blog') }}</NuxtLink></li>
-      <li class="li_login li-sh" style="width: 110px;padding: 10px;margin-left: 3%; text-align: center; background-color: rgba(255, 255, 255, 0.432);">
-        <NuxtLink to="/LoginRegister4" class="a-login" style="font-size: 15px;width: 100%;">{{ langStore.t('link_menu_login') }}<i class="fa-solid fa-chevron-{{ langStore.t('dire') }} fa-xs" style="font-size: 10px;text-align: center;"></i></NuxtLink>
+      <li class="li-sh w-[15%] hidden lg:block"><NuxtLink to="/ContantPage" class="text-gray-600 font-vazir3">{{ langStore.t('btn_contact_menu') }}</NuxtLink></li>
+      <li class="li-sh hidden lg:block ltr:ml-8 rtl:mr-8"><NuxtLink to="/blogs" class="text-gray-600 font-vazir3">{{ langStore.t('link_menu_blog') }}</NuxtLink></li>
+      <li class="li_login hidden lg:block w-[110px] p-2 text-center bg-white/40 border border-gray-300 rounded-lg" >
+        <NuxtLink to="/LoginRegister4" class="a-login text-sm flex items-center justify-center gap-1 w-full text-gray-600 font-vazir3">
+          {{ langStore.t('link_menu_login') }}
+          <i :class="['fa-solid', `fa-chevron-${langStore.t('dire')}`, 'fa-xs']" style="font-size: 10px;"></i>
+        </NuxtLink>
       </li>
 
-      <button class="btn-DL-Mode" @click="SH_Mode" :class="sh_Mode ? 'btn-DL-Mode' : 'btn-DL-Mode2'">
-        <i
-          :class="!sh_Mode ? 'fas fa-moon' : 'fas fa-sun'"
-          :style="{ color: sh_Mode ? 'white' : 'black' }"
-        ></i>
+      <button class="btn-DL-Mode w-12 h-10 rounded-lg transition-transform duration-300 hover:scale-110" :class="sh_Mode ? 'bg-gray-800' : 'bg-white'" @click="SH_Mode">
+        <i :class="['fas', sh_Mode ? 'fa-sun' : 'fa-moon']" :style="{ color: sh_Mode ? 'white' : 'black' }"></i>
       </button>
-      <button class="btn-DL-Mode" id="btn-DL-Mode5" @click="toggleLang" style="background-color: white;margin-right: 2%;">
+      <button class="btn-DL-Mode w-12 h-10 rounded-lg bg-white ltr:mr-2 rtl:ml-2 transition-transform duration-300 hover:scale-110" id="btn-DL-Mode5" @click="toggleLang">
         {{ sh_LN ? 'FA' : 'EN' }}
       </button>
       
-      <li>
-        <div  style="display: flex;width: 180px;text-align: center;">
-          <NuxtLink to="/LoginRegister4" class="login-btn-res" style=" margin-left: 10px; padding: 7px;border-radius: 8px ;border: 1px solid rgb(206, 206, 206) ; background-color: white ;">ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;text-align: center ;"></i></NuxtLink>
-          <i :class="['fas fa-bars', { show: shhamber }, { show2: shzarb }]" style=" font-size: 30px;" @click="toggleMainMenu" @mouseout="toggleMainMenu" id="hamber"></i>
-          
-        </div>
+      <li class="flex items-center w-[180px] gap-2">
+        <NuxtLink to="/LoginRegister4" class="login-btn-res lg:hidden border border-gray-300 rounded-lg p-2 bg-white text-gray-600 font-vazir3 flex items-center gap-1">
+          ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;"></i>
+        </NuxtLink>
+        <i :class="['fas fa-bars lg:hidden text-2xl transition-all duration-300', { 'block': shhamber, 'hidden': shzarb }]" @click="toggleMainMenu" @mouseout="toggleMainMenu" id="hamber"></i>
       </li>
     </ul>
   </div>
@@ -85,421 +85,144 @@ const isLoginPage = ref(false)
 const shmenu = ref(false)
 const shhamber = ref(true)
 const shzarb = ref(false)
-function SH_Mode() {
-  sh_Mode.value = !sh_Mode.value;
-
-  
-  if (sh_Mode.value) {
-    document.body.classList.add('dark');
-  } else {
-    document.body.classList.remove('dark');
-  }
-
-  
-  localStorage.setItem('darkMode', sh_Mode.value ? 'true' : 'false');
-}
-
-onMounted(() => {
-  
-  const darkModeStored = localStorage.getItem('darkMode');
-  
-  if (darkModeStored === 'true') {
-    sh_Mode.value = true;
-    document.body.classList.add('dark');
-  } else {
-    sh_Mode.value = false;
-    document.body.classList.remove('dark');
-  }
-
-  toggleLang()
-})
-
-
-
 const sh_Mode = ref(false)
 const sh_LN = ref(true)
 
-function toggleLang() {
-  if(sh_LN.value === true){
-    document.body.classList.remove('ltr-mode');
-    langStore.setLang('fa')
-  } else if(sh_LN.value === false){
-    document.body.classList.add('ltr-mode');
-    langStore.setLang('en')
-  }
-  sh_LN.value = !sh_LN.value
+function SH_Mode() {
+  sh_Mode.value = !sh_Mode.value;
+  document.body.classList.toggle('dark', sh_Mode.value);
+  localStorage.setItem('darkMode', sh_Mode.value ? 'true' : 'false');
 }
 
-
+function toggleLang() {
+  document.body.classList.toggle('ltr-mode', !sh_LN.value);
+  langStore.setLang(sh_LN.value ? 'fa' : 'en');
+  sh_LN.value = !sh_LN.value;
+}
 
 function menuopen() {
-  menuservices.value = !menuservices.value
+  menuservices.value = !menuservices.value;
 }
 
 function menuclose() {
-  menuservices.value = false
+  menuservices.value = false;
 }
 
 function handleScroll() {
-  isScrolled.value = window.scrollY > 50
+  isScrolled.value = window.scrollY > 50;
 }
 
 function toggleMainMenu() {
-  shmenu.value = !shmenu.value
+  shmenu.value = !shmenu.value;
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-  isLoginPage.value = route.fullPath.includes('LoginRegister4') || route.fullPath.includes('ResetPassword') || route.fullPath.includes('PasswordVerify')  || route.fullPath.includes('login') || route.fullPath.includes('register')  
+  const darkModeStored = localStorage.getItem('darkMode');
+  sh_Mode.value = darkModeStored === 'true';
+  document.body.classList.toggle('dark', sh_Mode.value);
+  window.addEventListener('scroll', handleScroll);
+  isLoginPage.value = ['LoginRegister4', 'ResetPassword', 'PasswordVerify', 'login', 'register'].some(path => route.fullPath.includes(path));
+  toggleLang();
 })
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('scroll', handleScroll);
 })
 
 watch(() => route.fullPath, (newPath) => {
-  isLoginPage.value = newPath.includes('LoginRegister4') || newPath.includes('ResetPassword') || newPath.includes('PasswordVerify') || newPath.includes('login') || newPath.includes('register')
+  isLoginPage.value = ['LoginRegister4', 'ResetPassword', 'PasswordVerify', 'login', 'register'].some(path => newPath.includes(path));
 })
-
 </script>
 
-  <style scoped>
-  @media screen and (max-width: 1024px) {
-    .li-sh.F{
-      margin-right: 2% !important;
-    }
-    .a-login{
-      font-size: 14px !important;
-    }
-  }
-  .div1 {
-    width: 100%;
-    height: 70px;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    direction: rtl;
-    z-index: 6;
-    background-color: transparent;
-    transition: background-color 0.1s ease;
-  }
-  .textlogo{
-    font-size: 25px;
-    font-family: Vazir3;
-    line-height: 35px;
-    margin-right: 5%;
-  }
+<style scoped>
+.div1 {
+  height: 70px;
+  direction: rtl;
+  background-color: transparent;
+  transition: background-color 0.1s ease;
+}
 
-  .div1.scrolled {
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
+.textlogo {
+  font-size: 25px;
+  font-family: Vazir3;
+  line-height: 35px;
+}
 
-  .ul_menu {
-    width: 60%;
-    height: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: auto;
-  }
+.logo {
+  width: 160px;
+  height: 53px;
+  background-image: url(../public/logo-xdgpay2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  .ul_menu li {
-    width: 0%;
-    list-style: none;
-    
-  }
+.logo1 {
+  width: 25px;
+  height: 25px;
+  background-image: url(https://jibit.ir/wp-content/themes/jibit/images/projectx/projectx-logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .ul_menu li a {
-    color: rgb(88, 88, 88);
-    text-decoration: none;
-    font-size: 16px;
-    font-family: Vazir3;
-  }
+.logo2 {
+  width: 25px;
+  height: 25px;
+  background-image: url(https://jibit.ir/wp-content/themes/jibit/images/icons/refund_logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .li_logo {
-    margin: auto;
-    width: 50%;
-    background-size: cover;
-    list-style: none;
-    margin-right: 8%;
-    display: flex;
-  }
+.logo3 {
+  width: 25px;
+  height: 25px;
+  background-image: url(https://jibit.ir/wp-content/themes/jibit/images/pip/pip-logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.logo4 {
+  width: 25px;
+  height: 25px;
+  background-image: url(https://jibit.ir/wp-content/themes/jibit/images/transferor/transferor-logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo5 {
+  width: 25px;
+  height: 25px;
+  background-image: url(https://jibit.ir/wp-content/themes/jibit/images/identicator/identicator-logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo6 {
+  width: 25px;
+  height: 25px;
+  background-image: url(https://jibit.ir/wp-content/themes/jibit/images/alpha/alpha_logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .a-login {
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
   .logo {
-    width: 160px;
-    height: 53px;
-    margin-top: 1%;
-    
-    background-image: url(../public/logo-xdgpay2.png);
-    /* background-size: cover; */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 70px !important;
   }
-  .services {
-    opacity: 0;
-    transition: opacity 0.5s ease, height 0.5s ease;
-    overflow: hidden;
-    width: 280px;
-    height: 0px;
-    background-color: #fff;
-    position: absolute;
-    top: 55px;
-    right: 50%;
-    border-radius: 15px;
-    box-shadow: 0px 2px 2px rgb(231, 231, 231);
-    transition: all ease-in-out 0.7s;
-    overflow: hidden;
-  }
-  .services.open {
-    opacity: 1;
-    height: 420px;
-  }
-  .services ul {
-    width: 100%;
-    height: 100%;
-  }
-  .services ul li {
-    width: 100%;  
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 0%;
-  }
-  .ul_services li a {
-    width: 90%;
-    color: rgb(88, 88, 88);
-    text-decoration: none;
-    font-size: 16px;
-    font-family: Vazir3;
-    padding: 15px;
-    transition: all ease-in-out 0.2s;
-    border-radius: 10px;
-    display: flex;
-    direction: ltr;
-    justify-content: end;
+}
 
-  }
-  .ul_services li a:hover{
-    background-color: #e8f3ff;
-  }
-  .logo1{
-    width: 25px;
-    height: 25px;
-    background-image: url(https://jibit.ir/wp-content/themes/jibit/images/projectx/projectx-logo.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;margin-left: 4%;
-  }
-  .logo2{
-    width: 25px;
-    height: 25px;
-    background-image: url(https://jibit.ir/wp-content/themes/jibit/images/icons/refund_logo.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;margin-left: 4%;
-  }
-  .logo3{
-    width: 25px;
-    height: 25px;
-    background-image: url(https://jibit.ir/wp-content/themes/jibit/images/pip/pip-logo.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;margin-left: 4%;
-  }
-  .logo4{
-    width: 25px;
-    height: 25px;
-    background-image: url(https://jibit.ir/wp-content/themes/jibit/images/transferor/transferor-logo.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;margin-left: 4%;
-  }
-  .logo5{
-    width: 25px;
-    height: 25px;
-    background-image: url(https://jibit.ir/wp-content/themes/jibit/images/alpha/alpha_logo.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;margin-left: 4%;
-  }
-  .logo5{
-    width: 25px;
-    height: 25px;
-    background-image: url(https://jibit.ir/wp-content/themes/jibit/images/identicator/identicator-logo.svg);
-    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;margin-left: 4%;
-  }
-  .logo6{
-    width: 25px;
-    height: 25px;
-    background-image: url(https://jibit.ir/wp-content/themes/jibit/images/alpha/alpha_logo.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;margin-left: 4%;
-  }
-  .hidenmenu{
-    display: none;
-  }
-  .li_login{
-    padding: 10px;padding-left: 18px;padding-right: 18px;
-    border: 1px solid rgb(206, 206, 206);
-    border-radius: 10px;
-    transition: all ease 0.3s;
-  }
-  
-  .ul-menu2{
-    width: 300px;
-    height: 0px;
-    background-color: white;
-    border-radius: 15px;
-    position: absolute;
-    top: 55px;
-    left: 10%;
-    padding: 18px;
-    transition: all 0.4s ease-in-out;
-    visibility: hidden;
-    overflow: hidden;
-  }
-  .ul-menu2.open{
-    width: 300px;
-    height: 500px;
-    background-color: white;
-    border-radius: 15px;
-    position: absolute;
-    top: 55px;
-    left: 10%;
-    padding: 18px;
-    transition: all ease-in-out 0.4s;
-    box-shadow: 0px 10px 15px rgb(224, 224, 224);
-    visibility: visible;
-    overflow: hidden;
-  }
-  .contant-btn{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Vazir3;
-    color: rgb(99, 99, 99);
-    border-bottom: 1px solid rgb(229 212 212);  
-    padding: 15px;
-  }
-  .showlogin{
-    display: block;
-  }
-  .blog-btn{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Vazir3;
-    color: rgb(99, 99, 99);
-    padding: 15px;
-  }
-  .fas.fa-bars{
-    transition: all ease-in-out 0.4s;
-    display: none;
-    visibility: hidden;
-  }
-  .fas.fa-xmark{
-    transition: all ease-in-out 0.4s;
-    display: none;
-  }
-  .fas.fa-bars.show{
-    display: inline;
-    z-index: 7;
-  }
-  .fas.fa-bars.show2{
-    font-size: 0px;
-    z-index: 00;
-  }
-  .fas.fa-xmark.show {
-    display: inline;
-  }
-  .login-btn-res{
-    visibility: hidden;
-  }
-  .btn-DL-Mode{
-    width: 50px;
-    height: 45px;
-    border-radius: 10px;
-    background-color: rgb(62, 62, 107);
-    transition: all ease 0.3s ;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .btn-DL-Mode2{
-    width: 50px;
-    height: 45px;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    transition: all ease 0.3s ;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .btn-DL-Mode:hover {
-    transform: scale(1.1);
-  }
-  @media screen and (max-width: 1259px) {
-      .ul_menu li{
-        margin-right: 35px;
-      }
-      @media screen and (max-width : 1149px) {
-        @media screen and (max-width : 1000px){
-          .li-sh {
-            display: none;
-          }
-          .ul_menu{
-            justify-content: left;
-            padding-left: 10%;
-          }
-          .fas.fa-bars{
-            visibility: visible;
-          }
-          .login-btn-res{
-            visibility: visible;
-          }
-        }
-        .ul_menu li{
-          margin-right: 24px;
-          
-        }
-        
-      }
-  }
-  @media screen and (max-width: 450px) {
-    .li_logo{
-      width: 10% !important; 
-      margin: 5%;
-    }
-    .logo{
-      width: 70px !important;
-    }
-    .ul_menu{
-      margin-right:0% ;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .ul_menu{
-      display: flex;
-      justify-content: center;
-    }
-    .btn-DL-Mode{
-      width: 50px;
-    }
-  }
-  @media screen and (max-width: 360px) {
-    .li_logo{
-      margin-right: 2% !important;
-    }
-  }
 @keyframes pop {
   0% {
     transform: scale(1) rotate(0deg);
@@ -514,4 +237,5 @@ watch(() => route.fullPath, (newPath) => {
     opacity: 1;
   }
 }
-  </style>
+</style>
+```

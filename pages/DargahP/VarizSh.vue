@@ -1,3 +1,4 @@
+```vue
 <template>
   <div class="w-full h-[700px] bg-cover bg-no-repeat bg-bottom py-20 flex justify-center items-center relative" 
        style="">
@@ -11,29 +12,29 @@
         </div>
       </div>
       
-      <p class="text-[40px] font-bold text-[#1a2d4b]-500 mt-[10px]  w-[72%] font-vazir3">
+      <p class="text-[40px] font-bold text-[#1a2d4b]-500 mt-[10px]  w-[72%] font-vazir3 t25">
         بدون محدودیت با<br>
 واریز شناسه دار XDGPay
       </p>
-      <p class="w-[72%] text-[18px] leading-[29px] text-[#4d5768] mt-4 font-vazir2" dir="rtl">
+      <p class="w-[72%] text-[18px] leading-[29px] text-[#4d5768] mt-4 font-vazir2 t24" dir="rtl">
         سرویس واریز شناسه‌دار این امکان را به مشتریان کسب و کار‌ها می‌دهد تا بدون محدودیت در مبلغ تراکنش و با انتخاب روش مناسب از خدمات واریز وجه و پرداخت استفاده کنند.
       </p>
       <div class="w-[72%] flex justify-end items-center mt-20 gap-2">
         <input dir="rtl" type="submit" value="تماس با تیم  فروش >"
-               class="w-[170px] h-[50px] border border-gray-400 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition" />
+               class="w-[170px] h-[50px] border border-gray-400 rounded-md text-sm font-vazir3 transition btn4">
         <input dir="rtl" type="submit" value="درخواست سرویس >"
-               class="w-[170px] h-[50px] bg-[#226ce9] text-white text-sm rounded-md border border-[#226ce9] font-vazir3 hover:bg-[#2247e9] transition" />
+               class="w-[170px] h-[50px] bg-[#226ce9] text-white text-sm rounded-md border border-[#226ce9] font-vazir3 hover:bg-[#2247e9] transition btn3" />
       </div>
     </div>
   </div>
   <div class="w-[83%] h-[80px] flex items-center m-auto">
-    <ul class="w-full flex justify-center items-center direction-rtl">
+    <!-- <ul class="w-full flex justify-center items-center direction-rtl">
       <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo1"></li>
       <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo2"></li>
       <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo3"></li>
       <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo4"></li>
       <li class="w-[110px] h-[30px] list-none mx-auto bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo5"></li>
-    </ul>
+    </ul> -->
   </div>
   
   <div class="div-about2">
@@ -96,7 +97,6 @@
        <div class="row22-about4">
           <div class="col23-about4">
             <p class="p-table2">
-
 2,5۰۰ ریال<br><span class="p11-table2">به ازای هر یک میلیون تومان</span></p>
           </div>
           <div class="col24-about4">
@@ -110,12 +110,12 @@
       <p class="title-about-services">استفاده از سرویس‌های XDGPay</p>
       <p class="text-about-services">با ایجاد حساب کاربری از خدمات XDGPay برای رشد و ارتقا فرآیند و عملیات مالی کسب و کارتان استفاده کنید.</p>
       <input dir="rtl" type="submit" value="ساخت حساب کاربری >"
-               class="w-[170px] h-[50px] bg-[#226ce9] text-white text-sm rounded-md border border-[#226ce9] font-vazir3 hover:bg-[#2247e9] mt-[20px] transition" />
+               class="w-[170px] h-[50px] bg-[#226ce9] text-white text-sm rounded-md border border-[#226ce9] font-vazir3 hover:bg-[#2247e9] mt-[20px] transition btn4" />
     </div>
     <div class="div-2-about-services">
       <p class="text-about-services2">برای ایجاد بسته اختصاصی کسب و کار‌تان با ما تماس بگیرید.</p>
       <input dir="rtl" type="submit" value="تماس با تیم  فروش >"
-               class="w-[170px] h-[50px] border border-gray-400 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition mt-[20px]" />
+               class="w-[170px] h-[50px] border border-gray-400 rounded-md text-white text-sm font-vazir3 hover:bg-gray-200 transition mt-[20px] btn3" />
     </div>
   </div>
   <br>
@@ -134,7 +134,6 @@
 <script>
 export default {
   name: 'DivImg'
-
 }
 </script>
 
@@ -150,7 +149,7 @@ export default {
     color: #1a2d4b;
     
 }
-    @font-face {
+@font-face {
   font-family: Vazir;
   src: url(../public/Vazir-Bold.woff);
 }
@@ -162,6 +161,14 @@ export default {
 @font-face {
   font-family: Vazir3;
   src: url(../public/Vazir-Medium.ttf);
+}
+@media screen and (max-width: 600px) {
+  .t25{
+    font-size: 24px !important;
+  }
+  .t24{
+    font-size: 14px !important;
+  }
 }
 .font-vazir {
   font-family: Vazir;
@@ -206,7 +213,6 @@ export default {
   background-image: url(https://jibit.ir/wp-content/themes/jibit/images/logos/gray/bidar.svg);
 }
 .li_logo1:hover {
-  
   background-image: url(https://jibit.ir/wp-content/themes/jibit/images/logos/colorful/bidar.svg);
   filter: brightness(1.2);
 }
@@ -278,7 +284,6 @@ export default {
   display: flex;
   justify-content: end;
   align-items: center;
-  
 }
 .logo-divimg2{
   width: 88px;
@@ -610,7 +615,6 @@ export default {
   align-items: center;
   padding-right: 2%;
 }
-
 .col24-about4{
   width: 68%;
   height: 100%;
@@ -626,7 +630,6 @@ export default {
   align-items: center;
   padding-right: 2%;
 }
-
 .col22-about4{
   width: 68%;
   height: 100%;
@@ -709,7 +712,6 @@ export default {
   padding-right: 12%;
   padding-left: 2%;
 }
-
 .div-2-about-services{
   width: 40%;
   padding-right: 6%;
@@ -734,11 +736,242 @@ export default {
   padding-top: 20px;
   padding-left: 40%;
 }
-
 .text-about-services{
   font-size: 17px;
   font-family: Vazir3;
   color: #797979;
 }
 
+/* Media Queries for Responsive Design */
+
+/* Tablet (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .w-full {
+    height: auto;
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .title2{
+    padding: 0% !important;
+  }
+  .text2{
+    margin-right: 0% !important;
+    text-align: center !important;
+    margin-bottom: 35px !important;
+  }
+  .w-full > div:first-child {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .w-full > div:last-child {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .w-full img {
+    width: 80%;
+    height: auto;
+    max-width: 400px;
+    margin-top: 150px;
+  }
+  .w-full p.text-[40px] {
+    font-size: 32px;
+    width: 90%;
+  }
+  .w-full p.text-[18px] {
+    font-size: 16px;
+    width: 90%;
+  }
+  .w-full .divdis {
+    width: 90%;
+    justify-content: center;
+  }
+  .w-full .w-[72%] {
+    width: 90%;
+    justify-content: center;
+  }
+  .div-about2 {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+  .div-about2 .image, .div-about2 .image2 {
+    width: 100%;
+    height: 300px;
+  }
+  .div-about2 .objects {
+    width: 100%;
+    text-align: center;
+  }
+  .div-about2 .title2 {
+    font-size: 28px;
+    margin-top: 20px;
+    padding-right: 0;
+  }
+  .div-about2 .text2 {
+    width: 90%;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+  .div-about4 {
+    width: 90%;
+    height: auto;
+  }
+  .table-about4, .table2-about4 {
+    width: 100%;
+  }
+  .about-services {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .div-1-about-services, .div-2-about-services {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .title-about-services {
+    font-size: 24px;
+    padding-left: 0;
+  }
+  .text-about-services2 {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .w-full {
+    padding: 20px 10px;
+  }
+  .w-full img {
+    width: 100%;
+    max-width: 300px;
+  }
+  .w-full p.text-[40px] {
+    font-size: 24px;
+  }
+  .w-full p.text-[18px] {
+    font-size: 14px;
+  }
+  .w-full .w-[72%] {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .w-full input[type="submit"] {
+    width: 100%;
+    max-width: 200px;
+  }
+  .div-about2 {
+    margin-top: 50px;
+  }
+  .div-about2 .image, .div-about2 .image2 {
+    height: 200px;
+  }
+  .div-about2 .title2 {
+    font-size: 24px;
+  }
+  .div-about2 .text2 {
+    font-size: 14px;
+  }
+  .div-about4 {
+    padding: 20px 10px;
+  }
+  .div-title-about4 {
+    padding-top: 40px;
+  }
+  .title-about4 {
+    font-size: 24px;
+  }
+  .text-about4 {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .table-about4 .row1-about4 {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .table-about4 .p-table1, .table-about4 .p2-table1 {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+  .table2-about4 .row21-about4, .table2-about4 .row22-about4 {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .table2-about4 .col21-about4, .table2-about4 .col22-about4,
+  .table2-about4 .col23-about4, .table2-about4 .col24-about4 {
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+  }
+  .p-table2 {
+    font-size: 20px;
+  }
+  .p2-table2 {
+    font-size: 16px;
+  }
+  .about-services {
+    margin-top: 50px;
+    padding: 15px;
+  }
+  .title-about-services {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .text-about-services, .text-about-services2 {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .w-full {
+    padding: 15px 5px;
+  }
+  .w-full img {
+    max-width: 250px;
+  }
+  .w-full p.text-[40px] {
+    font-size: 20px;
+  }
+  .w-full p.text-[18px] {
+    font-size: 12px;
+  }
+  .w-full input[type="submit"] {
+    max-width: 150px;
+    height: 40px;
+    font-size: 12px;
+  }
+  .div-about2 .image, .div-about2 .image2 {
+    height: 150px;
+  }
+  .div-about2 .title2 {
+    font-size: 20px;
+  }
+  .div-about2 .text2 {
+    font-size: 12px;
+  }
+  .title-about4 {
+    font-size: 20px;
+  }
+  .text-about4 {
+    font-size: 12px;
+    line-height: 25px;
+  }
+  .p-table2 {
+    font-size: 18px;
+  }
+  .p2-table2 {
+    font-size: 14px;
+  }
+  .p11-table2 {
+    font-size: 14px;
+  }
+}
 </style>
+```

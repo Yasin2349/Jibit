@@ -12,21 +12,21 @@
           </div>
         </div>
         <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1a2d4b] mt-4 w-full lg:w-[72%] font-vazir3 title11" style="line-height: 50px">
-          درگاه پرداخت رمزارزی برای رشد واقعی کسب‌وکار شما
+          {{ langStore.t('title_dargah') }}
         </p>
         <p class="w-full lg:w-[72%] text-base sm:text-lg leading-relaxed text-[#4d5768] mt-4 font-vazir2 text-dargah" dir="rtl">
-          با درگاه پرداخت XdgPay پرداخت‌های رمزارزی را ساده، سریع و امن دریافت کنید. با پشتیبانی از رمزارزهای متنوع، تسویه هوشمند، و API قدرتمند، راهکاری نوین برای پذیرش پرداخت از سراسر دنیا در اختیار شماست. دیگر نگران تحریم‌ها، محدودیت‌های بانکی یا تاخیرهای تسویه نباشید — XdgPay در کنار رشد شماست.
+          {{ langStore.t('text_dargah') }}
         </p>
         <div class=" lg:w-[72%] flex flex-col sm:flex-row justify-end items-center mt-10 gap-2 div-btns">
-          <input dir="rtl" type="submit" value="تماس با تیم فروش >"
+          <input dir="rtl" type="submit" :value="langStore.t('btn_dakhast')"
                  class="w-full sm:w-[170px] h-[45px] border border-gray-400 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition btn1" />
-          <input dir="rtl" type="submit" value="درخواست سرویس >"
+          <input dir="rtl" type="submit" :value="langStore.t('btn_dakhast2')"
                   class="w-full sm:w-[170px] h-[45px] bg-[#226ce9] text-white text-sm rounded-md border border-[#226ce9] font-vazir3 hover:bg-[#2247e9] transition mt-2 sm:mt-0 btn2" />
         </div>
       </div>
     </div>
   </div>
-  <div class="w-full max-w-[100%] h-auto flex items-center m-auto py-6">
+  <!-- <div class="w-full max-w-[100%] h-auto flex items-center m-auto py-6">
     <ul class="w-full max-w-[100%] flex flex-wrap justify-center items-center direction-rtl gap-4 ul-brand">
       <li class="w-[100px] h-[30px] list-none bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo1"></li>
       <li class="w-[100px] h-[30px] list-none bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo2"></li>
@@ -35,39 +35,39 @@
       <li class="w-[100px] h-[30px] list-none bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo5"></li>
       <li class="w-[100px] h-[30px] list-none bg-cover bg-bottom bg-no-repeat transition-filter duration-700 ease-in-out li_logo6"></li>
     </ul>
-  </div>
+  </div> -->
   <div class="w-full h-auto mt-12">
     <ul class="h-full flex flex-wrap justify-center items-center mx-auto gap-4 px-4">
-      <li class="w-full sm:w-[280px] rounded-[15px] h-auto bg-white list-none mx-2.5 direction-rtl shadow-[0_3px_2px_rgb(161,161,161)] p-6 li-box">
+      <li class="w-full sm:w-[280px] rounded-[15px] h-[252px] bg-white list-none mx-2.5 direction-rtl shadow-[0_3px_2px_rgb(161,161,161)] p-6 li-box">
         <div class="w-[55px] h-[55px] mt-4 mr-4 bg-center bg-cover"
              style="background-image: url('https://jibit.ir/wp-content/themes/jibit/images/projectx/feat4.svg')"></div>
-        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir "> کاهش ریسک پرداخت‌های رمزارزی</p>
+        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir "> {{ langStore.t('title_box_about1') }}</p>
         <p class="w-full text-right font-vazir2 text-sm sm:text-base font-bold text-[#697281]">
-          با تأیید چندمرحله‌ای XdgPay، تراکنش‌های مشکوک شناسایی و امنیت پرداخت‌ها تضمین می‌شود.
+          {{ langStore.t('text_box_about1') }}
         </p>  
       </li>
-      <li class="w-full sm:w-[280px] rounded-[15px] h-auto bg-white list-none mx-2.5 direction-rtl shadow-[0_3px_2px_rgb(161,161,161)] p-6 li-box">
+      <li class="w-full sm:w-[280px] rounded-[15px] h-[252px] bg-white list-none mx-2.5 direction-rtl shadow-[0_3px_2px_rgb(161,161,161)] p-6 li-box">
         <div class="w-[55px] h-[55px] mt-4 mr-4 bg-center bg-cover"
              style="background-image: url('https://jibit.ir/wp-content/themes/jibit/images/projectx/feat3.svg')"></div>
-        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir leading-[50px]">پردازش سریع تراکنش‌ها</p>
+        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir">{{ langStore.t('title_box_about2') }}</p>
         <p class="w-full text-right font-vazir2 text-sm sm:text-base font-bold text-[#697281]">
-          با زیرساخت بهینه XdgPay، تراکنش‌های رمزارزی در کمتر از یک ثانیه ثبت می‌شوند.
+          {{ langStore.t('text_box_about2') }}
         </p>
       </li>
-      <li class="w-full sm:w-[280px] rounded-[15px] h-auto bg-white list-none mx-2.5 direction-rtl shadow-[0_3px_2px_rgb(161,161,161)] p-6 li-box">
+      <li class="w-full sm:w-[280px] rounded-[15px] h-[252px] bg-white list-none mx-2.5 direction-rtl shadow-[0_3px_2px_rgb(161,161,161)] p-6 li-box">
         <div class="w-[55px] h-[55px] mt-4 mr-4 bg-center bg-cover"
              style="background-image: url('https://jibit.ir/wp-content/themes/jibit/images/projectx/feat2.svg')"></div>
-        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir leading-[50px]">پایداری در ترافیک بالا</p>
+        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir">{{ langStore.t('title_box_about3') }}</p>
         <p class="w-full text-right font-vazir2 text-sm sm:text-base font-bold text-[#697281]">
-          معماری توزیع‌شده XdgPay، در اوج ترافیک هم پرداخت‌ها را بدون اختلال مدیریت می‌کند.
+          {{ langStore.t('text_box_about3') }}
         </p>
       </li>
-      <li class="w-full sm:w-[280px] rounded-[15px] h-auto bg-white list-none mx-2.5 direction-rtl shadow-[0_3px_2px_rgb(161,161,161)] p-6 li-box">
+      <li class="w-full sm:w-[280px] rounded-[15px] h-[252px] bg-white list-none mx-2.5 direction-rtl shadow-[0_3px_2px_rgb(161,161,161)] p-6 li-box">
         <div class="w-[55px] h-[55px] mt-4 mr-4 bg-center bg-cover"
              style="background-image: url('https://jibit.ir/wp-content/themes/jibit/images/projectx/feat1.svg')"></div>
-        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir leading-[50px]">موفقیت ۹۹٪ در تراکنش‌ها</p>
+        <p class="w-full text-right text-lg sm:text-xl text-[#303c4f] font-vazir">{{ langStore.t('title_box_about4') }}</p>
         <p class="w-full text-right font-vazir2 text-sm sm:text-base font-bold text-[#697281]">
-          ترکیب چند بلاک‌چین و الگوریتم‌های هوشمند، موفقیت تراکنش‌ها را به ۹۹٪ می‌رساند.
+          {{ langStore.t('text_box_about4') }}
         </p>
       </li>
     </ul>
@@ -79,11 +79,10 @@
         <div class="divdis2">
           <div class="logo-divimg2"></div>
         </div>
-        <p class="title2"><b>مسیردهی هوشمند بین درگاه‌ها</b></p>
+        <p class="title2"><b>{{ langStore.t('title_about_dargah3') }}</b></p>
         <div class="divtext2">
           <p class="text2">
-            XdgPay با اتصال هم‌زمان به چند درگاه و سوئیچینگ هوشمند بین آن‌ها، پایداری سرویس را تضمین و نرخ خطا در پرداخت‌ها را به حداقل می‌رساند. <br><br>
-            PSPهای فعال:<br>سامان کیش(سپ)، سپهر
+            {{ langStore.t('text_about_dargah3') }}
           </p>
         </div>
         <div class="divdis2">
@@ -96,18 +95,18 @@
     <div class="flex flex-col lg:flex-row gap-6 div-rtl" >
       <div class="about3-box1 w-full lg:w-1/3">
         <div class="imgbox1"></div>
-        <p class="p-title-box1">تعیین اولویت PSP‌ها</p>
-        <p class="text-box1">در XdgPay این امکان وجود دارد که کسب‌وکارها مشخص کنند کدام درگاه پرداخت در اولویت باشد، تا در صورت نیاز، مسیردهی پرداخت‌ها طبق سیاست آن‌ها انجام شود.</p>
-      </div>
+        <p class="p-title-box1">{{ langStore.t('title_about_dargah5') }}</p>
+        <p class="text-box1">{{ langStore.t('text_about_dargah5') }}</p>
+      </div>  
       <div class="about3-box2 w-full lg:w-1/3">
         <div class="imgbox2"></div>
-        <p class="p-title-box1"> دریافت کارمزد از پرداخت‌کننده</p>
-        <p class="text-box1">XdgPay امکان کسر کارمزد مستقیم از پرداخت‌کننده را فراهم کرده است؛ ابزاری کاربردی برای سرویس‌هایی که هزینه مالیات یا خدمات را به مشتری منتقل می‌کنند.</p>
+        <p class="p-title-box1">{{ langStore.t('title_about_dargah4') }}</p>
+        <p class="text-box1">{{ langStore.t('text_about_dargah4') }}</p>
       </div>
       <div class="about3-box3 w-full lg:w-1/3">
         <div class="imgbox3"></div>
-        <p class="p-title-box1">تسویه خودکار روزانه</p>
-        <p class="text-box1">با فعال‌سازی تسویه خودکار در XdgPay، موجودی حاصل از فروش به صورت روزانه و منظم به حساب بانکی تعریف‌شده شما واریز می‌شود.</p>
+        <p class="p-title-box1">{{ langStore.t('title_about_dargah3') }}</p>
+        <p class="text-box1">{{ langStore.t('text_about_dargah3') }}</p>
       </div>
     </div>
   </div>
@@ -123,31 +122,31 @@
   </div>
   <div class="div-about4 container mx-auto mt-12">
     <div class="div-title-about4" style="direction: rtl;">
-      <p class="title-about4">تعرفه درگاه پرداخت</p>
-      <p class="text-about4">کارمزد درگاه پرداخت XdgPay با هدف شفافیت و پشتیبانی از کسب‌وکارهای نوپا تا حرفه‌ای، به‌صورت پلکانی تنظیم شده است. مبالغ اعلام‌شده بدون احتساب مالیات بر ارزش افزوده هستند و هنگام تسویه، ۱۰٪ مالیات به آن افزوده خواهد شد.</p>
+      <p class="title-about4">{{ langStore.t('title_tarefe_dargah111') }}</p>
+      <p class="text-about4"></p>
     </div>
     <div class="table-about4">
       <div class="row1-about4">
-        <p class="p-table1">مبلغ</p>
-        <p class="p2-table1">تعداد تراکنش روزانه</p>
+        <p class="p-table1">{{ langStore.t('amount_tarefe_dargah') }}</p>
+        <p class="p2-table1">{{ langStore.t('number_tarefe_dargah') }}</p>
       </div>
     </div>
     <div class="table2-about4">
       <div class="row21-about4">
         <div class="col21-about4">
-          <p class="p-table2">۱ درصد<br><span class="p11-table2">تا سقف ۵۰,۰۰۰ ریال</span></p>
+          <p class="p-table2">{{ langStore.t('text3_number_tarefe_dargah') }}<br><span class="p11-table2">{{ langStore.t('text32_number_tarefe_dargah') }}</span></p>
         </div>
         <div class="col22-about4">
-          <p class="p2-table2"><span class="check-circle"><i class="fas fa-check"></i></span> ۱ تا ۲۰۰ تراکنش</p>
+          <p class="p2-table2"><span class="check-circle"><i class="fas fa-check"></i></span>{{ langStore.t('text_number_tarefe_dargah') }}</p>
         </div>
       </div>
       <div class="row22-about4">
         <div class="col23-about4">
-          <input dir="rtl" type="submit" value="تماس با تیم فروش >"
+          <input dir="rtl" type="submit" :value="langStore.t('text2_number_tarefe_dargah')"
                  class="w-[170px] h-[45px] border border-gray-300 rounded-md text-black text-sm font-vazir3 hover:bg-gray-200 transition btn-tel btn1" />
         </div>
         <div class="col24-about4">
-          <p class="p2-table2"><span class="check-circle"><i class="fas fa-check"></i></span> بیش از ۲۰۰ تراکنش</p>
+          <p class="p2-table2"><span class="check-circle"><i class="fas fa-check"></i></span>{{ langStore.t('text_number_tarefe_dargah') }}</p>
         </div>
       </div>
     </div>
@@ -170,10 +169,11 @@
   <Footer style="margin-top: 150px;"></Footer>
 </template>
 
-<script>
-export default {
-  name: 'DivImg'
-}
+<script setup>
+import { useLangStore } from '@/stores/lang'
+
+const langStore = useLangStore()
+langStore.loadLangFromCookie()
 </script>
 
 <style scoped>

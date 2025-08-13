@@ -29,7 +29,7 @@ export const useLangStore = defineStore('lang', {
         btn6_slider:"اهراز حویت بایومتریک",
         btn_blog:"بلاگ",
         btn_contact_menu:"ارتباط با ما",
-        btn_services:"سرویس ها",
+        btn_services:"سرویس ها",  
 
         title_page1_silder:"درگاه پرداخت",
         title_page2_silder:"سرویس های استعلامی",
@@ -71,7 +71,72 @@ export const useLangStore = defineStore('lang', {
         link_menu_contactus:"ارتباط با ما",
         link_menu_blog:"بلاگ",
         link_menu_login:"ورود به پنل",
-        dire:"left"
+        dire:"left",
+
+        title_dargah:"درگاه پرداخت رمزارزی برای رشد واقعی کسب‌وکار شما",
+        text_dargah:"با درگاه پرداخت XdgPay پرداخت‌های رمزارزی را ساده، سریع و امن دریافت کنید. با پشتیبانی از رمزارزهای متنوع، تسویه هوشمند، و API قدرتمند، راهکاری نوین برای پذیرش پرداخت از سراسر دنیا در اختیار شماست. دیگر نگران تحریم‌ها، محدودیت‌های بانکی یا تاخیرهای تسویه نباشید — XdgPay در کنار رشد شماست.",
+        btn_dakhast:"درخواست سرویس >",
+        btn_dakhast2:"تماس با تیم فروش >",
+        title_box_about1:"موفقیت ۹۹٪ در تراکنش‌ها",
+        text_box_about1:"ترکیب چند بلاک‌چین و الگوریتم‌های هوشمند، موفقیت تراکنش‌ها را به ۹۹٪ می‌رساند.",
+
+        title_box_about2:"پایداری در ترافیک بالا",
+        text_box_about2:"معماری توزیع‌شده XdgPay، در اوج ترافیک هم پرداخت‌ها را بدون اختلال مدیریت می‌کند.",
+
+        title_box_about3:"پردازش سریع تراکنش‌ها",
+        text_box_about3:"با زیرساخت بهینه XdgPay، تراکنش‌های رمزارزی در کمتر از یک ثانیه ثبت می‌شوند.",
+
+        title_box_about4:"کاهش ریسک پرداخت‌های رمزارزی",
+        text_box_about4:"با تأیید چندمرحله‌ای XdgPay، تراکنش‌های مشکوک شناسایی و امنیت پرداخت‌ها تضمین می‌شود.",
+
+        title2_dargah:"مسیردهی هوشمند بین درگاه‌ها",
+        text2_dargah:"XdgPay با اتصال هم‌زمان به چند درگاه و سوئیچینگ هوشمند بین آن‌ها، پایداری سرویس را تضمین و نرخ خطا در پرداخت‌ها را به حداقل می‌رساند.PSPهای فعال: سامان کیش(سپ)، سپهر",
+
+        title3_dargah:"تسویه خودکار روزانه",
+        text3_dargah:"با فعال‌سازی تسویه خودکار در XdgPay، موجودی حاصل از فروش به صورت روزانه و منظم به حساب بانکی تعریف‌شده شما واریز می‌شود.",
+
+        title4_dargah:"دریافت کارمزد از پرداخت‌کننده",
+        text5_dargah:"XdgPay امکان کسر کارمزد مستقیم از پرداخت‌کننده را فراهم کرده است؛ ابزاری کاربردی برای سرویس‌هایی که هزینه مالیات یا خدمات را به مشتری منتقل می‌کنند.",
+
+        title4_dargah:"تعیین اولویت PSP‌ها",
+        text5_dargah:"در XdgPay این امکان وجود دارد که کسب‌وکارها مشخص کنند کدام درگاه پرداخت در اولویت باشد، تا در صورت نیاز، مسیردهی پرداخت‌ها طبق سیاست آن‌ها انجام شود.",
+
+        title_tarefe_dargah111:"تعرفه درگاه پرداخت",
+        text_tarefe_dargah111:"کارمزد درگاه پرداخت XdgPay با هدف شفافیت و پشتیبانی از کسب‌وکارهای نوپا تا حرفه‌ای، به‌صورت پلکانی تنظیم شده است. مبالغ اعلام‌شده بدون احتساب مالیات بر ارزش افزوده هستند و هنگام تسویه، ۱۰٪ مالیات به آن افزوده خواهد شد.",
+
+        number_tarefe_dargah:"تعداد تراکنش روزانه",
+        text_number_tarefe_dargah:"۱ تا ۲۰۰ تراکنش",
+        text_number_tarefe_dargah:" بیش از ۲۰۰ تراکنش",
+        
+        amount_tarefe_dargah:"مبلغ",
+        text_number_tarefe_dargah:" تا ۲۰۰ تراکنش",
+        text3_number_tarefe_dargah:"1 درصد",
+        text32_number_tarefe_dargah:"تا سقف 50000 ریال",
+        text2_number_tarefe_dargah:"تماس با تیم فروش >",
+
+
+        title_about_dargah3:"مسیردهی هوشمند بین درگاه‌ها",
+        text_about_dargah3:"XdgPay با اتصال هم‌زمان به چند درگاه و سوئیچینگ هوشمند بین آن‌ها، پایداری سرویس را تضمین و نرخ خطا در پرداخت‌ها را به حداقل می‌رساند.PSPهای فعال:سامان کیش(سپ)، سپهر",
+
+        title_about_dargah4:"تسویه خودکار روزانه",
+        text_about_dargah4:"با فعال‌سازی تسویه خودکار در XdgPay، موجودی حاصل از فروش به صورت روزانه و منظم به حساب بانکی تعریف‌شده شما واریز می‌شود.",
+
+        title_about_dargah5:"دریافت کارمزد از پرداخت‌کننده",
+        text_about_dargah5:"XdgPay امکان کسر کارمزد مستقیم از پرداخت‌کننده را فراهم کرده است؛ ابزاری کاربردی برای سرویس‌هایی که هزینه مالیات یا خدمات را به مشتری منتقل می‌کنند.",
+
+        title_about_dargah5:"تعیین اولویت PSP‌ها",
+        text_about_dargah5:"در XdgPay این امکان وجود دارد که کسب‌وکارها مشخص کنند کدام درگاه پرداخت در اولویت باشد، تا در صورت نیاز، مسیردهی پرداخت‌ها طبق سیاست آن‌ها انجام شود.0",
+
+
+        
+        
+
+
+        
+
+
+
+
       },
       en: {
         title_home_page:"Safe and fast buying and selling of digital currencies",
@@ -139,7 +204,48 @@ export const useLangStore = defineStore('lang', {
         link_menu_contactus:"Contact Us",
         link_menu_blog:"Blog",
         link_menu_login:"Login",
-        dire:"rigth"
+        dire:"rigth",
+
+
+        title_dargah:"Cryptocurrency payment gateway for real business growth",
+        text_dargah:"Accept cryptocurrency payments simply, quickly, and securely with the XdgPay payment gateway. With support for multiple cryptocurrencies, smart settlement, and a powerful API, you have a new way to accept payments from around the world. No more worrying about sanctions, banking restrictions, or settlement delays — XdgPay is here to help you grow.",
+        btn_dakhast:"Service request <",
+        btn_dakhast:"Contact the sales team <",
+        title_box_about1:"99% success rate in transactions",
+        text_box_about1:"The combination of multiple blockchains and smart algorithms increases transaction success to 99%.",
+
+        title_box_about2:"Stability in high traffic",
+        text_box_about2:"XdgPay's distributed architecture manages payments without disruption, even during peak traffic.",
+
+        title_box_about3:"Fast transaction processing",
+        text_box_about3:"With XdgPay's optimized infrastructure, cryptocurrency transactions are recorded in less than a second.",
+
+        title_box_about4:"Reducing the risk of cryptocurrency payments",
+        text_box_about4:"With XdgPay's multi-step verification, suspicious transactions are identified and payment security is guaranteed.",
+
+        title_about_dargah3:"Intelligent routing between ports",
+        text_about_dargah3:"By connecting to multiple gateways simultaneously and intelligently switching between them, XdgPay ensures service stability and minimizes payment error rates. Active PSPs: Saman Kish (Sep), Sepehr",
+
+        title_about_dargah4:"Automatic daily settlement",
+        text_about_dargah4:"By activating automatic settlement in XdgPay, the balance from sales will be deposited into your defined bank account on a daily and regular basis.",
+
+        title_about_dargah5:"Receiving a fee from the payer",
+        text_about_dargah5:"XdgPay enables direct fee deductions from the payer; a useful tool for services that pass on taxes or service charges to the customer.",
+
+        title_about_dargah5:"Prioritizing PSPs",
+        text_about_dargah5:"In XdgPay, it is possible for businesses to specify which payment gateway is prioritized, so that payments can be routed according to their policy if needed.0",
+
+        
+        title_tarefe_dargah111:"Payment gateway tariff",
+        text_tarefe_dargah111:"XdgPay payment gateway fees are set on a tiered basis with the aim of transparency and supporting businesses from start-ups to professionals. The amounts stated are exclusive of VAT and a 10% tax will be added upon checkout.",
+
+        number_tarefe_dargah:"Number of daily transactions",
+        text_number_tarefe_dargah:"1 to 200 transactions",
+        text_number_tarefe_dargah:"More than 200 transactions",
+        
+        amount_tarefe_dargah:"amount",
+        text_number_tarefe_dargah:"1% up to 50,000 Rials 1 to 200 transactions",
+        text2_number_tarefe_dargah:"Contact Sales Team >",
       },
     },
   }),

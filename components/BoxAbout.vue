@@ -2,7 +2,7 @@
   <div class="w-full mt-[110px] div-about">
     <ul class="flex flex-wrap justify-center items-start mx-auto ul-btns mb-[50px]">
       <li
-  class="w-[280px] min-h-[235px] mx-2.5 bg-white rounded-[15px]
+  class="w-[262px] min-h-[235px] mx-2.5 bg-white rounded-[15px]
          shadow-[0_3px_2px_rgb(161,161,161)] list-none rtl li-btns mt-[25px] flex flex-col justify-start box-about"
 >
         <div
@@ -11,7 +11,7 @@
           :style="{ backgroundImage: `url(${items[0].icon})` }"
         ></div>
         <p class="w-[90%] pr-[10%] text-right text-[20px]
-                  text-[#303c4f] font-vazir leading-[55px] p-title2" style="margin-top: 0px; text-align: right;"> 
+                  text-[#303c4f] font-vazir leading-[30px] p-title2" style="margin-top: 0px; text-align: right;"> 
           {{ langStore.t('title_box_about1') }}
         </p>
         <p class="w-[90%] text-right mr-[10%] text-[15px]
@@ -20,7 +20,7 @@
         </p>
       </li>
       <li
-  class="w-[280px] min-h-[235px] mx-2.5 bg-white rounded-[15px]
+  class="w-[262px] min-h-[235px] mx-2.5 bg-white rounded-[15px]
          shadow-[0_3px_2px_rgb(161,161,161)] list-none rtl li-btns mt-[25px] flex flex-col justify-start box-about"
 >
         <div
@@ -38,7 +38,7 @@
         </p>
       </li>
       <li
-  class="w-[280px] min-h-[235px] mx-2.5 bg-white rounded-[15px]
+  class="w-[262px] min-h-[235px] mx-2.5 bg-white rounded-[15px]
          shadow-[0_3px_2px_rgb(161,161,161)] list-none rtl li-btns mt-[25px] flex flex-col justify-start box-about"
 >
         <div
@@ -56,7 +56,7 @@
         </p>
       </li>
       <li
-  class="w-[280px] min-h-[235px] mx-2.5 bg-white rounded-[15px]
+  class="w-[262px] min-h-[235px] mx-2.5 bg-white rounded-[15px]
          shadow-[0_3px_2px_rgb(161,161,161)] list-none rtl li-btns mt-[25px] flex flex-col justify-start box-about"
 >
         <div
@@ -65,7 +65,7 @@
           :style="{ backgroundImage: `url(${items[3].icon})` }"
         ></div>
         <p class="w-[90%] pr-[10%] text-right text-[20px]
-                  text-[#303c4f] font-vazir leading-[55px] p-title2" style="margin-top: 0px; text-align: right;"> 
+                  text-[#303c4f] font-vazir  p-title2" style="margin-top: 0px; text-align: right;"> 
           {{ langStore.t('title_box_about4') }}
         </p>
         <p class="w-[90%] text-right mr-[10%] text-[15px]
