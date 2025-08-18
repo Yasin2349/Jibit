@@ -6,7 +6,7 @@
   >
     <div class="w-3/5 h-full flex justify-center items-center image-container-responsive">
       <img
-        src="https://jibit.ir/wp-content/themes/jibit/images/home2/main-photo.svg"
+        src="../public/222.png"
         alt="main graphic"
         class="w-[660px] h-[600px] mt-10 object-cover z-1 image-responsive"
       />

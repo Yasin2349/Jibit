@@ -1,15 +1,19 @@
 ```vue
 <template>
-  <div :class="['div1 container mx-auto flex items-center justify-between fixed top-0 z-50', { 'bg-white shadow-md': isScrolled, 'hidden': isLoginPage }]">
-    
+<div :class="[
+  'div1 container w-full !max-w-full mx-auto flex items-center justify-center fixed top-0 z-50',
+  'gap-x-0 sm:gap-x-15 md:gap-x-12 lg:gap-x-50 xl:gap-x-105',
+  sh_Mode ? 'dark' : 'light',
+  { 'scrolled': isScrolled, 'hidden': isLoginPage }
+]">
     <li class="li_logo" style="list-style:none;">
       <NuxtLink to="/"><div class="logo"></div></NuxtLink>
     </li>
 
     
-    <ul :class="['ul-menu2 absolute top-14 ltr:left-4 rtl:right-4 bg-white rounded-2xl shadow-lg transition-all duration-300', { 'w-72 h-[500px] p-4 visible': shmenu, 'w-72 h-0 invisible': !shmenu }]" id="ul-menu2">
-      <li>  
-        <button type="button" class="text-sm font-vazir3 text-gray-600">
+    <ul  :class="['ul-menu2 overflow-auto absolute top-14 ltr:left-4 rtl:right-4 bg-white rounded-2xl shadow-lg transition-all duration-300', { 'w-72 h-[500px] p-4 visible': shmenu, 'w-72 h-0 invisible': !shmenu }]" id="ul-menu2">
+      <li>
+        <button type="button" class="text-sm font-vazir3 text-gray-600" style="margin-top: 0;">
           سرویس‌ها
         </button>
       </li>
@@ -23,31 +27,31 @@
           <li><a href="#" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">احراز هویت بایومتریک <div class="logo6"></div></a></li>
         </ul>
       </div>
-      <li><NuxtLink to="/ContantPage" class="contant-btn flex items-center justify-center text-gray-600 font-vazir3 border-b border-gray-200 py-4">ارتباط با ما</NuxtLink></li>
-      <li><NuxtLink to="/blogs" class="blog-btn flex items-center justify-center text-gray-600 font-vazir3 py-4">{{ langStore.t('btn_blog') }}</NuxtLink></li>
+      <li><NuxtLink to="/ContantPage" class="contant-btn flex items-center justify-center text-gray-600 font-vazir3 border-b border-gray-200 py-4" style="margin-top: 0;">ارتباط با ما</NuxtLink></li>
+      <li><NuxtLink to="/blogs" class="blog-btn flex items-center justify-center text-gray-600 font-vazir3 py-4" style="margin-top: 0;">{{ langStore.t('btn_blog') }}</NuxtLink></li>
     </ul>
 
     
-    <ul class="ul_menu flex items-center gap-6 ltr:mr-8 rtl:ml-8">
-      <li class="li-sh w-[18%] hidden lg:block">
+    <ul class="ul_menu flex items-center gap-2 ltr:mr-8 rtl:ml-8">
+      <li class="li-sh w-[23%] hidden lg:block">
         <button class="bnt-ser-menu flex items-center gap-2 text-gray-600 font-vazir3 cursor-pointer" type="button" @click="menuopen" @blur="menuclose">
           {{ langStore.t('link_menu_servic') }}<i class="fas fa-chevron-down"></i>
         </button>
       </li>
-      <div :class="['services absolute top-14 ltr:right-1/2 rtl:left-1/2 bg-white rounded-2xl shadow-md transition-all duration-300', { 'opacity-100 h-[420px] w-72': menuservices, 'opacity-0 h-0 w-72': !menuservices }]">
+      <div :class="['services absolute top-14 bg-white ltr:right-1/2 rtl:left-1/2 rounded-2xl shadow-md transition-all duration-300 ul_menuul2', { 'opacity-100 h-[420px] w-72 block': menuservices, 'opacity-0 h-0 w-72 bg-white invisible ': !menuservices }]"> 
         <ul class="ul_services flex flex-col">
-          <li><NuxtLink to="/DargahP/DargahPardakht" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn1_slider') }} <div class="logo1"></div></NuxtLink></li>
-          <li><NuxtLink to="/DargahP/EsterdadVagh" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn2_slider') }}<div class="logo2"></div></NuxtLink></li>
-          <li><NuxtLink to="/DargahP/VarizSH" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn3_slider') }}<div class="logo3"></div></NuxtLink></li>
-          <li><a href="#" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn4_slider') }}<div class="logo4"></div></a></li>
-          <li><a href="#" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn5_slider') }}<div class="logo5"></div></a></li>
-          <li><a href="#" class="flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn6_slider') }}<div class="logo6"></div></a></li>
+          <li class="flex text-start w-[100%] mb-[10px]"><NuxtLink to="/DargahP/DargahPardakht" class="w-[100%] ps-[20%] font-vazir3 text-gray-700 flex items-center text-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn1_slider') }} <div class="logo1 ms-[10%]"></div></NuxtLink></li>
+          <li class="flex text-start w-[100%] mb-[10px]"><NuxtLink to="/DargahP/EsterdadVagh" class="w-[100%] ps-[20%] font-vazir3 text-gray-700 flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn2_slider') }}<div class="logo2 ms-[10%]"></div></NuxtLink></li>
+          <li class="flex text-start w-[100%] mb-[10px]"><NuxtLink to="/DargahP/VarizSH" class="w-[100%] ps-[20%] flex font-vazir3 text-gray-700 items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn3_slider') }}<div class="logo3 ms-[10%]"></div></NuxtLink></li>
+          <li class="flex text-start w-[100%] mb-[10px]"><a href="#" class="w-[100%] ps-[20%] flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn4_slider') }}<div class="logo4"></div></a></li>
+          <li class="flex text-start w-[100%] mb-[10px]"><a href="#" class="w-[100%] ps-[20%] flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn5_slider') }}<div class="logo5"></div></a></li>
+          <li class="flex text-start w-[100%] mb-[10px]"><a href="#" class=" w-[100%] ps-[20%] flex items-center justify-end p-4 hover:bg-blue-50 rounded-lg">{{ langStore.t('btn6_slider') }}<div class="logo6"></div></a></li>
         </ul>
       </div>
-      <li class="li-sh w-[15%] hidden lg:block"><NuxtLink to="/ContantPage" class="text-gray-600 font-vazir3">{{ langStore.t('btn_contact_menu') }}</NuxtLink></li>
+      <li class="li-sh w-[20%] hidden lg:block"><NuxtLink to="/ContantPage" class="text-gray-600 font-vazir3">{{ langStore.t('btn_contact_menu') }}</NuxtLink></li>
       <li class="li-sh hidden lg:block ltr:ml-8 rtl:mr-8"><NuxtLink to="/blogs" class="text-gray-600 font-vazir3">{{ langStore.t('link_menu_blog') }}</NuxtLink></li>
       <li class="li_login hidden lg:block w-[110px] p-2 text-center bg-white/40 border border-gray-300 rounded-lg" >
-        <NuxtLink to="/LoginRegister4" class="a-login text-sm flex items-center justify-center gap-1 w-full text-gray-600 font-vazir3">
+        <NuxtLink to="http://localhost:3001/login" class="a-login text-sm flex items-center justify-center gap-1 w-full text-gray-600 font-vazir3">
           {{ langStore.t('link_menu_login') }}
           <i :class="['fa-solid', `fa-chevron-${langStore.t('dire')}`, 'fa-xs']" style="font-size: 10px;"></i>
         </NuxtLink>
@@ -60,11 +64,11 @@
         {{ sh_LN ? 'FA' : 'EN' }}
       </button>
       
-      <li class="flex items-center w-[180px] gap-2">
-        <NuxtLink to="/LoginRegister4" class="login-btn-res lg:hidden border border-gray-300 rounded-lg p-2 bg-white text-gray-600 font-vazir3 flex items-center gap-1">
+      <li class="hidden flex-row items-center w-[150px] gap-2 menures items-center">
+        <NuxtLink to="http://localhost:3001/login" class="login-btn-res lg:hidden border border-gray-300 rounded-lg p-2 bg-white text-gray-600 font-vazir3 flex items-center gap-1 w-[100px] sm:w-[120px] md:w-[150px] text-sm sm:text-base md:text-lg linkres">
           ورود به پنل <i class="fa-solid fa-chevron-left fa-xs" style="font-size: 10px;"></i>
         </NuxtLink>
-        <i :class="['fas fa-bars lg:hidden text-2xl transition-all duration-300', { 'block': shhamber, 'hidden': shzarb }]" @click="toggleMainMenu" @mouseout="toggleMainMenu" id="hamber"></i>
+        <i :class="['fas fa-bars btnmenures lg:hidden text-2xl transition-all duration-300 ', { 'block': shhamber, 'hidden': shzarb }]" @click="toggleMainMenu" @mouseout="toggleMainMenu" id="hamber"></i>
       </li>
     </ul>
   </div>
@@ -138,9 +142,26 @@ watch(() => route.fullPath, (newPath) => {
 .div1 {
   height: 70px;
   direction: rtl;
-  background-color: transparent;
-  transition: background-color 0.1s ease;
+  transition: background-color 0.3s ease;
 }
+
+.div1.light {
+  background-color: transparent;
+}
+
+.div1.light.scrolled {
+  background-color: white;
+  box-shadow: 0px 2px 10px rgb(138, 138, 138);
+}
+
+.div1.dark {
+  background-color: transparent;
+}
+
+.div1.dark.scrolled {
+  background-color: #1f2937; /* رنگ پس‌زمینه حالت شب */
+}
+
 
 .textlogo {
   font-size: 25px;
@@ -215,6 +236,10 @@ watch(() => route.fullPath, (newPath) => {
   .a-login {
     font-size: 14px !important;
   }
+  .menures{
+    visibility: visible !important;
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -222,7 +247,13 @@ watch(() => route.fullPath, (newPath) => {
     width: 70px !important;
   }
 }
+@media screen and (max-width: 600px) {
+  .linkres{
+    font-size: 14px !important;
+    margin-top: 0%;
 
+  }
+}
 @keyframes pop {
   0% {
     transform: scale(1) rotate(0deg);

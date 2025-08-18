@@ -1,9 +1,9 @@
 <template>
-  <div class="div111">
-    <div class="divbtns">
+  <div class="div111 w-[77%] h-[610px] m-auto mb-[0]">
+    <div class="divbtns w-[100%] flex h-[100%]" dir="rtl">
       <button
         type="submit"
-        class="radio-site"
+        class="radio-site w-[19%] rounded-[15px] h-[80px] font-bolder cursor-pointer transition-colors duration-300 ease-in-out  m-auto border-[0] bg-[#f2f5fb] text-[rgba(57, 65, 78, 0.438)] text-[18px]" style="Vazir"
         v-for="tab in tabs"
         :key="tab.name"
         :class="{ active: shTab === tab.name }"
@@ -12,76 +12,73 @@
         {{ tab.value }}
       </button>
     </div>
-    <div class="div2">
+    <div class="div2 w-full h-[510px] overflow-x-hidden relative bg-white shadow-[ 0px 10px 20px rgb(231, 231, 231)] flex ">
       
       <transition :name="transitionName" mode="out-in">
         
         <div class="page" :key="shTab">
-          
-
-          
-          <div v-if="shTab === 'tab1'" class="pagee1">
-            <div class="img-pag5"></div>
-            <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo2"><div class="logo55"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">{{ langStore.t('title_page5_silder') }}</H3></div>
-              <div class="div-text-page1"><p class="text">
+          <div v-if="shTab === 'tab1'" class="h-[100%] flex justify-center item-center">
+            <div class="img-pag5 w-[65%] h-[100%] bg-left bg-cover bg-[url(https://jibit.ir/wp-content/themes/jibit/images/home2/slide5.svg)]"></div>
+            <div class="document-page1 w-[35%] h-[100%]">
+              <div class="div-logo-page1 w-[100%] h-[70px] flex justify-end item-center pr-[65px] mt-[40px]"><div class="logo2"><div class="logo55"></div></div></div>
+              <div class="div-title-page1 w-full h-[65px] flex justify-end item-center"><H3 class="title">{{ langStore.t('title_page5_silder') }}</H3></div>
+              <div class="div-text-page1 text-start w-full h-[190px] flex justify-center item-center"><p class="text w-full h-full text-[16px] text-[#384b69] text-end pr-[65px] text-vazir3">
                 {{ langStore.t('text_page5_silder') }}
               </p></div>
-              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more"></div>
+              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more w-[135px] h-[45px] bg-[#fff] border rounded-[8px] border-[rgb(199,199,199)] text-[13px] text-[#303c4f] leading-[30px]"></div>
             </div>
           </div>
 
           <!-- tab1 -->
-          <div v-else-if="shTab === 'tab2'" class="pagee2">
+          <div v-else-if="shTab === 'tab2'" class="h-[100%] flex justify-center item-center">
             <div class="img-pag4"></div>
-            <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo2"><div class="logo44"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">{{ langStore.t('title_page4_silder') }}</H3></div>
-              <div class="div-text-page1"><p class="text">
+            <div class="document-page1 w-[35%] h-[100%]">
+              <div class="div-logo-page1 w-[100%] h-[70px] flex justify-end item-center pr-[65px] mt-[40px]"><div class="logo2"><div class="logo44"></div></div></div>
+              <div class="div-title-page1  w-full h-[65px] flex justify-end item-center"><H3 class="title">{{ langStore.t('title_page4_silder') }}</H3></div>
+              <div class="div-text-page1 w-full h-[190px] flex justify-center item-center"><p class="text w-full h-full text-[16px] text-[#384b69] text-end pr-[65px] text-vazir3 dir-rtl">
                 {{ langStore.t('text_page4_silder') }}
               </p></div>
-              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more"></div>
+              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more w-[135px] h-[45px] bg-[#fff] border rounded-[8px] border-[rgb(199,199,199)] text-[13px] text-[#303c4f] leading-[30px]"></div>
             </div>
           </div>
 
           <!-- tab3 -->
-          <div v-else-if="shTab === 'tab3'" class="pagee3">
+          <div v-else-if="shTab === 'tab3'" class="h-[100%] flex justify-center item-center">
             <div class="img-pag3"></div>
-            <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo2"><div class="logo33"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">{{ langStore.t('title_page3_silder') }}</H3></div>
-              <div class="div-text-page1"><p class="text">
+            <div class="document-page1 w-[35%] h-[100%]">
+              <div class="div-logo-page1 w-[100%] h-[70px] flex justify-end item-center pr-[65px] mt-[40px]"><div class="logo2"><div class="logo33"></div></div></div>
+              <div class="div-title-page1 w-full h-[65px] flex justify-end item-center"><H3 class="title">{{ langStore.t('title_page3_silder') }}</H3></div>
+              <div class="div-text-page1 w-full h-[190px] flex justify-center item-center"><p class="text w-full h-full text-[16px] text-[#384b69] text-end pr-[65px] text-vazir3 dir-rtl">
                 {{ langStore.t('text_page3_silder') }}
               </p></div>
-              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more"></div>
+              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more w-[135px] h-[45px] bg-[#fff] border rounded-[8px] border-[rgb(199,199,199)] text-[13px] text-[#303c4f] leading-[30px]"></div>
             </div>
           </div>
 
           <!-- tab4 -->
-          <div v-else-if="shTab === 'tab4'" class="pagee4">
+          <div v-else-if="shTab === 'tab4'" class="h-[100%] flex justify-center item-center">
             <div class="img-pag2"></div>
-            <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo2"><div class="logo22"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">{{ langStore.t('title_page2_silder') }}</H3></div>
-              <div class="div-text-page1"><p class="text">
+            <div class="document-page1 w-[35%] h-[100%]">
+              <div class="div-logo-page1  w-[100%] h-[70px] flex justify-end item-center pr-[65px] mt-[40px]"><div class="logo2"><div class="logo22"></div></div></div>
+              <div class="div-title-page1 w-full h-[65px] flex justify-end item-center"><H3 class="title">{{ langStore.t('title_page2_silder') }}</H3></div>
+              <div class="div-text-page1 w-full h-[190px] flex justify-center item-center"><p class="text w-full h-full text-[16px] text-[#384b69] text-end pr-[65px] text-vazir3 dir-rtl">
                 {{ langStore.t('text_page2_silder') }}
               </p></div>
-              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more"></div>
+              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more w-[135px] h-[45px] bg-[#fff] border rounded-[8px] border-[rgb(199,199,199)] text-[13px] text-[#303c4f] leading-[30px]"></div>
             </div>
           </div>
 
           <!-- tab5 -->
-          <div v-else-if="shTab === 'tab5'" class="pagee5">
+          <div v-else-if="shTab === 'tab5'" class="h-[100%] flex justify-center item-center">
             <div class="img-pag1"></div>
-            <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo2"><div class="logo11"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">درگاه پرداخت {{ langStore.t('title_page1_silder') }}</H3></div>
-              <div class="div-text-page1"><p class="text">
+            <div class="document-page1 w-[35%] h-[100%]">
+              <div class="div-logo-page1  w-[100%] h-[70px] flex justify-end item-center pr-[65px] mt-[40px]"><div class="logo2"><div class="logo11"></div></div></div>
+              <div class="div-title-page1 w-full h-[65px] flex justify-end item-center"><H3 class="title">درگاه پرداخت {{ langStore.t('title_page1_silder') }}</H3></div>
+              <div class="div-text-page1 w-full h-[190px] flex justify-center item-center"><p class="text w-full h-full text-[16px] text-[#384b69] text-end pr-[65px] text-vazir3 dir-rtl">
                 {{ langStore.t('text_page1_silder') }}
                 
               </p></div>
-              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more"></div>
+              <div class="div-btn-more-page1"><input type="submit" :value="langStore.t('btn_slider')" class="btn-more w-[135px] h-[45px] bg-[#fff] border rounded-[8px] border-[rgb(199,199,199)] text-[13px] text-[#303c4f] leading-[30px]"></div>
             </div>
           </div>
 
@@ -91,53 +88,53 @@
   </div>
   <div class="div112">
     <div class="page11">
-      <div class="document-page1">
-        <div class="div-logo-page1"><div class="logo2"><div class="logo11"></div></div></div>
-        <div class="div-title-page1"><H3 class="title">{{ langStore.t('btn1_slider') }}</H3></div>
-        <div class="div-text-page1"><p class="text">
+      <div class="document-page1 w-[35%] h-[100%]">
+        <div class="div-logo-page1  w-[100%] h-[70px] flex justify-end item-center pr-[65px] mt-[40px]"><div class="logo2"><div class="logo11"></div></div></div>
+        <div class="div-title-page1 w-full h-[65px] flex justify-end item-center"><H3 class="title">{{ langStore.t('btn1_slider') }}</H3></div>
+        <div class="div-text-page1 w-full h-[190px] flex justify-center item-center"><p class="text w-full h-full text-[16px] text-[#384b69] text-end pr-[65px] text-vazir3 dir-rtl">
           XDGPay به عنوان یکی از بزرگ‌ترین پرداخت‌یار‌های رسمی شاپرک (بانک مرکزی)، با ارائه درگاه پرداخت با قابلیت اتصال به درگاه‌های متنوع و مسیردهی هوشمند بین PSPها در راستای پایداری در سیستم پرداخت و افزایش درآمد در کنار کسب و کارها ایستاده است.
         </p></div>
-        <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+        <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more w-[135px] h-[45px] bg-[#fff] border rounded-[8px] border-[rgb(199,199,199)] text-[13px] text-[#303c4f] leading-[30px]"></div>
       </div>
     </div>
     <div class="page22">
-      <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo2"><div class="logo44"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">{{ langStore.t('btn2_slider') }}</H3></div>
-              <div class="div-text-page1"><p class="text">
+      <div class="document-page1 w-[35%] h-[100%]">
+              <div class="div-logo-page1  w-[100%] h-[70px] flex justify-end item-center pr-[65px] mt-[40px]"><div class="logo2"><div class="logo44"></div></div></div>
+              <div class="div-title-page1 w-full h-[65px] flex justify-end item-center"><H3 class="title">{{ langStore.t('btn2_slider') }}</H3></div>
+              <div class="div-text-page1 w-full h-[190px] flex justify-center item-center"><p class="text w-full h-full text-[16px] text-[#384b69] text-end pr-[65px] text-vazir3 dir-rtl">
                 امکان انتقال وجوه در وب‌سرویس XDGPay به شیوه‌های متنوع برای صاحبان کسب و کار فراهم شده است. امکان جابه‌جایی وجوه از مبدا پلتفرم XDGPay به حساب مشتریان، همکاران و شرکای تجاری شما در تمامی بانک‌ها امکان‌پذیر است.
               </p></div>
-              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more w-[135px] h-[45px] bg-[#fff] border rounded-[8px] border-[rgb(199,199,199)] text-[13px] text-[#303c4f] leading-[30px]"></div>
             </div>
     </div>
     <div class="page33">
-      <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo2"><div class="logo33"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">{{ langStore.t('btn3_slider') }}</H3></div>
-              <div class="div-text-page1"><p class="text">
+      <div class="document-page1 w-[35%] h-[100%]">
+              <div class="div-logo-page1  w-[100%] h-[70px] flex justify-end item-center pr-[65px] mt-[40px]"><div class="logo2"><div class="logo33"></div></div></div>
+              <div class="div-title-page1 w-full h-[65px] flex justify-end item-center"><H3 class="title">{{ langStore.t('btn3_slider') }}</H3></div>
+              <div class="div-text-page1 w-full h-[190px] flex justify-center item-center"><p class="text w-full h-full text-[16px] text-[#384b69] text-end pr-[65px] text-vazir3 dir-rtl">
                 سرویس واریز شناسه‌دار این امکان را به مشتریان کسب و کار‌ها می‌دهد تا بدون محدودیت در مبلغ تراکنش و با انتخاب روش مناسب از خدمات واریز وجه و پرداخت استفاده کنند.
               </p></div>
-              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more w-[135px] h-[45px] bg-[#fff] border rounded-[8px] border-[rgb(199,199,199)] text-[13px] text-[#303c4f] leading-[30px]"></div>
             </div>
     </div>
     <div class="page44">
-      <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo2"><div class="logo22"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">{{ langStore.t('btn4_slider') }}</H3></div>
-              <div class="div-text-page1"><p class="text">
+      <div class="document-page1 w-[35%] h-[100%]">
+              <div class="div-logo-page1  w-[100%] h-[70px] flex justify-end item-center pr-[65px] mt-[40px]"><div class="logo2 w-[65px] h-[65px] bg-white flex justify-center item-center rounded-[20px] shadow-[0 4px 14px rgba(0, 0, 0, .06)]"><div class="logo22"></div></div></div>
+              <div class="div-title-page1 w-full h-[65px] flex justify-end item-center"><H3 class="title">{{ langStore.t('btn4_slider') }}</H3></div>
+              <div class="div-text-page1 w-full h-[190px] flex justify-center item-center"><p class="text w-full h-full text-[16px] text-[#384b69] text-end pr-[65px] text-vazir3 dir-rtl">
                 با وب‌سرویس استعلامی XDGPay کسب و کار‌ها می‌توانند با ایجاد خدماتی نوین در سنجش اصالت اطلاعات بانکی و شناسایی هویت اشخاص تجربه‌ای جدید را برای مشتریان خود به وجود آورند.
               </p></div>
-              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more w-[135px] h-[45px] bg-[#fff] border rounded-[8px] border-[rgb(199,199,199)] text-[13px] text-[#303c4f] leading-[30px]"></div>
             </div>
     </div>
     <div class="page55">
-      <div class="document-page1">
-              <div class="div-logo-page1"><div class="logo2"><div class="logo11"></div></div></div>
-              <div class="div-title-page1"><H3 class="title">{{ langStore.t('btn5_slider') }}</H3></div>  
-              <div class="div-text-page1"><p class="text">
+      <div class="document-page1 w-[35%] h-[100%]">
+              <div class="div-logo-page1  w-[100%] h-[70px] flex justify-end item-center pr-[65px] mt-[40px]"><div class="logo2"><div class="logo11"></div></div></div>
+              <div class="div-title-page1 w-full h-[65px] flex justify-end item-center"><H3 class="title">{{ langStore.t('btn5_slider') }}</H3></div>  
+              <div class="div-text-page1 w-full h-[190px] flex justify-center item-center"><p class="text w-full h-full text-[16px] text-[#384b69] text-end pr-[65px] text-vazir3 dir-rtl">
                 XDGPay به عنوان یکی از بزرگ‌ترین پرداخت‌یار‌های رسمی شاپرک (بانک مرکزی)، با ارائه درگاه پرداخت با قابلیت اتصال به درگاه‌های متنوع و مسیردهی هوشمند بین PSPها در راستای پایداری در سیستم پرداخت و افزایش درآمد در کنار کسب و کارها ایستاده است.
               </p></div>
-              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more"></div>
+              <div class="div-btn-more-page1"><input type="submit" value="اطلاعات بیشتر   >" class="btn-more w-[135px] h-[45px] bg-[#fff] border rounded-[8px] border-[rgb(199,199,199)] text-[13px] text-[#303c4f] leading-[30px]"></div>
             </div>
     </div>
   </div>
@@ -297,12 +294,6 @@ function changepage(tab) {
     font-size: 13px !important;
   }
 }
-.div111 {
-  width: 77%;
-  height: 610px;
-  margin: auto;
-  margin-bottom: 0px;
-}
 .divbtns {
   width: 100%;
   display: flex;
@@ -390,40 +381,6 @@ transform: translateX(100%);
     transform: translateX(-100%);
     opacity: 0;
 }
-.pagee1{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.pagee2{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.pagee3{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.pagee4{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.pagee5{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.document-page1{
-    width: 35%;
-    height: 100%;
-}
 .img-pag1{
   width: 65%;
     height: 100%;
@@ -452,13 +409,7 @@ transform: translateX(100%);
     background-size: cover;
     background-image: url(https://jibit.ir/wp-content/themes/jibit/images/home2/slide4.svg);
 }
-.img-pag5{
-  width: 65%;
-    height: 100%;
-    background-position: left;
-    background-size: cover;
-    background-image: url(https://jibit.ir/wp-content/themes/jibit/images/home2/slide5.svg);
-}
+
 .page2{
     text-align: center;
     padding-top: 200px;
@@ -511,7 +462,7 @@ transform: translateX(100%);
     background-position: center;
     background-size: cover;
 }
-.div-logo-page1{
+/* .div-logo-page1{
   width: 100%;
   height: 70px;
   display: flex;
@@ -519,21 +470,14 @@ transform: translateX(100%);
   padding-right: 65px;
   align-items: center;
   margin-top: 40px;
-}
-.div-title-page1{
+} */
+/* .div-title-page1{
   width: 100%;
   height: 65px;
   display: flex;
   justify-content: end;
   align-items: center;
-}
-.div-text-page1{
-  width: 100%;
-  height: 190px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+} */
 .div-btn-more-page1{
   width: 100%;
   height: 50px;
@@ -542,7 +486,7 @@ transform: translateX(100%);
   padding-right: 65px;
   align-items: center;
 }
-.btn-more{
+/* .btn-more{
   width: 135px;
   height: 45px;
   background-color: #fff;
@@ -554,8 +498,8 @@ transform: translateX(100%);
   color: #303c4f;
   border-radius: 10px;
   line-height: 30px;
-}
-.logo2{
+} */
+/* .logo2{
   width: 60px;
   height: 60px;
   background-color: #FFF; 
@@ -564,7 +508,7 @@ transform: translateX(100%);
   align-items: center;
   border-radius: 20px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, .06);
-}
+} */
 .logo11{
   width: 35px;
   height: 35px;
@@ -618,7 +562,7 @@ transform: translateX(100%);
   justify-content: end;
   align-items: center;
 }
-.text{
+/* .text{
   width: 100%;
   height: 100%;
   font-size: 16px;
@@ -627,7 +571,7 @@ transform: translateX(100%);
   padding-right: 65px;
   font-family: Vazir3;
   direction: rtl;
-}
+} */
 .div112{
   width: 95%;
   margin: auto;
